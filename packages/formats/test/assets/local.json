@@ -1,4 +1,0 @@
-{
-  "@context": "http://example.org/ns/csvw",
-  "url": "file:./test/assets/test.csv"
-}

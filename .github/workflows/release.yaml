@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - cube-class-constraints
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -15,9 +15,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "lts/*"
+          cache: npm
 
       - name: Install Dependencies
         run: npm ci
@@ -27,7 +28,7 @@ jobs:
         uses: changesets/action@v1
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: yarn release
+          publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
