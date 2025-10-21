@@ -1,11 +1,11 @@
 import * as url from 'url'
 import { expect } from 'chai'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import express from 'express'
 import withServer from 'express-as-promise/withServer.js'
 import { turtle } from '@tpluscode/rdf-string'
 import toStream from 'string-to-stream'
-import { createPipeline } from 'barnard59-core'
+import { createPipeline } from 'lindas-barnard59-core'
 import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDefinition.js'
 import getStream from 'get-stream'
 

@@ -2,7 +2,7 @@ import { rejects, strictEqual } from 'node:assert'
 import withServer from 'express-as-promise/withServer.js'
 import getStream from 'get-stream'
 import { isReadableStream } from 'is-stream'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import fetchUnbound from '../fetch.js'
 
 const csvContent = 'id,text\n1,abc\n'

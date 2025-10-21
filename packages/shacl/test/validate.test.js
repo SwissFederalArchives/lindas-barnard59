@@ -6,7 +6,7 @@ import getStream, { getStreamAsArray } from 'get-stream'
 import { isReadableStream, isWritableStream } from 'is-stream'
 import toStream from 'rdf-dataset-ext/toStream.js'
 import sinon from 'sinon'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import { shacl as unbound } from '../validate.js'
 
 const shapePath = 'support/simple.shape.ttl'

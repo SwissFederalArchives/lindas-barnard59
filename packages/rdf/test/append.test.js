@@ -7,7 +7,7 @@ import assertThrows from 'assert-throws-async'
 import getStream from 'get-stream'
 import { isDuplexStream as isDuplex } from 'is-stream'
 import nock from 'nock'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { Readable } from 'readable-stream'
 import appendUnbound from '../lib/append.js'
 

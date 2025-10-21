@@ -1,6 +1,6 @@
 import type { Term } from '@rdfjs/types'
 import type { GraphPointer } from 'clownface'
-import type { Environment } from 'barnard59-env'
+import type { Environment } from 'lindas-barnard59-env'
 import type { Sh } from '@tpluscode/rdf-ns-builders/vocabularies/sh'
 
 export class ValuesConstraintBuilder {

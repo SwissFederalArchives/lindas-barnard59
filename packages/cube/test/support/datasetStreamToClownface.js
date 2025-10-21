@@ -1,5 +1,5 @@
 import getStream from 'get-stream'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 
 async function datasetStreamToClownface(stream) {
   const datasets = await getStream.array(stream)

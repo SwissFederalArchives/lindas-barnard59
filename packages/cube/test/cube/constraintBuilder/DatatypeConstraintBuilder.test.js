@@ -1,4 +1,4 @@
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { DatatypeConstraintBuilder } from '../../../lib/cube/buildCubeShape/constraintBuilder/DatatypeConstraintBuilder.js'
 import { prepareValidator } from './support.js'
 

@@ -2,8 +2,8 @@ import type { NamedNode, DatasetCore, Term, Stream, Quad, BlankNode } from '@rdf
 import once from 'lodash/once.js'
 import { Transform } from 'readable-stream'
 import type { AnyPointer } from 'clownface'
-import type { Environment } from 'barnard59-env'
-import type { Context as BarnardContext } from 'barnard59-core'
+import type { Environment } from 'lindas-barnard59-env'
+import type { Context as BarnardContext } from 'lindas-barnard59-core'
 import urlJoin from '../../urlJoin.js'
 import Cube from './Cube.js'
 

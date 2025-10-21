@@ -1,4 +1,4 @@
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { Readable } from 'readable-stream'
 import { ex } from './namespaces.js'
 

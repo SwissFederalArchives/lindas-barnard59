@@ -3,7 +3,7 @@ import ecmaScriptLiteralLoader from 'rdf-loader-code/ecmaScriptLiteral.js'
 // eslint-disable-next-line import/default
 import ecmaScriptModuleLoader from 'rdf-loader-code/ecmaScriptModule.js'
 import LoaderRegistry from 'rdf-loaders-registry'
-import type { Environment } from 'barnard59-env'
+import type { Environment } from 'lindas-barnard59-env'
 import pipelineLoader from './loader/pipeline.js'
 import variableLoader from './loader/variable.js'
 import fileLoader from './loader/file.js'

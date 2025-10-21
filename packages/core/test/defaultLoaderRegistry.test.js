@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import defaultLoaderRegistry from '../lib/defaultLoaderRegistry.js'
 import ns from './support/namespaces.js'
 

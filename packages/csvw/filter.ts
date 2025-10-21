@@ -1,4 +1,4 @@
-import type { Context } from 'barnard59-core'
+import type { Context } from 'lindas-barnard59-core'
 import type { Quad } from '@rdfjs/types'
 
 export function excludeCsvwTriples(this: Context, quad: Quad) {

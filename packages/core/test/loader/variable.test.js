@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import loaderUnbound from '../../lib/loader/variable.js'
 import ns from '../support/namespaces.js'
 

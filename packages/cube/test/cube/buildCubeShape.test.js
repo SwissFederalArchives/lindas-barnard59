@@ -1,7 +1,7 @@
 import { deepEqual, strictEqual } from 'node:assert'
 import toNT from '@rdfjs/to-ntriples'
 import { isDuplexStream as isDuplex } from 'is-stream'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { expect } from 'chai'
 import buildCubeShapeUnbound from '../../lib/cube/buildCubeShape/index.js'
 import createObservationsStream from '../support/createObservationsStream.js'

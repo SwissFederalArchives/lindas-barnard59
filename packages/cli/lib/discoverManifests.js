@@ -3,7 +3,7 @@ import { exec } from 'child_process'
 import { dirname } from 'path'
 import { getInstalledPackage } from 'pkgscan'
 import isInstalledGlobally from 'is-installed-globally'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { packageDirectory } from 'pkg-dir'
 import { findUp } from 'find-up'
 

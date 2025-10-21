@@ -1,7 +1,7 @@
 import module from 'node:module'
 import { dirname, resolve } from 'node:path'
 import * as url from 'url'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { isGraphPointer } from 'is-graph-pointer'
 import { packageDirectory } from 'pkg-dir'
 import iriResolve from 'rdf-loader-code/lib/iriResolve.js'

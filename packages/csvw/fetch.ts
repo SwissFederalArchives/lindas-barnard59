@@ -1,6 +1,6 @@
 import toReadable from 'duplex-to/readable.js'
 import { PassThrough } from 'readable-stream'
-import type { Context } from 'barnard59-core'
+import type { Context } from 'lindas-barnard59-core'
 import { JsonLdParser } from 'jsonld-streaming-parser'
 import fetchData from './lib/fetchData.js'
 import fetchMetadata from './lib/fetchMetadata.js'

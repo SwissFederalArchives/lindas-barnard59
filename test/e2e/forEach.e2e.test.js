@@ -1,8 +1,8 @@
 import { strictEqual } from 'node:assert'
-import { createPipeline } from 'barnard59-core'
+import { createPipeline } from 'lindas-barnard59-core'
 import getStream from 'get-stream'
 import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDefinition.js'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import { expect } from 'chai'
 
 const loadPipelineDefinition = pipelineDefinitionLoader(import.meta.url, 'definitions')

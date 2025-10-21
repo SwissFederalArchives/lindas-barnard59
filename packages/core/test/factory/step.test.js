@@ -1,7 +1,7 @@
 import { strictEqual, rejects } from 'node:assert'
 import getStream from 'get-stream'
 import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDefinition.js'
-import env from 'barnard59-env'
+import env from 'lindas-barnard59-env'
 import defaultLoaderRegistry from '../../lib/defaultLoaderRegistry.js'
 import defaultLogger from '../../lib/defaultLogger.js'
 import createStep from '../../lib/factory/step.js'

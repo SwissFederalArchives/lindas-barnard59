@@ -1,4 +1,4 @@
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 // eslint-disable-next-line import/default
 import ecmaScriptModuleLoader from 'rdf-loader-code/ecmaScriptModule.js'
 

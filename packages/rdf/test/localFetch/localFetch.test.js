@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { expect } from 'chai'
 import assertThrows from 'assert-throws-async'
 import nock from 'nock'
-import rdf from 'barnard59-env'
+import rdf from 'lindas-barnard59-env'
 import { localFetch as unbound } from '../../lib/localFetch/localFetch.js'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))

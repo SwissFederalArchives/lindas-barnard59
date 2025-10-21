@@ -3,7 +3,7 @@ import * as url from 'node:url'
 import rdf from '@zazuko/env-node'
 import namespace from '@rdfjs/namespace'
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { desugar as desugarDefinition } from 'barnard59/lib/pipeline.js'
+import { desugar as desugarDefinition } from 'lindas-barnard59/lib/pipeline.js'
 
 const ex = namespace('http://example.org/pipeline/')
 
