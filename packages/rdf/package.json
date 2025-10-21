@@ -1,6 +1,6 @@
 {
   "name": "lindas-barnard59-rdf",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "RDF support for Linked Data pipelines",
   "main": "index.js",
   "type": "module",
@@ -37,7 +37,7 @@
     "rdf-transform-triple-to-quad": "^2.0.0",
     "rdf-stream-to-dataset-stream": "^1.0.0",
     "readable-stream": "^3.6.0",
-    "lindas-barnard59-env": "^2.0.0"
+    "lindas-barnard59-env": "^2.0.1"
   },
   "devDependencies": {
     "@rdfjs/to-ntriples": "^3.0.0",

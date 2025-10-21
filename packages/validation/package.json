@@ -1,6 +1,6 @@
 {
   "name": "lindas-barnard59-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "cli.js",
   "bin": {
@@ -19,9 +19,9 @@
     "deep-equal": "^2.0.5",
     "esmock": "^2.3.8",
     "sinon": "^15.2.0",
-    "lindas-barnard59-base": "^3.0.0",
-    "lindas-barnard59-core": "^7.0.0",
-    "lindas-barnard59-formats": "^5.0.0"
+    "lindas-barnard59-base": "^3.0.1",
+    "lindas-barnard59-core": "^7.0.1",
+    "lindas-barnard59-formats": "^5.0.1"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "chalk": "^4.1.0",
     "commander": "^11.0.0",
     "rdf-loader-code": "^2.2.2",
-    "lindas-barnard59-env": "^2.0.0"
+    "lindas-barnard59-env": "^2.0.1"
   },
   "mocha": {
     "loader": [

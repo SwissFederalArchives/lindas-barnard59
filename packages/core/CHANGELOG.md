@@ -1,5 +1,13 @@
 # barnard59-core
 
+## 7.0.1
+
+### Patch Changes
+
+- 02c2689: Fix all import references to use lindas-barnard59 package names
+
+  Updated all source and test file imports to reference the renamed lindas-barnard59 packages instead of the old barnard59 names. External packages like barnard59-test-support remain unchanged.
+
 ## 7.0.0
 
 ### Major Changes
