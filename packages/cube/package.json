@@ -1,6 +1,6 @@
 {
   "name": "lindas-barnard59-cube",
-  "version": "1.4.10",
+  "version": "2.0.0",
   "description": "Build and check RDF cubes in Linked Data pipelines",
   "type": "module",
   "main": "index.js",
@@ -28,12 +28,12 @@
     "rdf-literal": "^2.0.0",
     "readable-stream": "3 - 4",
     "through2": "^4.0.2",
-    "lindas-barnard59-base": "^2.4.2",
-    "lindas-barnard59-formats": "^4.0.1",
-    "lindas-barnard59-http": "^2.1.0",
-    "lindas-barnard59-rdf": "^3.4.1",
-    "lindas-barnard59-shacl": "^1.4.11",
-    "lindas-barnard59-sparql": "^2.3.0"
+    "lindas-barnard59-base": "^3.0.0",
+    "lindas-barnard59-formats": "^5.0.0",
+    "lindas-barnard59-http": "^3.0.0",
+    "lindas-barnard59-rdf": "^4.0.0",
+    "lindas-barnard59-shacl": "^2.0.0",
+    "lindas-barnard59-sparql": "^3.0.0"
   },
   "devDependencies": {
     "@types/clownface": "^2.0.8",
@@ -44,7 +44,7 @@
     "is-stream": "^3.0.0",
     "rdf-validate-shacl": "^0.6.5",
     "shelljs": "^0.8.5",
-    "lindas-barnard59-env": "^1.2.7"
+    "lindas-barnard59-env": "^2.0.0"
   },
   "mocha": {
     "loader": "ts-node/esm"

@@ -1,6 +1,6 @@
 {
   "name": "lindas-barnard59-base",
-  "version": "2.4.2",
+  "version": "3.0.0",
   "description": "Linked Data pipelines",
   "main": "index.js",
   "type": "module",
@@ -44,7 +44,7 @@
     "is-stream": "^3.0.0",
     "rimraf": "^3.0.2",
     "sinon": "^17.0.0",
-    "lindas-barnard59-core": "^6.0.0"
+    "lindas-barnard59-core": "^7.0.0"
   },
   "engines": {
     "node": ">= 14.0.0"
