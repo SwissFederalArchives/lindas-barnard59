@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "barnard59": "bin/barnard59.sh",
+    "lindas-barnard59": "bin/barnard59.sh",
     "b59": "bin/barnard59.sh"
   },
   "scripts": {
