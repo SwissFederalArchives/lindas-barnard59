@@ -1,5 +1,13 @@
 # barnard59-http
 
+## 3.0.0
+
+### Major Changes
+
+- d98737d: Rename all packages with lindas- prefix for LINDAS project
+
+  This is a major version bump as we're publishing these packages under new names (lindas-barnard59-\*) forked from the upstream zazuko/barnard59 repository. All package names, internal dependencies, and repository URLs have been updated to reflect the LINDAS branding.
+
 ## 2.1.0
 
 ### Minor Changes
