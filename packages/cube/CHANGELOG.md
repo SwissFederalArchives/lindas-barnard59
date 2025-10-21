@@ -1,5 +1,21 @@
 # barnard59-cube
 
+## 2.0.1
+
+### Patch Changes
+
+- 02c2689: Fix all import references to use lindas-barnard59 package names
+
+  Updated all source and test file imports to reference the renamed lindas-barnard59 packages instead of the old barnard59 names. External packages like barnard59-test-support remain unchanged.
+
+- Updated dependencies [02c2689]
+  - lindas-barnard59-base@3.0.1
+  - lindas-barnard59-formats@5.0.1
+  - lindas-barnard59-http@3.0.1
+  - lindas-barnard59-rdf@4.0.1
+  - lindas-barnard59-shacl@2.0.1
+  - lindas-barnard59-sparql@3.0.1
+
 ## 2.0.0
 
 ### Major Changes
