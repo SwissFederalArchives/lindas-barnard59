@@ -1,5 +1,5 @@
 {
-  "name": "barnard59-shacl",
+  "name": "lindas-barnard59-shacl",
   "version": "1.4.11",
   "description": "A barnard59 step that validates RDF using the Shapes Constraint Language (SHACL).",
   "type": "module",
@@ -12,31 +12,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zazuko/barnard59.git",
+    "url": "git://github.com/SwissFederalArchives/lindas-barnard59.git",
     "directory": "packages/shacl"
   },
   "keywords": [],
   "author": "Zazuko GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zazuko/barnard59/issues"
+    "url": "https://github.com/SwissFederalArchives/lindas-barnard59/issues"
   },
-  "homepage": "https://github.com/zazuko/barnard59",
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
     "@rdfjs/fetch": "^3.0.0",
     "@rdfjs/to-ntriples": "^3.0.0",
-    "barnard59-base": "^2.4.2",
-    "barnard59-formats": "^4.0.1",
-    "barnard59-rdf": "^3.4.1",
     "is-stream": "^3.0.0",
     "rdf-validate-shacl": "^0.6.3",
-    "readable-stream": "3 - 4"
+    "readable-stream": "3 - 4",
+    "lindas-barnard59-base": "^2.4.2",
+    "lindas-barnard59-formats": "^4.0.1",
+    "lindas-barnard59-rdf": "^3.4.1"
   },
   "devDependencies": {
     "@tpluscode/rdf-string": "^1.3.4",
     "assert-throws-async": "^3.0.0",
-    "barnard59-core": "^6.1.3",
-    "barnard59-env": "^1.2.7",
     "barnard59-test-support": "*",
     "chai": "^4.3.4",
     "express": "^4.21.2",
@@ -44,7 +42,9 @@
     "get-stream": "^8.0.1",
     "rdf-dataset-ext": "^1.1.0",
     "sinon": "^15",
-    "string-to-stream": "^3.0.1"
+    "string-to-stream": "^3.0.1",
+    "lindas-barnard59-core": "^6.1.3",
+    "lindas-barnard59-env": "^1.2.7"
   },
   "mocha": {
     "recursive": true,

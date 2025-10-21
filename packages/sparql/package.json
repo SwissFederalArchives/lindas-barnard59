@@ -1,5 +1,5 @@
 {
-  "name": "barnard59-sparql",
+  "name": "lindas-barnard59-sparql",
   "version": "2.3.0",
   "description": "SPARQL support for Barnard59 Linked Data pipelines",
   "type": "module",
@@ -14,12 +14,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zazuko/barnard59-sparql.git"
+    "url": "git://github.com/SwissFederalArchives/lindas-barnard59-sparql.git"
   },
   "bugs": {
-    "url": "https://github.com/zazuko/barnard59-sparql/issues"
+    "url": "https://github.com/SwissFederalArchives/lindas-barnard59-sparql/issues"
   },
-  "homepage": "https://github.com/zazuko/barnard59-sparql",
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59-sparql",
   "dependencies": {
     "duplex-to": "^1.0.1",
     "oxigraph": "^0.4.0-alpha.2",
@@ -30,10 +30,10 @@
     "@tpluscode/rdf-string": "^1.1.2",
     "@types/sparql-http-client": "^3.0.0",
     "@zazuko/env": "^3",
-    "barnard59-env": "^1.2.3",
     "get-stream": "^6.0.0",
     "is-stream": "^3.0.0",
-    "nock": "^13.1.1"
+    "nock": "^13.1.1",
+    "lindas-barnard59-env": "^1.2.3"
   },
   "engines": {
     "node": ">= 14.0.0"

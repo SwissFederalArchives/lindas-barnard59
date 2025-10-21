@@ -1,5 +1,5 @@
 {
-  "name": "barnard59-ftp",
+  "name": "lindas-barnard59-ftp",
   "version": "2.1.0",
   "description": "FTP support for Linked Data pipelines",
   "main": "index.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zazuko/barnard59.git",
+    "url": "git://github.com/SwissFederalArchives/lindas-barnard59.git",
     "directory": "packages/ftp"
   },
   "keywords": [],
   "author": "Zazuko GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zazuko/barnard59/issues"
+    "url": "https://github.com/SwissFederalArchives/lindas-barnard59/issues"
   },
-  "homepage": "https://github.com/zazuko/barnard59",
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
     "duplex-to": "^1.0.0",
     "ftp": "^0.3.10",

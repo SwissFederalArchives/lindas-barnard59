@@ -26,6 +26,6 @@ jobs:
         uses: withfig/push-to-fig-autocomplete-action@v2
         with:
           token: ${{ secrets.FIG_PAT }}
-          autocomplete-spec-name: barnard59
+          autocomplete-spec-name: lindas-barnard59
           spec-path: packages/cli/fig-spec.ts
           integration: commander

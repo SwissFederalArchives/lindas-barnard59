@@ -1,5 +1,5 @@
 {
-  "name": "barnard59-formats",
+  "name": "lindas-barnard59-formats",
   "version": "4.0.1",
   "description": "Support for various formats for Barnard59 Linked Data pipelines",
   "main": "index.js",
@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zazuko/barnard59.git",
+    "url": "git://github.com/SwissFederalArchives/lindas-barnard59.git",
     "directory": "packages/formats"
   },
   "keywords": [],
   "author": "Zazuko GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zazuko/barnard59/issues"
+    "url": "https://github.com/SwissFederalArchives/lindas-barnard59/issues"
   },
-  "homepage": "https://github.com/zazuko/barnard59",
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
     "@opentelemetry/api": "^1.0.1",
     "@rdfjs/parser-jsonld": "^2.1.0",
@@ -29,19 +29,19 @@
     "@rdfjs/serializer-jsonld": "^2.0.0",
     "@rdfjs/serializer-ntriples": "^2.0.1",
     "@rdfjs/sink-to-duplex": "^1.0.0",
-    "barnard59-base": "^2.0.1",
     "is-stream": "^3.0.0",
     "@zazuko/rdf-parser-csvw": "^0.17.0",
     "@zazuko/rdf-parser-csvw-xlsx": "^0.3",
-    "rdfxml-streaming-parser": "^3.1.0"
+    "rdfxml-streaming-parser": "^3.1.0",
+    "lindas-barnard59-base": "^2.0.1"
   },
   "devDependencies": {
     "@types/rdfjs__sink-to-duplex": "^1.0.0",
     "@types/rdfjs__parser-jsonld": "^2.1.7",
     "@types/sax": "^1.2.7",
     "@zazuko/env-core": "^1.1.2",
-    "barnard59-env": "^1.2.7",
-    "chai": "^4.3.7"
+    "chai": "^4.3.7",
+    "lindas-barnard59-env": "^1.2.7"
   },
   "engines": {
     "node": ">= 14.0.0"
