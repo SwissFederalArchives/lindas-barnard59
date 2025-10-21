@@ -7,7 +7,7 @@ import { Transform } from 'readable-stream'
 
 class VoidStats extends Transform {
   /**
-   * @param {import('barnard59-core').Context} context
+   * @param {import('lindas-barnard59-core').Context} context
    * @param {object} options
    * @param {import('@rdfjs/types').NamedNode} options.voidDatasetUri
    * @param {(import('@rdfjs/types').NamedNode | undefined)[]} options.classPartitions
@@ -159,7 +159,7 @@ function toNamedNode(item) {
 }
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {object} options
  * @param {string | import('@rdfjs/types').NamedNode} [options.voidDatasetUri]
  * @param {(string | import('@rdfjs/types').NamedNode)[]} [options.classPartitions]

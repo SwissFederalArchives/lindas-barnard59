@@ -19,7 +19,7 @@ import { combine } from './cli/options.js'
  *   quiet: boolean,
  *   enableBufferMonitor: boolean,
  *   otelDebug: keyof typeof import('@opentelemetry/api').DiagLogLevel,
- *   level: import('barnard59-core/lib/defaultLogger.js').LogLevels,
+ *   level: import('lindas-barnard59-core/lib/defaultLogger.js').LogLevels,
  *   otelTracesExporter: 'otlp' | 'none',
  *   otelMetricsExporter: 'otlp' | 'none',
  * }} CliOptions

@@ -1,4 +1,4 @@
 import { trace } from '@opentelemetry/api'
 
-const tracer = trace.getTracer('barnard59-core')
+const tracer = trace.getTracer('lindas-barnard59-core')
 export default tracer

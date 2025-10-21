@@ -10,7 +10,7 @@ export class NodeKindConstraintBuilder implements Builder {
   #termTypes = new Set()
 
   /**
-   * @param {import('barnard59-env').Environment} rdf
+   * @param {import('lindas-barnard59-env').Environment} rdf
    */
   constructor(rdf: Environment) {
     this.sh = rdf.ns.sh

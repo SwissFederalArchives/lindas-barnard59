@@ -1,7 +1,7 @@
 import TripleToQuadTransform from 'rdf-transform-triple-to-quad'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {string | import('@rdfjs/types').Term | undefined} graph
  * @return {import('readable-stream').Transform}
  */

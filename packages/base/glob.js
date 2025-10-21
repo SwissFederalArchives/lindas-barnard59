@@ -5,7 +5,7 @@ import { Readable } from 'readable-stream'
 import tracer from './lib/tracer.js'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {{ pattern: string } & Omit<import('glob').GlobOptions, 'withFileTypes'>} options
  * @return {Readable}
  */

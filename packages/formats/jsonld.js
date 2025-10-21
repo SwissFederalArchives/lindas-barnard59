@@ -7,7 +7,7 @@ import { combine, jsonStringify } from 'lindas-barnard59-base'
 import tracer from './lib/tracer.js'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {Object} [options]
  * @param {string | Record<string, string>} [options.localContext]
  */
@@ -38,7 +38,7 @@ function parse({ localContext } = {}) {
 }
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  */
 const parseObject = function () {
   return tracer.startActiveSpan('jsonld:parse.object', span => {

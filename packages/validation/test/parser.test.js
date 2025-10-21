@@ -99,15 +99,15 @@ describe('parser', () => {
   describe('getDependencies', () => {
     it('should create tree structure for codelinks', () => {
       const input = [
-        { stepName: 'a', stepOperation: 'node:barnard59-base#fetch.json' },
-        { stepName: 'b', stepOperation: 'node:barnard59-base#map' },
-        { stepName: 'c', stepOperation: 'node:barnard59-formats#ntriples.serialize' },
+        { stepName: 'a', stepOperation: 'node:lindas-barnard59-base#fetch.json' },
+        { stepName: 'b', stepOperation: 'node:lindas-barnard59-base#map' },
+        { stepName: 'c', stepOperation: 'node:lindas-barnard59-formats#ntriples.serialize' },
         { stepName: 'd', stepOperation: 'file:awesomeModule#awesomeFunction' },
       ]
       const expected = {
         'node:': {
-          'barnard59-base': new Set(['node:barnard59-base#fetch.json', 'node:barnard59-base#map']),
-          'barnard59-formats': new Set(['node:barnard59-formats#ntriples.serialize']),
+          'lindas-barnard59-base': new Set(['node:lindas-barnard59-base#fetch.json', 'node:lindas-barnard59-base#map']),
+          'lindas-barnard59-formats': new Set(['node:lindas-barnard59-formats#ntriples.serialize']),
         },
         'file:': {
           [url.pathToFileURL(path.join(process.cwd(), 'awesomeModule'))]: new Set(['file:awesomeModule#awesomeFunction']),
@@ -118,7 +118,7 @@ describe('parser', () => {
     })
 
     it('should fail with noniterable input', () => {
-      const input = 'node:barnard59-base#fetch.json'
+      const input = 'node:lindas-barnard59-base#fetch.json'
       assert.throws(() => parser.getDependencies(input), TypeError)
     })
 

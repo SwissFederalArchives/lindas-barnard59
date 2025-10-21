@@ -2,7 +2,7 @@ import sinkToDuplex from '@rdfjs/sink-to-duplex'
 import { RdfXmlParser } from 'rdfxml-streaming-parser'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  */
 function parse() {
   return sinkToDuplex(new RdfXmlParser({

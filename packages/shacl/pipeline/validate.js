@@ -1,7 +1,7 @@
 import { shacl } from '../report.js'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  */
 export default function () {
   const { variables } = this

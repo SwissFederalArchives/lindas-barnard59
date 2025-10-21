@@ -1,7 +1,7 @@
 import Client from 'sparql-http-client'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {Object} options
  * @param {string} options.endpoint
  * @param {string} options.query

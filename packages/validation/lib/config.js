@@ -9,5 +9,5 @@ export const dependencyTypes = {
 // List of packages for which the manifest location is known and needs to be overridden
 // Required for ./utils.js#getManifestPath
 export const manifestLocation = {
-  fs: 'barnard59-core',
+  fs: 'lindas-barnard59-core',
 }

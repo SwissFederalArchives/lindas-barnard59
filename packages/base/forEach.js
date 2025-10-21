@@ -6,13 +6,13 @@ import ReadableToReadable from 'readable-to-readable'
 const { finished, Duplex } = stream
 
 /**
- * @typedef {Pick<import('barnard59-core').Context, 'createPipeline' | 'variables'> & {
+ * @typedef {Pick<import('lindas-barnard59-core').Context, 'createPipeline' | 'variables'> & {
  *   pipeline: PipelineStream
  *   variable: string
  * }} ForEachOptions
  *
  * @typedef {import('stream').Duplex & {
- *  pipeline: import('barnard59-core').Pipeline
+ *  pipeline: import('lindas-barnard59-core').Pipeline
  * }} PipelineStream
  */
 
@@ -45,7 +45,7 @@ class ForEach extends Duplex {
   }
 
   /**
-   * @type import('barnard59-core').Pipeline
+   * @type import('lindas-barnard59-core').Pipeline
    */
   get subPipeline() {
     // @ts-ignore
@@ -111,7 +111,7 @@ class ForEach extends Duplex {
 }
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {PipelineStream} pipeline
  * @param {string} variable
  * @return {ForEach}

@@ -1,3 +1,3 @@
 import logger from 'anylogger'
 
-export const log = logger('barnard59-validation')
+export const log = logger('lindas-barnard59-validation')

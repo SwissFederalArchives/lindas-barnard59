@@ -1,7 +1,7 @@
 import Client from 'sparql-http-client'
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {Pick<import('sparql-http-client/StreamClient.js').Options<any>, 'user' | 'password'> & {
  *   endpoint: string,
  *   graph: string | import('@rdfjs/types').NamedNode | import('@rdfjs/types').DefaultGraph,

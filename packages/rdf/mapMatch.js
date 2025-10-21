@@ -2,12 +2,12 @@ import { Transform } from 'readable-stream'
 import PatternMatcher from './lib/PatternMatcher.js'
 
 /**
- * @typedef {(this: { rdf: import('barnard59-env').Environment }, quad: import('@rdfjs/types').Quad) => Promise<T> | T} MapCallback
+ * @typedef {(this: { rdf: import('lindas-barnard59-env').Environment }, quad: import('@rdfjs/types').Quad) => Promise<T> | T} MapCallback
  * @template T
  */
 
 /**
- * @this {import('barnard59-core').Context}
+ * @this {import('lindas-barnard59-core').Context}
  * @param {object} options
  * @param {MapCallback<T>} options.map
  * @param {import('@rdfjs/types').Quad_Subject | Iterable<import('@rdfjs/types').Term>} [options.subject]
