@@ -30,7 +30,9 @@ describe('glob', () => {
 
     const filenames = await array(s)
 
-    expect(filenames).to.contain.all.members([
+    // Normalize paths to use forward slashes for cross-platform compatibility
+    const normalizedFilenames = filenames.map(f => f.replace(/\\/g, '/'))
+    expect(normalizedFilenames).to.contain.all.members([
       '../../test/e2e/definitions/foreach/csv-duplicate.ttl',
       '../../test/e2e/definitions/foreach/with-handler.ttl',
       '../../test/e2e/definitions/foreach/with-variable.ttl',
