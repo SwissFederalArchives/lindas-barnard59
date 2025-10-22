@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-# find local barnard59
-barnard59=$(node -e "console.log(require.resolve('barnard59/bin/barnard59.js'))" 2> /dev/null)
+# find local lindas-barnard59
+barnard59=$(node -e "console.log(require.resolve('lindas-barnard59/bin/barnard59.js'))" 2> /dev/null)
 
 if [ -z "$barnard59" ]
 then
-  # find global barnard59
+  # find global lindas-barnard59
   NODE_PATH=$(npm config get prefix)
-  barnard59=$(node -e "console.log(require('path').join('$NODE_PATH', '/lib/node_modules/barnard59/bin/barnard59.js'))")
+  barnard59=$(node -e "console.log(require('path').join('$NODE_PATH', '/lib/node_modules/lindas-barnard59/bin/barnard59.js'))")
 fi
 
 if [ -z "$barnard59" ]
 then
-  echo "Could not find barnard59/bin/barnard59.js" >&2
+  echo "Could not find lindas-barnard59/bin/barnard59.js" >&2
   exit 1
 fi
 

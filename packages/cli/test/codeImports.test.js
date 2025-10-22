@@ -23,7 +23,7 @@ describe('pipeline', () => {
   context('with code:imports', () => {
     it('merges the pipelines', async () => {
       // given
-      const filename = require.resolve('barnard59-test-e2e/definitions/code-imports/main.ttl')
+      const filename = require.resolve('lindas-barnard59-test-e2e/definitions/code-imports/main.ttl')
 
       // when
       const { ptr } = await pipeline.parse(filename, env.namedNode('http://example.org/pipeline/'))
