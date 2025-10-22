@@ -1,4 +1,4 @@
-@base <https://barnard59.zazuko.com/operations/shacl/> .
+@base <https://lindas-barnard59.zazuko.com/operations/shacl/> .
 @prefix b59: <https://barnard59.zazuko.com/vocab#> .
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .

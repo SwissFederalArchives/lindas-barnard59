@@ -57,7 +57,7 @@ jobs:
           node-version: "lts/*"
           cache: npm
       - run: npm ci
-      - run: npm run -w barnard59-test-e2e test
+      - run: npm run -w lindas-barnard59-test-e2e test
 
   test-cli:
     runs-on: ubuntu-latest

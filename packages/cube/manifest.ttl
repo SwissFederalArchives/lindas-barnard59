@@ -4,7 +4,7 @@
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
 
-# renamed from <https://barnard59.zazuko.com/operations/rdf/cube.js#buildCubeShape>
+# renamed from <https://lindas-barnard59.zazuko.com/operations/rdf/cube.js#buildCubeShape>
 <operations/cube/buildCubeShape> a p:Operation, p:WritableObjectMode, p:ReadableObjectMode;
   rdfs:label "build Cube Shape";
   rdfs:comment "Builds a Cube Shape based on Cube Observation datasets";
@@ -12,7 +12,7 @@
     code:link <node:lindas-barnard59-cube/cube.js#buildCubeShape>
   ].
 
-# renamed from <https://barnard59.zazuko.com/operations/rdf/cube.js#toObservation>
+# renamed from <https://lindas-barnard59.zazuko.com/operations/rdf/cube.js#toObservation>
 <operations/cube/toObservation> a p:Operation, p:WritableObjectMode, p:ReadableObjectMode;
   rdfs:label "to Cube Observation";
   rdfs:comment "Converts a set of quads to a Cube Observation";
