@@ -1,10 +1,11 @@
 import { strictEqual } from 'assert'
 import { expect } from 'chai'
+import { fileURLToPath } from 'url'
 import shell from 'shelljs'
 import stripAnsi from 'strip-ansi'
 import filenamePipelineDefinition from './support/filenamePipelineDefinition.js'
 
-const cwd = new URL('..', import.meta.url).pathname
+const cwd = fileURLToPath(new URL('..', import.meta.url))
 
 describe('barnard59', function () {
   this.timeout(10000)
@@ -15,9 +16,10 @@ describe('barnard59', function () {
       const command = `npx lindas-barnard59 run ${pipelineFile}`
 
       const result = shell.exec(command, { silent: true, cwd })
+      const stderr = stripAnsi(result.stderr).split('\n').filter(line => !line.startsWith('npm warn')).join('\n')
 
       strictEqual(result.code, 1)
-      expect(result.stderr).to.equal('Multiple root pipelines found. Try one of these:\n\t--pipeline http://example.org/pipeline/p1\n\t--pipeline http://example.org/pipeline/p2\n')
+      expect(stderr).to.equal('Multiple root pipelines found. Try one of these:\n\t--pipeline http://example.org/pipeline/p1\n\t--pipeline http://example.org/pipeline/p2\n')
     })
     it('should exit with error code 0 if there are no error while processing the pipeline', () => {
       const pipelineFile = filenamePipelineDefinition('simple')
@@ -51,7 +53,7 @@ describe('barnard59', function () {
         const pipelineFile = filenamePipelineDefinition('logs')
         const command = `npx lindas-barnard59 run --pipeline=http://example.org/pipeline/ --verbose ${pipelineFile} -q`
 
-        const result = stripAnsi(shell.exec(command, { silent: true, cwd }).stderr)
+        const result = stripAnsi(shell.exec(command, { silent: true, cwd }).stderr).split('\n').filter(line => !line.startsWith('npm warn')).join('\n').trim()
 
         expect(result).to.be.empty
       })
@@ -103,7 +105,11 @@ describe('barnard59', function () {
         strictEqual(result.includes('abc: 123'), true)
       })
 
-      it('should set the given variable to the value of the environment variable with the same name', () => {
+      it('should set the given variable to the value of the environment variable with the same name', function () {
+        if (process.platform === 'win32') {
+          this.skip()
+        }
+
         const pipelineFile = filenamePipelineDefinition('simple')
         const command = `abc=123 npx lindas-barnard59 run --pipeline=http://example.org/pipeline/ --verbose ${pipelineFile} --variable=abc`
 
@@ -114,30 +120,34 @@ describe('barnard59', function () {
     })
 
     describe('variable-all', () => {
-      [
-        ['abc=123 def=456', '--variable-all', '', 'should import all environment variables'],
-        ['abc=123 def=456', '', '--variable-all', 'should import all environment variables'],
-        ['abc=123 def=123', '--variable-all --variable def=456', '', 'should override single variable'],
-        ['abc=123 def=123', '--variable-all', '--variable def=456', 'should override single variable'],
-        ['abc=123 def=123', '--variable def=456', '--variable-all', 'should override single variable'],
-        ['abc=123 def=123', '', '--variable-all --variable def=456', 'should override single variable'],
-      ].forEach(([env, optionsBefore, optionsAfter, title]) => {
-        context(`${optionsBefore} run ${optionsAfter}`, () => {
-          it(title, () => {
-            const pipelineFile = filenamePipelineDefinition('simple')
-            const command = `${env} npx lindas-barnard59 ${optionsBefore} run --pipeline=http://example.org/pipeline/ -vv ${pipelineFile} ${optionsAfter}`
+      if (process.platform !== 'win32') {
+        [
+          ['abc=123 def=456', '--variable-all', '', 'should import all environment variables'],
+          ['abc=123 def=456', '', '--variable-all', 'should import all environment variables'],
+          ['abc=123 def=123', '--variable-all --variable def=456', '', 'should override single variable'],
+          ['abc=123 def=123', '--variable-all', '--variable def=456', 'should override single variable'],
+          ['abc=123 def=123', '--variable def=456', '--variable-all', 'should override single variable'],
+          ['abc=123 def=123', '', '--variable-all --variable def=456', 'should override single variable'],
+        ].forEach(([env, optionsBefore, optionsAfter, title]) => {
+          context(`${optionsBefore} run ${optionsAfter}`, () => {
+            it(title, () => {
+              const pipelineFile = filenamePipelineDefinition('simple')
+              const command = `${env} npx lindas-barnard59 ${optionsBefore} run --pipeline=http://example.org/pipeline/ -vv ${pipelineFile} ${optionsAfter}`
 
-            const result = stripAnsi(shell.exec(command, { silent: true }).stderr)
+              const result = stripAnsi(shell.exec(command, { silent: true }).stderr)
 
-            expect(result).to.match(/info:.+abc: 123/)
-            expect(result).to.match(/verbose:.+def: 456/)
+              expect(result).to.match(/info:.+abc: 123/)
+              expect(result).to.match(/verbose:.+def: 456/)
+            })
           })
         })
-      })
+      }
     })
   })
 
   describe('examples', function () {
+    this.timeout(30000)
+
     it('should run the fetch-json-to-ntriples.json example without error', () => {
       const pipelineFile = (new URL('../examples/fetch-json-to-ntriples.json', import.meta.url)).pathname
       const command = `npx lindas-barnard59 run --pipeline=http://example.org/pipeline/cet ${pipelineFile}`

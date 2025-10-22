@@ -1,6 +1,7 @@
 import { resolve } from 'path'
+import { fileURLToPath } from 'url'
 
-const base = new URL('.', import.meta.url).pathname
+const base = fileURLToPath(new URL('.', import.meta.url))
 
 /**
  * @param {string} name
