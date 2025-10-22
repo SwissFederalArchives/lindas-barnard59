@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "test": "mocha *.test.js",
-    "clock": "barnard59 run definitions/world-clock/file.ttl"
+    "clock": "lindas-barnard59 run definitions/world-clock/file.ttl"
   },
   "dependencies": {
     "@zazuko/rdf-utils-fs": "^3.3.1",
-    "barnard59-base": "^2.4.1",
-    "barnard59-core": "^6.0.0",
-    "barnard59-env": "^1.2.1",
-    "barnard59-formats": "^4.0.0",
-    "barnard59-http": "^2.0.0",
+    "lindas-barnard59-base": "^3.0.1",
+    "lindas-barnard59-core": "^7.0.1",
+    "lindas-barnard59-env": "^2.0.1",
+    "lindas-barnard59-formats": "^5.0.1",
+    "lindas-barnard59-http": "^3.0.1",
     "chai": "^4.3.7",
     "get-stream": "^6.0.0",
     "nock": "^13.3.1",
