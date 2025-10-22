@@ -149,13 +149,7 @@ jobs:
       - name: pack all
         run: npm pack -ws
       - run: npm install -g lindas-barnard59-*.tgz
-        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
-      - run: cmd /c npm install -g (Get-ChildItem -Filter lindas-barnard59-*.tgz).FullName
-        if: matrix.os == 'windows-latest'
       - run: which lindas-barnard59
       - run: lindas-barnard59 --help
       - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl
-        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
-      - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl
-        if: matrix.os == 'windows-latest'
-        shell: cmd
+        shell: bash
