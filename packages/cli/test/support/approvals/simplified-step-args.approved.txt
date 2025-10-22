@@ -8,7 +8,7 @@ _:c14n2 <https://code.described.at/implementedBy> <http://example.org/pipeline/s
 _:c14n3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/pipeline/readB> .
 _:c14n3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:c14n4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://code.described.at/EcmaScriptModule> .
-_:c14n4 <https://code.described.at/link> <node:barnard59-base#concat> .
+_:c14n4 <https://code.described.at/link> <node:lindas-barnard59-base#concat> .
 _:c14n5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:c14n6 .
 _:c14n5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:c14n6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://pipeline.described.at/Step> .
