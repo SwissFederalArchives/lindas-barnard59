@@ -7,7 +7,7 @@ import rdf from 'lindas-barnard59-env'
 import { packageDirectory } from 'pkg-dir'
 import { findUp } from 'find-up'
 
-const packagePattern = /^barnard59-(.+)$/
+const packagePattern = /^(?:lindas-)?barnard59-(.+)$/
 
 /**
  * @param {object} [options]
@@ -60,7 +60,7 @@ async function getInstalledPackages(all) {
         if (err) {
           reject(err)
         } else {
-          resolve([...new Set(stdout.match(/(?<pkg>barnard59-[^@]+)/g))])
+          resolve([...new Set(stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g))])
         }
       })
     })
@@ -70,7 +70,7 @@ async function getInstalledPackages(all) {
   if (!packagePath) {
     return []
   }
-  return (getInstalledPackage('barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+  return (getInstalledPackage('{barnard59-*,lindas-barnard59-*}', dirname(packagePath)) || []).map(pkg => pkg.name)
 }
 
 /**
