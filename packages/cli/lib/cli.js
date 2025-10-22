@@ -74,10 +74,10 @@ export default async function () {
           if (groups && groups.command) {
             /* eslint-disable no-console */
             if (isInstalledGlobally) {
-              console.error(`Try running 'npm install (-g) barnard59-${groups.command}'`)
+              console.error(`Try running 'npm install (-g) lindas-barnard59-${groups.command}'`)
             }
 
-            console.error(`Try running 'npm install barnard59-${groups.command}'`)
+            console.error(`Try running 'npm install lindas-barnard59-${groups.command}'`)
           }
           process.exit(error.exitCode)
         } else if (error instanceof MultipleRootsError) {

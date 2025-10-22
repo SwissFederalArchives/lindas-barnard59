@@ -53,7 +53,7 @@
       "@id": "fetch",
       "code:implementedBy": {
         "@type": "code:EcmaScriptModule",
-        "code:link": "node:barnard59-http#get"
+        "code:link": "node:lindas-barnard59-http#get"
       },
       "code:arguments": {
         "code:name": "url",
@@ -66,13 +66,13 @@
       "@id": "parseJson",
       "code:implementedBy": {
         "@type": "code:EcmaScriptModule",
-        "code:link": "node:barnard59-base/json.js#parse"
+        "code:link": "node:lindas-barnard59-base/json.js#parse"
       }
     },{
       "@id": "jsonldStructure",
       "code:implementedBy": {
         "@type": "code:EcmaScriptModule",
-        "code:link": "node:barnard59-base/map.js#default"
+        "code:link": "node:lindas-barnard59-base/map.js#default"
       },
       "code:arguments": {
         "@list": [{
@@ -84,13 +84,13 @@
       "@id": "parse",
       "code:implementedBy": {
         "@type": "code:EcmaScriptModule",
-        "code:link": "node:barnard59-formats/jsonld.js#parse.object"
+        "code:link": "node:lindas-barnard59-formats/jsonld.js#parse.object"
       }
     }, {
       "@id": "serialize",
       "code:implementedBy": {
         "@type": "code:EcmaScriptModule",
-        "code:link": "node:barnard59-formats/ntriples.js#serialize"
+        "code:link": "node:lindas-barnard59-formats/ntriples.js#serialize"
       }
     }]
   }]
