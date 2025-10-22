@@ -1,7 +1,7 @@
 @base <http://example.org/pipeline/> .
 @prefix p: <https://pipeline.described.at/> .
 @prefix code: <https://code.described.at/> .
-@prefix base: <https://barnard59.zazuko.com/operations/base/> .
+@prefix base: <https://lindas-barnard59.zazuko.com/operations/base/> .
 
 <> a p:Pipeline, p:ReadableObjectMode ;
   p:steps

@@ -1,9 +1,9 @@
 @base <http://example.org/pipeline/>.
 @prefix code: <https://code.described.at/>.
 @prefix p: <https://pipeline.described.at/>.
-@prefix fs: <https://barnard59.zazuko.com/operations/core/fs/> .
-@prefix base: <https://barnard59.zazuko.com/operations/base/> .
-@prefix test: <https://barnard59.zazuko.com/operations/test/> .
+@prefix fs: <https://lindas-barnard59.zazuko.com/operations/core/fs/> .
+@prefix base: <https://lindas-barnard59.zazuko.com/operations/base/> .
+@prefix test: <https://lindas-barnard59.zazuko.com/operations/test/> .
 
 <> a p:Pipeline, p:Readable;
   p:variables [
