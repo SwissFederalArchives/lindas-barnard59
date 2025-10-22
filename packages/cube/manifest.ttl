@@ -1,5 +1,5 @@
-@base <https://barnard59.zazuko.com/> .
-@prefix b59: <https://barnard59.zazuko.com/vocab#> .
+@base <https://lindas-barnard59.zazuko.com/> .
+@prefix b59: <https://lindas-barnard59.zazuko.com/vocab#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
