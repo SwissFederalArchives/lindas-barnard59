@@ -7,28 +7,28 @@
   rdfs:label "Map (RDF/JS Quad)";
   rdfs:comment "Calls a map function only for quads matching the given triple pattern.";
   code:implementedBy [ a code:EcmaScriptModule;
-    code:link <node:barnard59-rdf/mapMatch.js#default>
+    code:link <node:lindas-barnard59-rdf/mapMatch.js#default>
   ].
 
 <setGraph> a p:Operation, p:WritableObjectMode, p:ReadableObjectMode;
   rdfs:label "Set Graph";
   rdfs:comment "Sets the graph of all quads to the given fixed value.";
   code:implementedBy [ a code:EcmaScriptModule;
-    code:link <node:barnard59-rdf/setGraph.js#default>
+    code:link <node:lindas-barnard59-rdf/setGraph.js#default>
   ].
 
 <metadata.js#append> a p:Operation, p:WritableObjectMode, p:ReadableObjectMode;
   rdfs:label "Append metadata";
   rdfs:comment "Fetches, updates and appends a metadata resource";
   code:implementedBy [ a code:EcmaScriptModule;
-                       code:link <node:barnard59-rdf/metadata.js#append>
+                       code:link <node:lindas-barnard59-rdf/metadata.js#append>
   ].
 
 <metadata.js#voidStats> a p:Operation, p:WritableObjectMode, p:ReadableObjectMode;
  rdfs:label "Void statistics";
  rdfs:comment "Appends void statistics, such as counts for entities and properties";
  code:implementedBy [ a code:EcmaScriptModule;
-                      code:link <node:barnard59-rdf/metadata.js#voidStats>
+                      code:link <node:lindas-barnard59-rdf/metadata.js#voidStats>
                     ].
 
 <fs.js#parse>
@@ -38,7 +38,7 @@
   code:implementedBy
     [
       a code:EcmaScriptModule ;
-      code:link <node:barnard59-rdf/fs.js#parse>
+      code:link <node:lindas-barnard59-rdf/fs.js#parse>
     ] ;
 .
 
@@ -104,7 +104,7 @@
   code:implementedBy
     [
       a code:EcmaScriptModule ;
-      code:link <node:barnard59-rdf/open.js#default>
+      code:link <node:lindas-barnard59-rdf/open.js#default>
     ]
 .
 
@@ -114,6 +114,6 @@
   code:implementedBy
     [
       a code:EcmaScriptModule ;
-      code:link <node:barnard59-rdf/imports.js#default>
+      code:link <node:lindas-barnard59-rdf/imports.js#default>
     ]
 .
