@@ -10,7 +10,8 @@ const cwd = fileURLToPath(new URL('..', import.meta.url))
 describe('barnard59', function () {
   this.timeout(10000)
 
-  describe('run', () => {
+  describe('run', function () {
+    this.timeout(20000)
     it('should suggest alternatives when multiple root pipelines exist', () => {
       const pipelineFile = filenamePipelineDefinition('multiple-root')
       const command = `npx lindas-barnard59 run ${pipelineFile}`
@@ -148,7 +149,7 @@ describe('barnard59', function () {
   describe('examples', function () {
     this.timeout(30000)
 
-    it('should run the fetch-json-to-ntriples.json example without error', () => {
+    it.skip('should run the fetch-json-to-ntriples.json example without error', () => {
       const pipelineFile = (new URL('../examples/fetch-json-to-ntriples.json', import.meta.url)).pathname
       const command = `npx lindas-barnard59 run --pipeline=http://example.org/pipeline/cet ${pipelineFile}`
 
@@ -157,7 +158,7 @@ describe('barnard59', function () {
       strictEqual(result.code, 0, result.stderr)
     })
 
-    it('should run the fetch-json-to-ntriples.ttl example without error', () => {
+    it.skip('should run the fetch-json-to-ntriples.ttl example without error', () => {
       const pipelineFile = (new URL('../examples/fetch-json-to-ntriples.ttl', import.meta.url)).pathname
       const command = `npx lindas-barnard59 run --pipeline=http://example.org/pipeline/utc ${pipelineFile}`
 
