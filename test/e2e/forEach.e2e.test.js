@@ -37,7 +37,9 @@ describe('forEach', () => {
 
     const out = await getStream.array(pipeline.stream)
 
-    expect(out).to.contain.all.members([
+    // Normalize paths to use forward slashes for cross-platform compatibility
+    const normalizedOut = out.map(p => typeof p === 'string' ? p.replace(/\\/g, '/') : p)
+    expect(normalizedOut).to.contain.all.members([
       '/root/definitions/foreach/csv-duplicate.ttl',
       '/root/definitions/foreach/with-handler.ttl',
       '/root/definitions/foreach/with-variable.ttl',
