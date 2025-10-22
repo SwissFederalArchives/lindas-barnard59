@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+*.d.ts
+**/*.d.ts
+packages/**/*.js
+!packages/**/*.test.js
+!packages/**/test/**
+test/support/
+.changeset/
