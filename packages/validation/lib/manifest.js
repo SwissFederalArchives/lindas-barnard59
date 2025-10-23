@@ -13,7 +13,7 @@ const ns = {
 export default async function validate({ file, checks }) {
   const manifestPath = path.resolve(file)
   const manifestDir = removeFilePart(manifestPath)
-  const manifestDirPart = manifestDir.substr(manifestDir.lastIndexOf('/') + 1)
+  const manifestDirPart = path.basename(manifestDir)
 
   const manifestGraph = await parser.readGraph(manifestPath, checks)
   const operations = manifestGraph.has(rdf.ns.rdf.type, ns.p.Operation)
@@ -26,7 +26,7 @@ export default async function validate({ file, checks }) {
       return { operation: operation.term.value, filename, method }
     })
     .map(({ operation, filename, method }) => {
-      filename = manifestDir + filename.replace(manifestDirPart, '')
+      filename = path.join(manifestDir, filename.replace(manifestDirPart, ''))
       method = method || 'default'
       return { operation, filename, method }
     })

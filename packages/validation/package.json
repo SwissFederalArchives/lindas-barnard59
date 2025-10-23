@@ -6,6 +6,9 @@
   "bin": {
     "barnard59-validate": "./cli.js"
   },
+  "imports": {
+    "#fixtures/*": "./test/fixtures/*"
+  },
   "scripts": {
     "test": "mocha",
     "posttest": "npm run generate-rules",

@@ -6,7 +6,7 @@
   p:steps [
     p:stepList ([
       code:implementedBy [ a code:EcmaScriptModule;
-        code:link <file:support/operations/argsToStream.js#default>
+        code:link <file:../support/operations/argsToStream.js#default>
       ];
       code:arguments [
         code:name "a";
@@ -22,7 +22,7 @@
   p:steps [
     p:stepList ([
       code:implementedBy [ a code:EcmaScriptModule;
-        code:link <file:support/operations/argsToStream.js#default>
+        code:link <file:../support/operations/argsToStream.js#default>
       ];
       code:arguments [
         code:name "a";
@@ -35,7 +35,7 @@
   p:steps [
     p:stepList ([
       code:implementedBy [ a code:EcmaScriptModule;
-        code:link <file:support/operations/argsToStream.js#default>
+        code:link <file:../support/operations/argsToStream.js#default>
       ];
       code:arguments ("a" "b")
     ])
@@ -45,7 +45,7 @@
   p:steps [
     p:stepList ([
       code:implementedBy [ a code:EcmaScriptModule;
-        code:link <file:support/operations/argsToStream.js#default>
+        code:link <file:../support/operations/argsToStream.js#default>
       ];
       code:arguments ("a"^^p:VariableName)
     ])
@@ -55,7 +55,7 @@
   p:steps [
     p:stepList ([
       code:implementedBy [ a code:EcmaScriptModule;
-        code:link <file:support/operations/argsToStream.js#default>
+        code:link <file:../support/operations/argsToStream.js#default>
       ];
       code:arguments ("(() => { return this.variables.get('abcd') })()"^^code:EcmaScript)
     ])

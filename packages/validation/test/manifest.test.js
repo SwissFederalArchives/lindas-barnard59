@@ -18,7 +18,11 @@ describe('manifest', () => {
     const checks = new ChecksCollection()
     const file = path.join(__dirname, './fixtures/manifest-good.ttl')
     await validateManifest({ file, checks })
-    assert.ok(checks.generic.filter((issue) => issue.level === 'error').length === 0)
+    const errors = checks.generic.filter((issue) => issue.level === 'error')
+    if (errors.length > 0) {
+      console.log('Validation errors found:', errors.map(e => e.message))
+    }
+    assert.ok(errors.length === 0)
   })
 
   it('reports faulty imports/exports', async () => {

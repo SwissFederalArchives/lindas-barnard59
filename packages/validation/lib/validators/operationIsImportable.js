@@ -1,3 +1,4 @@
+import { pathToFileURL } from 'url'
 import { template } from '../utils.js'
 import Issue from '../issue.js'
 
@@ -10,7 +11,8 @@ export default {
     let issue = Issue.error({ rule: this, templateData: { op, filename } })
 
     try {
-      await import(filename)
+      const fileUrl = pathToFileURL(filename).href
+      await import(fileUrl)
       issue = Issue.info({ rule: this, templateData: { op, filename } })
     } catch (err) { }
 

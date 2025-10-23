@@ -94,7 +94,7 @@ describe('utils', () => {
 
     it('should override manifest location for known packages', () => {
       const actual = utils.getManifestPath('fs')
-      assert(actual.endsWith('/packages/core/manifest.ttl'))
+      assert(actual.replace(/\\/g, '/').endsWith('/packages/core/manifest.ttl'))
     })
   })
 
