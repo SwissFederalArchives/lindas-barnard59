@@ -40,7 +40,7 @@ describe('graph-store pipeline', function () {
   it('should run graph-store put pipeline without error', async () => {
     const data = `${support}/data.ttl`
     const { ptr, basePath } = await loadPipelineDefinition('pipeline/put', {
-      term: env.namedNode('https://barnard59.zazuko.com/pipeline/graph-store/put'),
+      term: env.namedNode('https://lindas-barnard59.zazuko.com/pipeline/graph-store/put'),
     })
     const pipeline = createPipeline(ptr, {
       env,

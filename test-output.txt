@@ -1,0 +1,1596 @@
+npm warn Unknown project config "18". This will stop working in the next major version of npm.
+
+> lindas-barnard59-root@1.1.4 test
+> npm run -ws --if-present test
+
+npm warn -ws is not a valid single-hyphen cli flag and will be removed in the future
+npm warn Unknown env config "18". This will stop working in the next major version of npm.
+npm warn Unknown project config "18". This will stop working in the next major version of npm.
+
+> lindas-barnard59-base@3.0.1 test
+> mocha
+
+(node:41316) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41316) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  batch
+    ✔ should be a function
+    ✔ should return a duplex stream
+    ✔ should do nothing if there are no input chunks
+    ✔ should split input in batches
+    ✔ should emit a single batch
+
+  concat
+    ✔ should be a function
+    ✔ should return a Readable
+    ✔ should process one stream after another (105ms)
+    ✔ should emit chunks from all streams in order
+    ✔ should forward error events
+    object
+      ✔ should be a function
+      ✔ should return a Readable
+      ✔ should process one stream after another (106ms)
+      ✔ should emit chunks from all streams in order
+      ✔ should forward error events
+
+  filter
+    ✔ should pass pipeline context to callback function
+
+  flatten
+    ✔ should be a function
+    ✔ should return a duplex stream
+    ✔ should do nothing if there are no input chunks
+    ✔ should flatten object with a iterator interface
+    ✔ should flatten object with a forEach method
+    ✔ should emit an error if the chunks don't implement Symbol.iterator or .forEach
+
+  glob
+    ✔ should return a Readable stream
+    ✔ should emit each file name as a chunk
+    ✔ should forward additional options
+    ✔ should warn when no files are matched
+    ✔ should not warn files have been matched
+
+  limit
+    ✔ should return generator
+    ✔ stop processing chunks when limit is reached
+
+  map
+    ✔ should pass pipeline context to mapper function
+    ✔ accepts a function as parameter
+    ✔ binds pipeline context to transform function
+    ✔ accepts an option to not retain order
+    ✔ retains input order by default
+
+  offset
+    ✔ should return generator
+    ✔ stop processing chunks when limit is reached
+
+  Readable
+    ✔ should return a readable stream
+
+
+  37 passing (322ms)
+
+
+> lindas-barnard59@6.0.1 test
+> mocha
+
+(node:29596) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29596) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  barnard59
+    run
+      ✔ should suggest alternatives when multiple root pipelines exist (7169ms)
+      ✔ should exit with error code 0 if there are no error while processing the pipeline (7181ms)
+      ✔ should exit with error code 1 when an error in the pipeline occurs (7693ms)
+      verbose
+npm warn Unknown env config "18". This will stop working in the next major version of npm.
+npm warn Unknown project config "18". This will stop working in the next major version of npm.
+[32minfo[39m: test info {"timestamp":"2025-10-22T17:27:15.144Z"}
+[33mwarn[39m: test warn {"timestamp":"2025-10-22T17:27:15.145Z"}
+[31merror[39m: test error {"timestamp":"2025-10-22T17:27:15.145Z"}
+
+        ✔ should log info messages if verbose flag is set (7228ms)
+        ✔ all logs suppressed with --quiet flag (7155ms)
+        ✔ should log info messages if verbose flag is set before command (7315ms)
+        ✔ should not log debug messages if verbose flag is set (7462ms)
+        ✔ should log trace messages if verbose flag is set 4 times (8537ms)
+      variable
+        ✔ should set the given variable to the given value (7793ms)
+        ✔ should set the given variable to the given value before command (7686ms)
+        - should set the given variable to the value of the environment variable with the same name
+    examples
+      - should run the fetch-json-to-ntriples.json example without error
+      - should run the fetch-json-to-ntriples.ttl example without error
+      ✔ should run the parse-csvw.ttl example without error (8449ms)
+
+  pipeline
+    with code:imports
+      ✔ merges the pipelines (302ms)
+
+  run
+    ✔ should emit an error if an error in the pipeline occurs (204ms)
+
+  simplified syntax
+    ✔ should desugar simplified syntax
+    ✔ should ignore empty arguments
+    ✔ should process also sub-pipelines
+    ✔ should handle named arguments
+
+
+  17 passing (1m)
+  3 pending
+
+
+> lindas-barnard59-core@7.0.1 test
+> mocha
+
+(node:27660) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27660) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  cloneTerm
+    ✔ should be a function
+    ✔ should return null if the given argument is null
+    ✔ should return a blank node with the same blank node id as the given blank node
+    ✔ should return a literal with the same value as the given literal
+    ✔ should return a literal with the same datatype as the given literal
+    ✔ should return a literal with the same language as the given literal
+    ✔ should return a named node the same value as the given named node
+    ✔ should throw an error if the term type is unknown
+
+  defaultLoaderRegistry
+    ✔ should contain the EcmaScript literal loader
+    ✔ should contain the EcmaScriptTemplateLiteral literal loader
+    ✔ should contain the VariableName literal loader
+    ✔ should contain the EcmaScript node loader
+    ✔ should contain the EcmaScriptModule node loader
+    ✔ should contain the Pipeline node loader
+    ✔ should contain the Variable node loader
+
+  defaultLogger
+    ✔ should be a function
+    ✔ should return a winston logger instance
+
+  factory/arguments
+    ✔ should be a method
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+    ✔ should build key-value pair arguments (228ms)
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+    ✔ should build key-value pair arguments with undefined variable (149ms)
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+    ✔ should build list arguments (137ms)
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+    ✔ should build list arguments with undefined variable (136ms)
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://code.described.at/implementedBy> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+    ✔ should forward variables to the loader (130ms)
+
+  factory/operation
+    ✔ should be a method
+    ✔ should load the given operation (124ms)
+
+  factory/pipeline
+    ✔ should be a method
+    ✔ should return a Pipeline object (127ms)
+    ✔ should load the given pipeline from a plain graph pointer (127ms)
+    ✔ should throw an error if the term property of the graph pointer is missing (125ms)
+    ✔ should throw an error if the dataset property of the graph pointer is missing (125ms)
+    ✔ should use the given basePath (131ms)
+    ✔ should use the given context (133ms)
+    ✔ should create a pipeline with readable interface matching the rdf:type (130ms)
+    ✔ should create a pipeline with readable object mode interface matching the rdf:type (128ms)
+    ✔ should create a pipeline with writable interface matching the rdf:type (122ms)
+    ✔ should create a pipeline with writable object mode interface matching the rdf:type (125ms)
+    ✔ should attach createPipeline to the context (123ms)
+    ✔ should log variables (127ms)
+
+  factory/step
+    ✔ should be a method
+    ✔ should load the given step (129ms)
+    ✔ should forward errors thrown by the loader (133ms)
+    ✔ should attach step to the context (134ms)
+
+  factory/variables
+    ✔ should return a VariableMap (122ms)
+    ✔ should load "required" annotation (126ms)
+    ✔ should load the given inline variables (124ms)
+    ✔ should load the given variables sets (127ms)
+
+  isStream
+    isStream
+      ✔ should be a function
+      ✔ should return true if the given object is a stream
+      ✔ should return false if the given object is not a stream
+    isReadable
+      ✔ should be a function
+      ✔ should return true if the given object is a Readable
+      ✔ should return false if the given object is not a Readable
+    isReadableObjectMode
+      ✔ should be a function
+      ✔ should return true if the given object is a Readable in object mode
+      ✔ should return false if the given object is not a Readable in object mode
+    isWritable
+      ✔ should be a function
+      ✔ should return true if the given object is a Writable
+      ✔ should return false if the given object is not a Writable
+    isWritableObjectMode
+      ✔ should be a function
+      ✔ should return true if the given object is a Writable in object mode
+      ✔ should return false if the given object is not a Writable in object mode
+    isDuplex
+      ✔ should be a function
+      ✔ should return true if the given object is a Duplex
+      ✔ should return false if the given object is not a Duplex
+
+  loader/pipeline
+    ✔ should use the given variables (139ms)
+    ✔ should reject if the referred resource does not have a pipeline type
+
+  loader/variable
+    ✔ should load a variable from the map by name
+    ✔ should add the variable name to variable value term
+    ✔ should load the variable from the dataset if it's not present in the variable map
+    ✔ should prioritize the variable value from the variable map
+    ✔ should load a variable value for a given variable name
+
+  metadata
+    ✔ should be a function
+    ✔ should return an object
+    ✔ should set readable to true if type is p:Readable
+    ✔ should set readableObjectMode to false if type is p:Readable
+    ✔ should set readable and readableObject to true if type is p:ReadableObjectMode
+    ✔ should set writable to true if type is p:Writable
+    ✔ should set writableObjectMode to false if type is p:Writable
+    ✔ should set writeable and writableObjectMode to true if type is p:WritableObjectMode
+
+  Pipeline
+    ✔ should be a constructor
+    ✔ should process the given pipeline definition (127ms)
+[31merror[39m: could not load step http://example.org/pipeline/toContext {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/toContext\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._write (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:149:9)\nCaused by: Error: Cannot find package 'barnard59-base' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at packageResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:757:9)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:798:18)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:16.214Z"}
+    1) should support writable pipelines
+    ✔ should support nested pipelines (130ms)
+[31merror[39m: ENOENT: no such file or directory, open 'C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\core\no\such\file' {"code":"ENOENT","errno":-4058,"path":"C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\no\\such\\file","stack":"Error: ENOENT: no such file or directory, open 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\no\\such\\file'","syscall":"open","timestamp":"2025-10-22T17:28:16.463Z"}
+    ✔ should emit error when nested pipeline step errors immediately (119ms)
+[31merror[39m: could not load step http://example.org/pipeline/forward {"iri":"http://example.org/pipeline/subPipeline","stack":"Error: could not load step http://example.org/pipeline/forward\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find package 'barnard59-base' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at packageResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:757:9)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:798:18)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:16.465Z"}
+    ✔ should support nested writable pipelines (128ms)
+    ✔ should assign the pipeline stream to the .stream property (117ms)
+    ✔ should assign the pipeline to the .pipeline property of the stream (117ms)
+    ✔ should have a basePath string property (126ms)
+    ✔ should have a context object property (115ms)
+[31merror[39m: pipeline http://example.org/pipeline/ does not contain any steps {"iri":"http://example.org/pipeline/","stack":"Error: pipeline http://example.org/pipeline/ does not contain any steps\n    at Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:66:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)","timestamp":"2025-10-22T17:28:17.188Z"}
+    ✔ should emit an error if the Pipeline contains no steps (120ms)
+    ✔ should have a ptr clownface property (116ms)
+    ✔ should have a ptr variables Map property (117ms)
+[31merror[39m: could not load step http://example.org/pipeline/error {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/error\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find module 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\test\\support\\definitions\\support\\operations\\noStream.js' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at finalizeResolution (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:366:11)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:801:10)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:17.543Z"}
+    ✔ should emit an error if an operation returns an invalid stream (121ms)
+[31merror[39m: could not load step http://example.org/pipeline/error {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/error\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find module 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\test\\support\\definitions\\support\\operations\\errorCreate.js' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at finalizeResolution (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:366:11)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:801:10)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:17.662Z"}
+    ✔ should emit an error if an operation rejects with error (119ms)
+[31merror[39m: could not load step http://example.org/pipeline/error {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/error\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find module 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\test\\support\\definitions\\support\\operations\\errorStream.js' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at finalizeResolution (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:366:11)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:801:10)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:17.784Z"}
+    ✔ should emit step stream errors (122ms)
+[31merror[39m: could not load step http://example.org/pipeline/error {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/error\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find module 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\test\\support\\definitions\\support\\operations\\throwStream.js' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at finalizeResolution (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:366:11)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:801:10)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:17.907Z"}
+    ✔ should catch and emit step stream errors (123ms)
+    plain Pipeline
+      ✔ should emit an end event (115ms)
+    readable Pipeline
+      ✔ should emit an end event (119ms)
+[31merror[39m: could not load step http://example.org/pipeline/createContent {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/createContent\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Cannot find module 'C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\packages\\core\\test\\support\\definitions\\support\\operations\\argsToStream.js' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at finalizeResolution (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:366:11)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:801:10)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:18.277Z"}
+      ✔ should emit an error if the last step doesn't have a readable interface (135ms)
+    writeable Pipeline
+[31merror[39m: could not load step http://example.org/pipeline/toContext {"iri":"http://example.org/pipeline/","stack":"Error: could not load step http://example.org/pipeline/toContext\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._final (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:155:9)\nCaused by: Error: Cannot find package 'barnard59-base' imported from C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\rdf-loader-code\\ecmaScriptModule.js\n    at packageResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:757:9)\n    at moduleResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:798:18)\n    at Object.defaultResolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\dist-raw\\node-internal-modules-esm-resolve.js:912:11)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:218:35\n    at entrypointFallback (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:168:34)\n    at C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:217:14\n    at addShortCircuitFlag (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:409:21)\n    at resolve (C:\\Users\\gva\\repos\\lindas-211-214-fork-trifid-barnard59-others\\lindas-barnard59\\node_modules\\ts-node\\src\\esm.ts:197:12)\n    at nextResolve (node:internal/modules/esm/hooks:748:28)\n    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)","timestamp":"2025-10-22T17:28:18.400Z"}
+      2) should emit an finish event
+
+  run
+    ✔ should be a function
+    ✔ should wait for the pipeline and the logger
+    ✔ should resume if resume flag is true
+    ✔ should end if end flag is true
+
+  VariableMap
+    get
+      ✔ throws when variable is undefined
+      ✔ returns undefined when variable is not required
+    set
+      ✔ sets empty string value
+    merge
+      ✔ merges arrays of entries
+      ✔ merges plain maps
+      ✔ merges VariableMaps with optional
+
+
+  108 passing (6s)
+  2 failing
+
+  1) Pipeline
+       should support writable pipelines:
+     Error: could not load step http://example.org/pipeline/toContext
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._write (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:149:9)
+  Caused by: Error: Cannot find package 'barnard59-base' imported from C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\rdf-loader-code\ecmaScriptModule.js
+      at packageResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:757:9)
+      at moduleResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:798:18)
+      at Object.defaultResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:912:11)
+      at C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:218:35
+      at entrypointFallback (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:168:34)
+      at C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:217:14
+      at addShortCircuitFlag (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:409:21)
+      at resolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:197:12)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+
+  2) Pipeline
+       writeable Pipeline
+         should emit an finish event:
+     Uncaught Error: could not load step http://example.org/pipeline/toContext
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._final (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:155:9)
+  Caused by: Error: Cannot find package 'barnard59-base' imported from C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\rdf-loader-code\ecmaScriptModule.js
+      at packageResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:757:9)
+      at moduleResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:798:18)
+      at Object.defaultResolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\dist-raw\node-internal-modules-esm-resolve.js:912:11)
+      at C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:218:35
+      at entrypointFallback (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:168:34)
+      at C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:217:14
+      at addShortCircuitFlag (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:409:21)
+      at resolve (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\ts-node\src\esm.ts:197:12)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 2
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\core
+npm error workspace lindas-barnard59-core@7.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\core
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-csvw@3.0.1 test
+> mocha
+
+(node:14696) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14696) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  fetch
+    using remote context
+      ✔ should return a readable stream
+      1) should process file: url
+      2) should process turtle file: url
+      ✔ should throw an error for non-existing file: metadata url
+      ✔ should throw an error for non-existing file: data url (583ms)
+      ✔ should process http: url (559ms)
+      ✔ should process turtle http: url
+      ✔ should throw an error for non-existing http: metadata url
+      ✔ should throw an error for non-existing http: data url (216ms)
+      ✔ should throw an error if http connection is killed (539ms)
+    using local context
+      ✔ should return a readable stream
+      3) should process file: url
+      4) should process turtle file: url
+      ✔ should throw an error for non-existing file: metadata url
+      ✔ should throw an error for non-existing file: data url
+      ✔ should process http: url
+      ✔ should process turtle http: url
+      ✔ should throw an error for non-existing http: metadata url
+      ✔ should throw an error for non-existing http: data url
+      ✔ should throw an error if http connection is killed
+
+
+  16 passing (2s)
+  4 failing
+
+  1) fetch
+       using remote context
+         should process file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:32:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  2) fetch
+       using remote context
+         should process turtle file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:39:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  3) fetch
+       using local context
+         should process file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:32:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  4) fetch
+       using local context
+         should process turtle file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:39:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 4
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\csvw
+npm error workspace lindas-barnard59-csvw@3.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\csvw
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-cube@2.0.1 test
+> mocha
+
+(node:35908) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35908) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  cube.buildCubeShape
+    ✔ should return a duplex stream
+    ✔ should create a cube
+    ✔ should use the observation IRI to build the cube IRI
+    ✔ should use a custom function to build the cube IRI
+    ✔ should use a custom function to build the shape IRI
+    ✔ should create a observation set
+    ✔ should use the observation IRI to build the observation set IRI
+    ✔ should point from the cube to the observation set
+    ✔ should create a shape
+    ✔ should use the observation IRI to build the shape IRI
+    ✔ should point from the cube to the shape
+    ✔ should generate a property shape for each dimension
+    ✔ should generate a NamedNode property shape for each dimension
+    ✔ should generate nodeKind for literal values
+    ✔ should generate nodeKind for named node values
+    ✔ should generate nodeKind for mixed node values
+    ✔ should generate a sh:in list for plain string values
+    ✔ should generate a sh:in list for literal values without a parser
+    ✔ should generate a sh:in list for named node values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for date values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for double values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for float values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for int values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for gYear values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for integer values
+    ✔ should generate sh:or for multiple datatypes
+    ✔ should limit number of values in sh:in
+    ✔ should place other constraints inside sh:or if there are multiple datatypes
+    ✔ should merge sh:in constraints if there are strings and named nodes
+    ✔ should create no range constraints on parsing error
+    ✔ should merge given metadata to cube metadata
+    ✔ should ignore cube:observationConstraint property in cube metadata
+    ✔ should merge given metadata with blank nodes to cube metadata
+    ✔ should merge given metadata to dimension metadata
+    ✔ should merge given metadata with blank nodes to dimension metadata
+    ✔ should use the graph parameter as named-graph for the produced shapes
+    ✔ should use the graph value as named-graph for the produced shapes, given as string
+
+  cube.toObservation
+    ✔ should be a factory
+    ✔ should return a duplex stream
+    ✔ should create an observation with default values
+    observer
+      ✔ should not touch an existing observer
+      ✔ should use the given observer IRI given as string
+      ✔ should use the given observer given as NamedNode
+    index
+      ✔ should use an IRI with an index to generate the observation term
+    date
+      ✔ should find the date by datatype if useDate is boolean true
+      ✔ should find the date by datatype if useDate is string true
+      ✔ should throw an error if multiple objects with a data datatype are found
+      ✔ should find the date using the given property IRI string
+      ✔ should find the date using the given property
+      ✔ should use the given function to generate the date
+      ✔ should use the current date if useDate is now
+    observations
+      ✔ should use the IRI of the observation without the observation ID extended by observation/
+      ✔ should not create duplicate observation/ pathes
+      ✔ should use the given observations function to generate the observations term
+      ✔ should use the given observations IRI string as observation set
+      ✔ should use the given observations observation set
+    observation
+      ✔ should use the given observation function to generate the observation term
+    blacklist
+      ✔ should delete properties given as Array of strings in the blacklist
+      ✔ should delete properties given as of graph pointers in the blacklist
+    dimensions
+      ✔ should fill properties given as Array of strings in dimensions with NaN if there is no value
+      ✔ should fill properties given as Array of graph pointers in dimensions with NaN if there is no value
+
+  DatatypeConstraintBuilder
+    built from all strings
+      ✔ string conforms
+      ✔ integer does not conform
+      ✔ named node does not conform
+    built from not only strings
+      ✔ everything conforms
+
+  RangeConstraintBuilder
+    ✔ should create an unconstrained shape due to wrong datatype
+    ✔ should create an unconstrained shape due to missing datatype
+    ✔ should create an unconstrained shape due to unexpected value
+    ✔ should create an unconstrained shape due to parsing issue of initial value
+    built from integers between 2 and 7
+      ✔ integers in range conform
+      ✔ integers outside range do not conform
+
+  ValuesConstraintBuilder
+    built without threshold
+      ✔ values used to build the shape conform
+      ✔ other values do not conform
+    built with too many values
+      ✔ everything conforms
+      ✔ reports too many values
+
+  NodeKindConstraintBuilder
+    built from all kinds of nodes
+      ✔ everything conforms
+    built from literals
+      ✔ literals conform
+      ✔ named nodes do not conform
+      ✔ blank nodes do not conform
+    built from literals and named nodes
+      ✔ literals conform
+      ✔ named nodes conform
+      ✔ blank nodes do not conform
+
+  DimensionConstraintsBuilder
+    built from two named nodes
+      ✔ the two named nodes conform
+      ✔ another named node does not conform
+      ✔ a string literal does not conform
+      ✔ an integer literal does not conform
+    built from too many distinct named nodes
+      ✔ all named nodes conform
+      ✔ a string literal does not conform
+      ✔ an integer literal does not conform
+    built from two strings
+      ✔ the two strings conform
+      ✔ another string does not conform
+      ✔ a named node does not conform
+      ✔ an integer literal does not conform
+    built from too many distinct strings
+      ✔ every string conforms
+      ✔ an integer literal does not conform
+      ✔ a named node does not conform
+    built from two integers
+      ✔ the two integers conform
+      ✔ an integer in between conforms
+      ✔ an integer outside the range does not conform
+      ✔ a string literal does not conform
+      ✔ a named node does not conform
+    built from two named nodes, two strings and two integers
+      ✔ the two named nodes conform
+      ✔ another named node does not conform
+      ✔ the two strings conform
+      ✔ another string does not conform
+      ✔ the two integers conform
+      ✔ an integer in between conforms
+      ✔ an integer outside the range does not conform
+    built from a string and a cube:Undefined
+      ✔ the two values conform
+      ✔ another string does not conform
+    built from a string and a named node
+      ✔ the two values conform
+      ✔ another string does not conform
+      ✔ another named node does not conform
+
+  cube validation pipeline
+    1) should run check-cube-observations pipeline without error
+    2) should run check-cube-observations pipeline with error
+    3) should run check-cube-observations pipeline with warning
+    4) should run check-cube-observations when maxViolations is not exceeded
+    5) should run check-cube-observations pipeline with options
+    6) should run check-cube-observations pipeline with error for cube.link examples
+    7) should run check-cube-observations pipeline with cube.link examples
+
+
+  113 passing (435ms)
+  7 failing
+
+  1) cube validation pipeline
+       should run check-cube-observations pipeline without error:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:18:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) cube validation pipeline
+       should run check-cube-observations pipeline with error:
+     AssertionError: expected '' to match /1 violations found/
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:29:30)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  3) cube validation pipeline
+       should run check-cube-observations pipeline with warning:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+      + expected - actual
+
+      -1
+      +0
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:39:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  4) cube validation pipeline
+       should run check-cube-observations when maxViolations is not exceeded:
+     AssertionError: expected '' to match /1 violations found/
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:53:30)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  5) cube validation pipeline
+       should run check-cube-observations pipeline with options:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:64:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  6) cube validation pipeline
+       should run check-cube-observations pipeline with error for cube.link examples:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "false"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:76:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  7) cube validation pipeline
+       should run check-cube-observations pipeline with cube.link examples:
+     AssertionError: expected '' to include '_:report <http://www.w3.org/ns/shacl#…'
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:88:11)
+      at process.processImmediate (node:internal/timers:485:21)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 7
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\cube
+npm error workspace lindas-barnard59-cube@2.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\cube
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-formats@5.0.1 test
+> mocha
+
+(node:39336) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39336) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  jsonld
+    parse
+      ✔ should load a file with a remote context (382ms)
+      ✔ should load a file with a local context
+      ✔ should load a file with a local context given as string
+      ✔ should use factory from context
+
+  n3
+    parse
+      ✔ successfully loads the input file
+      ✔ forwards argument to parser options
+      ✔ forwards argument to parser options
+
+  rdf/xml
+    parse
+      ✔ successfully loads the input file
+      ✔ forwards argument to parser options
+
+
+  9 passing (425ms)
+
+
+> lindas-barnard59-ftp@3.0.1 test
+> mocha
+
+(node:27720) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27720) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+ Exception during run: ReferenceError: __dirname is not defined
+    at dealWithExports (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\mocha\lib\nodejs\esm-utils.js:111:5)
+    at Object.requireModule [as requireOrImport] (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\mocha\lib\nodejs\esm-utils.js:97:12)
+    at async exports.loadFilesAsync (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\mocha\lib\nodejs\esm-utils.js:123:20)
+    at async singleRun (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\mocha\lib\cli\run-helpers.js:164:3)
+    at async exports.handler (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\mocha\lib\cli\run.js:379:5)
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\ftp
+npm error workspace lindas-barnard59-ftp@3.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\ftp
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-graph-store@7.0.1 test
+> mocha
+
+(node:26548) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26548) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  get
+    ✔ should return a readable stream
+    ✔ should send a GET request
+    ✔ should send a accept header with the value application/n-triples
+    ✔ should send a graph argument
+    ✔ should parse the response quad stream
+    ✔ should allow string values as graph argument
+    ✔ should support default graph as graph argument
+    ✔ should use default graph if the graph argument is a empty string
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+  graph-store pipeline
+    1) "before all" hook for "should run graph-store put pipeline without error"
+
+  post
+    ✔ should return a writable stream
+    ✔ should send a POST request
+    ✔ should do nothing if the stream was closed and no quads have been written
+    ✔ should send a content-type header with the value application/n-triples
+    ✔ should send the quad stream as N-Triples
+    ✔ should support default graph
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+  put
+    ✔ should return a writable stream
+    ✔ should send a PUT request
+    ✔ should do nothing if the stream was closed and no quads have been written
+    ✔ should send a content-type header with the value application/n-triples
+    ✔ should send the quad stream as N-Triples
+    ✔ should support default graph
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+
+  26 passing (204ms)
+  1 failing
+
+  1) graph-store pipeline
+       "before all" hook for "should run graph-store put pipeline without error":
+     Error: spawn docker ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+      at onErrorNT (node:internal/child_process:483:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\graph-store
+npm error workspace lindas-barnard59-graph-store@7.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\graph-store
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-http@3.0.1 test
+> mocha
+
+(node:39440) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39440) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  get
+    ✔ returns only a readable stream
+    ✔ provides the response content as stream
+    ✔ can be called with 2 arguments
+
+  post
+    ✔ returns a duplex stream
+    ✔ sends the stream to the server
+    ✔ can be called with 2 arguments
+
+
+  6 passing (129ms)
+
+
+> lindas-barnard59-rdf@4.0.1 test
+> mocha
+
+(node:31216) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31216) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  metadata.append
+    ✔ should throw an error if no argument is given
+    ✔ should return a duplex stream with a stream metadata parameter
+    ✔ should return a duplex stream with a path (string) metadata parameter
+    1) should return a duplex stream with an URL pointing to a public resource
+    ✔ should append data and metadata with default values
+    2) should append data and metadata with default values, and path as string
+    ✔ should append data with the specified graph
+(node:31216) [DEP0170] DeprecationWarning: The URL unknown::protocol is invalid. Future versions of Node.js will throw an error.
+    ✔ fails at unknown protocol
+    - fails at file not found
+
+  File System: metadata.append
+    3) should use resolved literal TIME_FILE_CREATION with dateCreated
+    4) should use resolved literal TIME_FILE_CREATION with dateModified
+    5) should use resolved literal TIME_FILE_MODIFICATION with dateCreated
+    6) should use resolved literal TIME_FILE_MODIFICATION with dateModified
+    ✔ should use resolved literal TIME_NOW with dateModified
+    ✔ should use resolved literal TIME_NOW with dateCreated
+    ✔ should use specified literal with dateModified (string)
+    ✔ should use specified literal with dateCreated (string)
+    ✔ should use specified literal with dateModified
+    ✔ should use specified literal with dateCreated
+
+  fs
+    parse
+      ✔ parses files from input chunks paths
+      ✔ fails when file does not exist
+      ✔ fails when file fails to parse
+      ✔ fails when extensions is unrecognised
+
+  mapMatch
+    ✔ should return a duplex stream
+    ✔ should not touch any quads not matching the pattern
+    ✔ should touch only the quads matching the pattern
+    ✔ should support multiple terms given as an iterable
+    ✔ should support async map functions
+    ✔ should give the quad to the map function
+    ✔ should assign @zazuko/env as rdf to the this context
+
+  membership.toTarget
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should return a duplex stream with valid parameters
+    ✔ should append meta-data to the data
+    ✔ should append meta-data to the data with string parameters
+
+  membership.fromSource
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should return a duplex stream with valid parameters
+    ✔ should append meta-data to the data
+    ✔ should append meta-data to the data with string parameters
+
+  open
+    ✔ should open from local path
+    ✔ should load from remote URL
+    ✔ should load from remote URL with overridden media type
+
+  PatternMatcher
+    ✔ should be a constructor
+    ✔ should assign the given terms to the pattern object
+    ✔ should assign the given iterable to the pattern object
+    .test
+      ✔ should be a method
+      ✔ should return false if the quad doesn't match the pattern
+      ✔ should return true if the subject matches
+      ✔ should return true if the predicate matches
+      ✔ should return true if the object matches
+      ✔ should return true if the graph matches
+
+  setGraph
+    ✔ should return a duplex stream
+    ✔ should set the graph of all quads
+    ✔ should accept string values
+    ✔ should use default graph if an empty string is given
+    ✔ should use default graph if null is given
+    ✔ should use default graph if undefined is given
+
+  metadata.voidStats
+    ✔ throws an error if no argument is given
+    ✔ return a duplex stream with default values for voidDatasetUri
+    ✔ includes counts at the end of the stream
+    ✔ returns zero counts for no data
+    ✔ returns zero counts for 0 classes
+    ✔ uses the named-graph given as parameter
+    ✔ does not include total counts with includeTotals: false
+    ✔ describes counts for class partitions
+    ✔ describe counts for class partitions with no matches
+    ✔ describe counts for property partitions
+    ✔ describe counts for property partitions with no matches
+    ✔ accepts string parameters
+
+
+  69 passing (105ms)
+  1 pending
+  6 failing
+
+  1) metadata.append
+       should return a duplex stream with an URL pointing to a public resource:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.readFileSync (node:fs:439:14)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:58:24)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) metadata.append
+       should append data and metadata with default values, and path as string:
+     Error: unknown protocol
+      at Function.fetch (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\proto-fetch\index.js:10:25)
+      at instance (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\proto-fetch\index.js:15:18)
+      at Object.localFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/lib/localFetch/localFetch.js:106:16)
+      at MetadataAppend._flush (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/lib/append.js:35:63)
+      at MetadataAppend.prefinish (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_transform.js:123:10)
+      at MetadataAppend.emit (node:events:518:28)
+      at prefinish (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:569:14)
+      at finishMaybe (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:576:5)
+      at endWritable (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:594:3)
+      at Writable.end (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:535:22)
+      at N3StreamParser.onend (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\n3\node_modules\readable-stream\lib\internal\streams\readable.js:608:10)
+      at Object.onceWrapper (node:events:632:28)
+      at N3StreamParser.emit (node:events:518:28)
+      at endReadableNT (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\n3\node_modules\readable-stream\lib\internal\streams\readable.js:1190:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+  3) File System: metadata.append
+       should use resolved literal TIME_FILE_CREATION with dateCreated:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:162:29)
+
+  4) File System: metadata.append
+       should use resolved literal TIME_FILE_CREATION with dateModified:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:187:29)
+
+  5) File System: metadata.append
+       should use resolved literal TIME_FILE_MODIFICATION with dateCreated:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:213:29)
+
+  6) File System: metadata.append
+       should use resolved literal TIME_FILE_MODIFICATION with dateModified:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:238:29)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 6
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\rdf
+npm error workspace lindas-barnard59-rdf@4.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\rdf
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-s3@1.0.1 test
+> mocha
+
+(node:38788) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38788) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  getObject
+    ✔ should be able to get a file
+    ✔ should throw for empty body
+
+  getObjectStream
+    ✔ should be able to get a stream from a file
+    ✔ should throw in case of empty body
+
+  lib
+    client
+      ✔ should be able to create a new client
+      ✔ should be able to create a new client using newClient
+      ✔ should be able to generate a config with default values
+      ✔ should be able to override default region
+      ✔ should be able to forward authentication
+
+  putObject
+    ✔ should be able to put a file
+
+
+  10 passing (52ms)
+
+
+> lindas-barnard59-shacl@2.0.1 test
+> mocha
+
+(node:41660) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41660) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  pipeline/validate
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/stdin> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/n3/parse> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/getDataset> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/flatten> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/ntriples/serialize> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/open> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/transformCodeImports> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[31merror[39m: could not load step b9 {"iri":"https://barnard59.zazuko.com/pipeline/shacl/_validate","stack":"Error: could not load step b9\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Expected a single node, got \n    at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)","timestamp":"2025-10-22T17:28:43.039Z"}
+    1) runs without error when input is valid
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/stdin> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/n3/parse> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/getDataset> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/flatten> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/ntriples/serialize> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/open> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/transformCodeImports> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[31merror[39m: could not load step b110 {"iri":"https://barnard59.zazuko.com/pipeline/shacl/_validate","stack":"Error: could not load step b110\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Expected a single node, got \n    at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)","timestamp":"2025-10-22T17:28:43.183Z"}
+    2) validates against shapes from input
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/stdin> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/n3/parse> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/getDataset> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/flatten> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/ntriples/serialize> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/open> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/transformCodeImports> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[31merror[39m: could not load step b211 {"iri":"https://barnard59.zazuko.com/pipeline/shacl/_validate","stack":"Error: could not load step b211\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Expected a single node, got \n    at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)","timestamp":"2025-10-22T17:28:43.316Z"}
+    3) validates against remote shapes
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/stdin> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/n3/parse> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/getDataset> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/base/flatten> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/formats/ntriples/serialize> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/open> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[WARN] Operation <https://barnard59.zazuko.com/operations/rdf/transformCodeImports> not found in known manifests. Have you added the right `barnard59-*` package as dependency?
+[31merror[39m: could not load step b312 {"iri":"https://barnard59.zazuko.com/pipeline/shacl/_validate","stack":"Error: could not load step b312\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)\nCaused by: Error: Expected a single node, got \n    at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37\n    at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)\n    at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)\n    at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)","timestamp":"2025-10-22T17:28:43.445Z"}
+    4) pushes error reports when resource has errors
+
+  TermCounter
+    ✔ should count terms
+
+  shacl
+    validate
+      ✔ should be a factory
+      ✔ should throw an error if no argument is given
+      ✔ should return a duplex stream with a stream shape parameter
+      ✔ sets maxErrors for validator
+      ✔ unsets maxErrors when argument is zero
+      ✔ does not fail when validation ok
+      ✔ successfully fails when there are validation errors
+      ✔ does not fail when there are validation errors but callback returns true
+
+
+  9 passing (753ms)
+  4 failing
+
+  1) pipeline/validate
+       runs without error when input is valid:
+     Error: could not load step b9
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: Error: Expected a single node, got 
+      at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+  2) pipeline/validate
+       validates against shapes from input:
+     Error: could not load step b110
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: Error: Expected a single node, got 
+      at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+  3) pipeline/validate
+       validates against remote shapes:
+     Error: could not load step b211
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: Error: Expected a single node, got 
+      at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+  4) pipeline/validate
+       pushes error reports when resource has errors:
+     Error: could not load step b312
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: Error: Expected a single node, got 
+      at createOperation (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/operation.js:4:15)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:13:37
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 4
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\shacl
+npm error workspace lindas-barnard59-shacl@2.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\shacl
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-sparql@3.0.1 test
+> mocha
+
+(node:34208) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm/transpile-only", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34208) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  construct
+    ✔ should be a function
+    ✔ should return a readable stream
+    ✔ should send a GET request
+    ✔ should send a POST request
+    ✔ should parse the response (47ms)
+    ✔ should support authentication headers
+
+  query
+    ✔ should be a function
+    ✔ should return a readable and witable stream
+    ✔ should CONSTRUCT quads
+
+  update
+    ✔ should be a function
+    ✔ should return a readable and witable stream
+    ✔ should UPDATE quads
+
+  select
+    ✔ should be a function
+    ✔ should return a readable stream
+    ✔ should send a GET request
+    ✔ should send a POST request
+    ✔ should parse the response
+    ✔ should support authentication headers
+
+
+  18 passing (280ms)
+
+
+> lindas-barnard59-validation@1.0.1 test
+> mocha
+
+(node:30632) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./")); register("esmock", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30632) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  addGenericCheck
+    ✔ should add check to this.generic
+
+  addPipelineCheck
+    ✔ should add check to this.pipelines[pipeline]
+
+  getGenericChecks
+    ✔ should get all generic checks
+    ✔ should get all generic checks of given level
+    ✔ should get all generic checks of multiple levels
+
+  getPipelineChecks
+    ✔ should get all pipeline checks
+    ✔ should get all pipline checks of multiple levels
+
+  getChecks
+    ✔ should get all checks
+    ✔ should get all pipline checks of multiple levels
+
+  containsMessage
+    ✔ should return true if message exists in checks
+    ✔ should return false if message does not exists in checks
+
+  countChecks
+    ✔ should return checks count
+
+  barnard59-validate
+    1) should exit with a zero exit code
+    2) should exit with a non-zero exit code in strict mode
+    3) should report parsing errors
+    4) should report file not found
+    5) should not report warnings when quiet
+    ✔ should only report info when verbose (2380ms)
+    should validate manifests
+      - good
+      - good, verbose
+      - bad
+
+  manifest
+    ✔ finds import errors
+    6) finds matching imports/exports
+    7) reports faulty imports/exports
+
+  parser
+    getDependencies
+      ✔ should create tree structure for codelinks
+      ✔ should fail with noniterable input
+      ✔ should forward iriResolve error
+    getAllCodeLinks
+      ✔ should transform dict values to set
+    readGraph
+      ✔ should read .ttl file and create DatasetCore object
+    getModuleOperationProperties
+      ✔ should create properties tree for identifiers
+    getIdentifiers
+      ✔ should create pipelines list
+      ✔ should return only requested pipeline
+      ✔ should return empty dict if pipeline does not exist
+      ✔ should not crash on invalid steps
+    getAllOperationProperties
+      ✔ should get operation properties from manifest.ttl file
+      ✔ should return nulls if manifest.ttl doesn't exist
+      ✔ should return properties for existing operations, and nulls for nonexisting ones
+      ✔ should report missing packages
+    getPipelineProperties
+      ✔ should extract pipeline properties
+      ✔ should return null when no properties exist
+    validatePipelines
+      ✔ should issue a warning if pipeline has no readable/writable property
+      ✔ should issue an info if pipeline has readable/writable property
+
+  rules
+    ✔ should produce array of rules
+    ✔ it should have ruleId, ruleDescription, messageSuccess, messageFailure for each rule
+    ✔ should have as many rules as validators
+    ✔ the rule fields should be non-empty
+    ✔ the ruleId needs to be a number
+
+  utils
+    removeFilePart
+      ✔ should remove last file part
+      ✔ should remove last file part, if it has extension
+    checkArrayContainsField
+      ✔ should return true if field with given value exists in at least one object
+      ✔ should return false if field with given value does not exists in any object
+      ✔ should return false if field does not exists in any object
+    checkArrayContainsObject
+      ✔ should return true if same object exists in array
+      ✔ should return false if same object does not exists in array
+    isModuleInstalled
+      ✔ should return true if module is installed
+      ✔ should return false if module is not installed
+    getManifestPath
+      ✔ should return path if manifest exists
+      ✔ should return null if module is not installed
+      ✔ should return null if module is installed, but no manifest exists
+      8) should override manifest location for known packages
+    template
+      ✔ should replace key variables in template
+      ✔ should return template when no variables are passed
+      ✔ should return template when empty array is passed
+
+  validatePipelinePropertyModeFirst
+    ✔ should produce an error if first stream is writable, but pipeline is not
+    ✔ should produce an error if first stream is WritableObjectMode, but pipeline is not
+    ✔ should produce an error if first stream is Writable or WritableObjectMode, but pipeline is not
+    ✔ should produce an info if first stream is writable and pipeline is
+    ✔ should produce an info if first stream is WritableObjectMode and pipeline is
+    ✔ should produce an info if first stream is Writable or WritableObjectMode and pipeline is
+    ✔ should produce no info if first stream is writable or readable
+
+  validatePipelinePropertyModeLast
+    ✔ should produce an error if last stream is readable, but pipeline is not
+    ✔ should produce an error if last stream is ReadableObjectMode, but pipeline is not
+    ✔ should produce an error if last stream is readable or ReadableObjectMode, but pipeline is not
+    ✔ should produce an info if last stream is readable, and pipeline is
+    ✔ should produce an info if last stream is ReadableObjectMode, and pipeline is
+    ✔ should produce an info if last stream is Readable or ReadableObjectMode, and pipeline is
+    ✔ should produce no info if last stream is writable or readable
+
+  parser.validateSteps
+    ✔ should accept valid pipelines
+    ✔ should accept valid pipelines -- object mode
+    ✔ should report missing metadata
+    ✔ should report found metadata
+    ✔ should report operations missing p:Operation
+    ✔ should report non-writable operation being written into
+    ✔ should report error if first operation is writable
+    ✔ should report bad mix of normal streams and object-mode streams
+
+  validators
+    ✔ should have all required fields
+
+
+  75 passing (9s)
+  3 pending
+  8 failing
+
+  1) barnard59-validate
+       should exit with a zero exit code:
+
+      AssertionError: expected "./cli.js ./sample-pipelines/fetch-json-to-ntriples.ttl" to exit with a code of +0, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +0
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:21:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) barnard59-validate
+       should exit with a non-zero exit code in strict mode:
+
+      AssertionError: expected "./cli.js -s ./sample-pipelines/fetch-json-to-ntriples.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:32:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  3) barnard59-validate
+       should report parsing errors:
+
+      AssertionError: expected "./cli.js ./test/fixtures/invalid.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:46:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  4) barnard59-validate
+       should report file not found:
+
+      AssertionError: expected "./cli.js ./test/-fixtures-/invalid.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:56:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  5) barnard59-validate
+       should not report warnings when quiet:
+     AssertionError: expected false to be truthy
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:67:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  6) manifest
+       finds matching imports/exports:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(checks.generic.filter((issue) => issue.level === 'error').length === 0)
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/manifest.test.js:21:12)
+
+  7) manifest
+       reports faulty imports/exports:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(error1.message.includes('does not export default'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/manifest.test.js:31:5)
+
+  8) utils
+       getManifestPath
+         should override manifest location for known packages:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(actual.endsWith('/packages/core/manifest.ttl'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/utils.test.js:97:7)
+      at process.processImmediate (node:internal/timers:485:21)
+
+
+
+npm error Lifecycle script `test` failed with error:
+npm error code 8
+npm error path C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\validation
+npm error workspace lindas-barnard59-validation@1.0.1
+npm error location C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\validation
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c mocha
+
+
+> lindas-barnard59-test-e2e@0.1.3 test
+> mocha *.test.js
+
+(node:34624) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34624) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+
+  forEach
+    ✔ should execute the example correctly (593ms)
+    ✔ should preserve variables set during forEach execution (263ms)
+    ✔ should be able to access variables from higher scopes (264ms)
+
+  Pipeline
+    ✔ should load code using node: scheme (195ms)
+    ✔ should load code using file: scheme (149ms)
+    ✔ should load code using async loaders (145ms)
+    ✔ should load file contents using loader (196ms)
+[31merror[39m: foo {"stack":"Error: foo\n    at Object.eval (eval at <anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/rdf-loader-code/ecmaScript.js:11:20), <anonymous>:2:26)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/base/map.js:45:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-22T17:29:00.523Z"}
+[31merror[39m: bar {"stack":"Error: bar\n    at Object.eval (eval at <anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/rdf-loader-code/ecmaScript.js:11:20), <anonymous>:2:26)\n    at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/base/map.js:45:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-22T17:29:00.524Z"}
+    ✔ should be set to fail from sub-pipeline (160ms)
+    ✔ works with async generator steps (153ms)
+
+
+  9 passing (2s)
+

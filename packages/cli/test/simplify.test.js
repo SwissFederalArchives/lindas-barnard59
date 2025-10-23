@@ -12,7 +12,7 @@ const loadPipelineDefinition = pipelineDefinitionLoader(import.meta.url)
 
 // test double for a fake context
 const knownOperations = rdf.termMap([
-  [rdf.namedNode('https://barnard59.zazuko.com/operations/concat'), {
+  [rdf.namedNode('https://lindas-barnard59.zazuko.com/operations/concat'), {
     type: rdf.namedNode('https://code.described.at/EcmaScriptModule'),
     link: rdf.namedNode('node:lindas-barnard59-base#concat'),
   }],

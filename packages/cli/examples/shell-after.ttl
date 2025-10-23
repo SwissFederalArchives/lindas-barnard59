@@ -24,7 +24,7 @@
 
 <echo> a p:Step;
   code:implementedBy [
-    code:link <node:barnard59-shell/after>;
+    code:link <node:lindas-barnard59-shell/after>;
     a code:EcmaScript
   ];
   code:arguments ("echo" "Hello World!").

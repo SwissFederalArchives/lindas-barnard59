@@ -10,7 +10,7 @@ import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDef
 import getStream from 'get-stream'
 
 const ex = env.namespace('http://example.org/')
-const ns = env.namespace('https://barnard59.zazuko.com/pipeline/shacl/')
+const ns = env.namespace('https://lindas-barnard59.zazuko.com/pipeline/shacl/')
 
 const loadPipeline = pipelineDefinitionLoader(import.meta.url, '../../pipeline')
 

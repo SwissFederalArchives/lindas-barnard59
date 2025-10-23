@@ -1,6 +1,6 @@
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
-@prefix sparql: <https://barnard59.zazuko.com/operations/sparql/> .
+@prefix sparql: <https://lindas-barnard59.zazuko.com/operations/sparql/> .
 @prefix : <http://barnard59.zazuko.com/pipeline/cube-validation/> .
 
 :queryObservationSample a p:Pipeline, p:ReadableObjectMode ;

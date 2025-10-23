@@ -1,8 +1,8 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-@base <https://barnard59.zazuko.com/pipeline/graph-store/> .
+@base <https://lindas-barnard59.zazuko.com/pipeline/graph-store/> .
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
-@prefix op: <https://barnard59.zazuko.com/operations/> .
+@prefix op: <https://lindas-barnard59.zazuko.com/operations/> .
 
 <put> a p:Pipeline ;
   p:variables

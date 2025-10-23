@@ -1,13 +1,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix p: <https://pipeline.described.at/> .
-@prefix base: <https://barnard59.zazuko.com/operations/base/> .
-@prefix n3: <https://barnard59.zazuko.com/operations/formats/n3/> .
-@prefix ntriples: <https://barnard59.zazuko.com/operations/formats/ntriples/> .
-@prefix shacl: <https://barnard59.zazuko.com/operations/shacl/> .
+@prefix base: <https://lindas-barnard59.zazuko.com/operations/base/> .
+@prefix n3: <https://lindas-barnard59.zazuko.com/operations/formats/n3/> .
+@prefix ntriples: <https://lindas-barnard59.zazuko.com/operations/formats/ntriples/> .
+@prefix shacl: <https://lindas-barnard59.zazuko.com/operations/shacl/> .
 @prefix code: <https://code.described.at/> .
-@prefix rdf: <https://barnard59.zazuko.com/operations/rdf/> .
+@prefix rdf: <https://lindas-barnard59.zazuko.com/operations/rdf/> .
 
-@base <https://barnard59.zazuko.com/pipeline/shacl/> .
+@base <https://lindas-barnard59.zazuko.com/pipeline/shacl/> .
 
 _:variables
   p:variable

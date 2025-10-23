@@ -1,7 +1,7 @@
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
-@prefix ntriples: <https://barnard59.zazuko.com/operations/formats/ntriples/> .
-@prefix base: <https://barnard59.zazuko.com/operations/base/> .
+@prefix ntriples: <https://lindas-barnard59.zazuko.com/operations/formats/ntriples/> .
+@prefix base: <https://lindas-barnard59.zazuko.com/operations/base/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix : <http://barnard59.zazuko.com/pipeline/cube-validation/> .
 

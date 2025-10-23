@@ -2,7 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX p: <https://pipeline.described.at/>
 PREFIX code: <https://code.described.at/>
-prefix op: <https://barnard59.zazuko.com/operations/>
+prefix op: <https://lindas-barnard59.zazuko.com/operations/>
 
 <Pipeline>
   a sh:NodeShape ;

@@ -1,0 +1,1304 @@
+
+> lindas-barnard59-root@1.1.4 test
+> npm run -ws --if-present test
+
+
+> lindas-barnard59-base@3.0.1 test
+> mocha
+
+
+
+  batch
+    ✔ should be a function
+    ✔ should return a duplex stream
+    ✔ should do nothing if there are no input chunks
+    ✔ should split input in batches
+    ✔ should emit a single batch
+
+  concat
+    ✔ should be a function
+    ✔ should return a Readable
+    ✔ should process one stream after another (90ms)
+    ✔ should emit chunks from all streams in order
+    ✔ should forward error events
+    object
+      ✔ should be a function
+      ✔ should return a Readable
+      ✔ should process one stream after another (101ms)
+      ✔ should emit chunks from all streams in order
+      ✔ should forward error events
+
+  filter
+    ✔ should pass pipeline context to callback function
+
+  flatten
+    ✔ should be a function
+    ✔ should return a duplex stream
+    ✔ should do nothing if there are no input chunks
+    ✔ should flatten object with a iterator interface
+    ✔ should flatten object with a forEach method
+    ✔ should emit an error if the chunks don't implement Symbol.iterator or .forEach
+
+  glob
+    ✔ should return a Readable stream
+    ✔ should emit each file name as a chunk
+    ✔ should forward additional options
+    ✔ should warn when no files are matched
+    ✔ should not warn files have been matched
+
+  limit
+    ✔ should return generator
+    ✔ stop processing chunks when limit is reached
+
+  map
+    ✔ should pass pipeline context to mapper function
+    ✔ accepts a function as parameter
+    ✔ binds pipeline context to transform function
+    ✔ accepts an option to not retain order
+    ✔ retains input order by default
+
+  offset
+    ✔ should return generator
+    ✔ stop processing chunks when limit is reached
+
+  Readable
+    ✔ should return a readable stream
+
+
+  37 passing (352ms)
+
+
+> lindas-barnard59@6.0.1 test
+> mocha
+
+
+
+  barnard59
+    run
+      ✔ should suggest alternatives when multiple root pipelines exist (7077ms)
+      ✔ should exit with error code 0 if there are no error while processing the pipeline (7606ms)
+      ✔ should exit with error code 1 when an error in the pipeline occurs (7176ms)
+      verbose
+
+        ✔ should log info messages if verbose flag is set (7997ms)
+        ✔ all logs suppressed with --quiet flag (7549ms)
+        ✔ should log info messages if verbose flag is set before command (7106ms)
+        ✔ should not log debug messages if verbose flag is set (7944ms)
+        ✔ should log trace messages if verbose flag is set 4 times (7652ms)
+      variable
+        ✔ should set the given variable to the given value (7735ms)
+        ✔ should set the given variable to the given value before command (8403ms)
+        - should set the given variable to the value of the environment variable with the same name
+    examples
+      - should run the fetch-json-to-ntriples.json example without error
+      - should run the fetch-json-to-ntriples.ttl example without error
+      ✔ should run the parse-csvw.ttl example without error (11198ms)
+
+  pipeline
+    with code:imports
+      ✔ merges the pipelines (363ms)
+
+  run
+    ✔ should emit an error if an error in the pipeline occurs (171ms)
+
+  simplified syntax
+    ✔ should desugar simplified syntax
+    ✔ should ignore empty arguments
+    ✔ should process also sub-pipelines
+    ✔ should handle named arguments
+
+
+  17 passing (1m)
+  3 pending
+
+
+> lindas-barnard59-core@7.0.1 test
+> mocha
+
+
+
+  cloneTerm
+    ✔ should be a function
+    ✔ should return null if the given argument is null
+    ✔ should return a blank node with the same blank node id as the given blank node
+    ✔ should return a literal with the same value as the given literal
+    ✔ should return a literal with the same datatype as the given literal
+    ✔ should return a literal with the same language as the given literal
+    ✔ should return a named node the same value as the given named node
+    ✔ should throw an error if the term type is unknown
+
+  defaultLoaderRegistry
+    ✔ should contain the EcmaScript literal loader
+    ✔ should contain the EcmaScriptTemplateLiteral literal loader
+    ✔ should contain the VariableName literal loader
+    ✔ should contain the EcmaScript node loader
+    ✔ should contain the EcmaScriptModule node loader
+    ✔ should contain the Pipeline node loader
+    ✔ should contain the Variable node loader
+
+  defaultLogger
+    ✔ should be a function
+    ✔ should return a winston logger instance
+
+  factory/arguments
+    ✔ should be a method
+    ✔ should build key-value pair arguments (233ms)
+    ✔ should build key-value pair arguments with undefined variable (131ms)
+    ✔ should build list arguments (117ms)
+    ✔ should build list arguments with undefined variable (110ms)
+    ✔ should forward variables to the loader (105ms)
+
+  factory/operation
+    ✔ should be a method
+    ✔ should load the given operation (106ms)
+
+  factory/pipeline
+    ✔ should be a method
+    ✔ should return a Pipeline object (104ms)
+    ✔ should load the given pipeline from a plain graph pointer (109ms)
+    ✔ should throw an error if the term property of the graph pointer is missing (107ms)
+    ✔ should throw an error if the dataset property of the graph pointer is missing (107ms)
+    ✔ should use the given basePath (105ms)
+    ✔ should use the given context (108ms)
+    ✔ should create a pipeline with readable interface matching the rdf:type (110ms)
+    ✔ should create a pipeline with readable object mode interface matching the rdf:type (123ms)
+    ✔ should create a pipeline with writable interface matching the rdf:type (128ms)
+    ✔ should create a pipeline with writable object mode interface matching the rdf:type (113ms)
+    ✔ should attach createPipeline to the context (109ms)
+    ✔ should log variables (126ms)
+
+  factory/step
+    ✔ should be a method
+    ✔ should load the given step (131ms)
+    ✔ should forward errors thrown by the loader (124ms)
+    ✔ should attach step to the context (117ms)
+
+  factory/variables
+    ✔ should return a VariableMap (116ms)
+    ✔ should load "required" annotation (113ms)
+    ✔ should load the given inline variables (113ms)
+    ✔ should load the given variables sets (113ms)
+
+  isStream
+    isStream
+      ✔ should be a function
+      ✔ should return true if the given object is a stream
+      ✔ should return false if the given object is not a stream
+    isReadable
+      ✔ should be a function
+      ✔ should return true if the given object is a Readable
+      ✔ should return false if the given object is not a Readable
+    isReadableObjectMode
+      ✔ should be a function
+      ✔ should return true if the given object is a Readable in object mode
+      ✔ should return false if the given object is not a Readable in object mode
+    isWritable
+      ✔ should be a function
+      ✔ should return true if the given object is a Writable
+      ✔ should return false if the given object is not a Writable
+    isWritableObjectMode
+      ✔ should be a function
+      ✔ should return true if the given object is a Writable in object mode
+      ✔ should return false if the given object is not a Writable in object mode
+    isDuplex
+      ✔ should be a function
+      ✔ should return true if the given object is a Duplex
+      ✔ should return false if the given object is not a Duplex
+
+  loader/pipeline
+    ✔ should use the given variables (117ms)
+    ✔ should reject if the referred resource does not have a pipeline type
+
+  loader/variable
+    ✔ should load a variable from the map by name
+    ✔ should add the variable name to variable value term
+    ✔ should load the variable from the dataset if it's not present in the variable map
+    ✔ should prioritize the variable value from the variable map
+    ✔ should load a variable value for a given variable name
+
+  metadata
+    ✔ should be a function
+    ✔ should return an object
+    ✔ should set readable to true if type is p:Readable
+    ✔ should set readableObjectMode to false if type is p:Readable
+    ✔ should set readable and readableObject to true if type is p:ReadableObjectMode
+    ✔ should set writable to true if type is p:Writable
+    ✔ should set writableObjectMode to false if type is p:Writable
+    ✔ should set writeable and writableObjectMode to true if type is p:WritableObjectMode
+
+  Pipeline
+    ✔ should be a constructor
+    ✔ should process the given pipeline definition (118ms)
+    ✔ should support writable pipelines (187ms)
+    ✔ should support nested pipelines (128ms)
+    ✔ should emit error when nested pipeline step errors immediately (118ms)
+    ✔ should support nested writable pipelines (121ms)
+    ✔ should assign the pipeline stream to the .stream property (115ms)
+    ✔ should assign the pipeline to the .pipeline property of the stream (114ms)
+    ✔ should have a basePath string property (117ms)
+    ✔ should have a context object property (117ms)
+    ✔ should emit an error if the Pipeline contains no steps (116ms)
+    ✔ should have a ptr clownface property (121ms)
+    ✔ should have a ptr variables Map property (131ms)
+    ✔ should emit an error if an operation returns an invalid stream (126ms)
+    ✔ should emit an error if an operation rejects with error (129ms)
+    ✔ should emit step stream errors (123ms)
+    ✔ should catch and emit step stream errors (117ms)
+    plain Pipeline
+      ✔ should emit an end event (131ms)
+    readable Pipeline
+      ✔ should emit an end event (116ms)
+      ✔ should emit an error if the last step doesn't have a readable interface (120ms)
+    writeable Pipeline
+      ✔ should emit an finish event (114ms)
+
+  run
+    ✔ should be a function
+    ✔ should wait for the pipeline and the logger
+    ✔ should resume if resume flag is true
+    ✔ should end if end flag is true
+
+  VariableMap
+    get
+      ✔ throws when variable is undefined
+      ✔ returns undefined when variable is not required
+    set
+      ✔ sets empty string value
+    merge
+      ✔ merges arrays of entries
+      ✔ merges plain maps
+      ✔ merges VariableMaps with optional
+
+
+  110 passing (6s)
+
+
+> lindas-barnard59-csvw@3.0.1 test
+> mocha
+
+
+
+  fetch
+    using remote context
+      ✔ should return a readable stream
+      1) should process file: url
+      2) should process turtle file: url
+      ✔ should throw an error for non-existing file: metadata url
+      ✔ should throw an error for non-existing file: data url (299ms)
+      ✔ should process http: url (582ms)
+      ✔ should process turtle http: url
+      ✔ should throw an error for non-existing http: metadata url
+      ✔ should throw an error for non-existing http: data url (318ms)
+      ✔ should throw an error if http connection is killed (257ms)
+    using local context
+      ✔ should return a readable stream
+      3) should process file: url
+      4) should process turtle file: url
+      ✔ should throw an error for non-existing file: metadata url
+      ✔ should throw an error for non-existing file: data url
+      ✔ should process http: url
+      ✔ should process turtle http: url
+      ✔ should throw an error for non-existing http: metadata url
+      ✔ should throw an error for non-existing http: data url
+      ✔ should throw an error if http connection is killed
+
+
+  16 passing (2s)
+  4 failing
+
+  1) fetch
+       using remote context
+         should process file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:32:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  2) fetch
+       using remote context
+         should process turtle file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:39:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  3) fetch
+       using local context
+         should process file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:32:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  4) fetch
+       using local context
+         should process turtle file: url:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'id,text\r\n1,abc\r\n'
+- 'id,text\n1,abc\n'
+           ^
+
+      + expected - actual
+
+      -id,text
+      -1,abc
+      +id,text
+      +1,abc
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/csvw/test/fetch.test.js:39:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
+
+> lindas-barnard59-cube@2.0.1 test
+> mocha
+
+
+
+  cube.buildCubeShape
+    ✔ should return a duplex stream
+    ✔ should create a cube
+    ✔ should use the observation IRI to build the cube IRI
+    ✔ should use a custom function to build the cube IRI
+    ✔ should use a custom function to build the shape IRI
+    ✔ should create a observation set
+    ✔ should use the observation IRI to build the observation set IRI
+    ✔ should point from the cube to the observation set
+    ✔ should create a shape
+    ✔ should use the observation IRI to build the shape IRI
+    ✔ should point from the cube to the shape
+    ✔ should generate a property shape for each dimension
+    ✔ should generate a NamedNode property shape for each dimension
+    ✔ should generate nodeKind for literal values
+    ✔ should generate nodeKind for named node values
+    ✔ should generate nodeKind for mixed node values
+    ✔ should generate a sh:in list for plain string values
+    ✔ should generate a sh:in list for literal values without a parser
+    ✔ should generate a sh:in list for named node values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for date values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for double values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for float values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for int values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for gYear values
+    ✔ should generate sh:minInclusive an sh:maxInclusive properties for integer values
+    ✔ should generate sh:or for multiple datatypes
+    ✔ should limit number of values in sh:in
+    ✔ should place other constraints inside sh:or if there are multiple datatypes
+    ✔ should merge sh:in constraints if there are strings and named nodes
+    ✔ should create no range constraints on parsing error
+    ✔ should merge given metadata to cube metadata
+    ✔ should ignore cube:observationConstraint property in cube metadata
+    ✔ should merge given metadata with blank nodes to cube metadata
+    ✔ should merge given metadata to dimension metadata
+    ✔ should merge given metadata with blank nodes to dimension metadata
+    ✔ should use the graph parameter as named-graph for the produced shapes
+    ✔ should use the graph value as named-graph for the produced shapes, given as string
+
+  cube.toObservation
+    ✔ should be a factory
+    ✔ should return a duplex stream
+    ✔ should create an observation with default values
+    observer
+      ✔ should not touch an existing observer
+      ✔ should use the given observer IRI given as string
+      ✔ should use the given observer given as NamedNode
+    index
+      ✔ should use an IRI with an index to generate the observation term
+    date
+      ✔ should find the date by datatype if useDate is boolean true
+      ✔ should find the date by datatype if useDate is string true
+      ✔ should throw an error if multiple objects with a data datatype are found
+      ✔ should find the date using the given property IRI string
+      ✔ should find the date using the given property
+      ✔ should use the given function to generate the date
+      ✔ should use the current date if useDate is now
+    observations
+      ✔ should use the IRI of the observation without the observation ID extended by observation/
+      ✔ should not create duplicate observation/ pathes
+      ✔ should use the given observations function to generate the observations term
+      ✔ should use the given observations IRI string as observation set
+      ✔ should use the given observations observation set
+    observation
+      ✔ should use the given observation function to generate the observation term
+    blacklist
+      ✔ should delete properties given as Array of strings in the blacklist
+      ✔ should delete properties given as of graph pointers in the blacklist
+    dimensions
+      ✔ should fill properties given as Array of strings in dimensions with NaN if there is no value
+      ✔ should fill properties given as Array of graph pointers in dimensions with NaN if there is no value
+
+  DatatypeConstraintBuilder
+    built from all strings
+      ✔ string conforms
+      ✔ integer does not conform
+      ✔ named node does not conform
+    built from not only strings
+      ✔ everything conforms
+
+  RangeConstraintBuilder
+    ✔ should create an unconstrained shape due to wrong datatype
+    ✔ should create an unconstrained shape due to missing datatype
+    ✔ should create an unconstrained shape due to unexpected value
+    ✔ should create an unconstrained shape due to parsing issue of initial value
+    built from integers between 2 and 7
+      ✔ integers in range conform
+      ✔ integers outside range do not conform
+
+  ValuesConstraintBuilder
+    built without threshold
+      ✔ values used to build the shape conform
+      ✔ other values do not conform
+    built with too many values
+      ✔ everything conforms
+      ✔ reports too many values
+
+  NodeKindConstraintBuilder
+    built from all kinds of nodes
+      ✔ everything conforms
+    built from literals
+      ✔ literals conform
+      ✔ named nodes do not conform
+      ✔ blank nodes do not conform
+    built from literals and named nodes
+      ✔ literals conform
+      ✔ named nodes conform
+      ✔ blank nodes do not conform
+
+  DimensionConstraintsBuilder
+    built from two named nodes
+      ✔ the two named nodes conform
+      ✔ another named node does not conform
+      ✔ a string literal does not conform
+      ✔ an integer literal does not conform
+    built from too many distinct named nodes
+      ✔ all named nodes conform
+      ✔ a string literal does not conform
+      ✔ an integer literal does not conform
+    built from two strings
+      ✔ the two strings conform
+      ✔ another string does not conform
+      ✔ a named node does not conform
+      ✔ an integer literal does not conform
+    built from too many distinct strings
+      ✔ every string conforms
+      ✔ an integer literal does not conform
+      ✔ a named node does not conform
+    built from two integers
+      ✔ the two integers conform
+      ✔ an integer in between conforms
+      ✔ an integer outside the range does not conform
+      ✔ a string literal does not conform
+      ✔ a named node does not conform
+    built from two named nodes, two strings and two integers
+      ✔ the two named nodes conform
+      ✔ another named node does not conform
+      ✔ the two strings conform
+      ✔ another string does not conform
+      ✔ the two integers conform
+      ✔ an integer in between conforms
+      ✔ an integer outside the range does not conform
+    built from a string and a cube:Undefined
+      ✔ the two values conform
+      ✔ another string does not conform
+    built from a string and a named node
+      ✔ the two values conform
+      ✔ another string does not conform
+      ✔ another named node does not conform
+
+  cube validation pipeline
+    1) should run check-cube-observations pipeline without error
+    2) should run check-cube-observations pipeline with error
+    3) should run check-cube-observations pipeline with warning
+    4) should run check-cube-observations when maxViolations is not exceeded
+    5) should run check-cube-observations pipeline with options
+    6) should run check-cube-observations pipeline with error for cube.link examples
+    7) should run check-cube-observations pipeline with cube.link examples
+
+
+  113 passing (1s)
+  7 failing
+
+  1) cube validation pipeline
+       should run check-cube-observations pipeline without error:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:18:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) cube validation pipeline
+       should run check-cube-observations pipeline with error:
+     AssertionError: expected '' to match /1 violations found/
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:29:30)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  3) cube validation pipeline
+       should run check-cube-observations pipeline with warning:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+      + expected - actual
+
+      -1
+      +0
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:39:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  4) cube validation pipeline
+       should run check-cube-observations when maxViolations is not exceeded:
+     AssertionError: expected '' to match /1 violations found/
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:53:30)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  5) cube validation pipeline
+       should run check-cube-observations pipeline with options:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:64:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  6) cube validation pipeline
+       should run check-cube-observations pipeline with error for cube.link examples:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  ok(result.stdout.includes('_:report <http://www.w3.org/ns/shacl#conforms> "false"^^<http://www.w3.org/2001/XMLSchema#boolean>'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:76:5)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  7) cube validation pipeline
+       should run check-cube-observations pipeline with cube.link examples:
+     AssertionError: expected '' to include '_:report <http://www.w3.org/ns/shacl#…'
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/cube/test/validation.pipeline.test.js:88:11)
+      at process.processImmediate (node:internal/timers:485:21)
+
+
+
+
+> lindas-barnard59-formats@5.0.1 test
+> mocha
+
+
+
+  jsonld
+    parse
+      ✔ should load a file with a remote context (735ms)
+      ✔ should load a file with a local context
+      ✔ should load a file with a local context given as string
+      ✔ should use factory from context
+
+  n3
+    parse
+      ✔ successfully loads the input file
+      ✔ forwards argument to parser options
+      ✔ forwards argument to parser options
+
+  rdf/xml
+    parse
+      ✔ successfully loads the input file
+      ✔ forwards argument to parser options
+
+
+  9 passing (817ms)
+
+
+> lindas-barnard59-ftp@3.0.1 test
+> mocha
+
+
+> lindas-barnard59-graph-store@7.0.1 test
+> mocha
+
+
+
+  get
+    ✔ should return a readable stream (59ms)
+    ✔ should send a GET request
+    ✔ should send a accept header with the value application/n-triples
+    ✔ should send a graph argument
+    ✔ should parse the response quad stream
+    ✔ should allow string values as graph argument
+    ✔ should support default graph as graph argument
+    ✔ should use default graph if the graph argument is a empty string
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+  graph-store pipeline
+    1) "before all" hook for "should run graph-store put pipeline without error"
+
+  post
+    ✔ should return a writable stream
+    ✔ should send a POST request
+    ✔ should do nothing if the stream was closed and no quads have been written
+    ✔ should send a content-type header with the value application/n-triples
+    ✔ should send the quad stream as N-Triples
+    ✔ should support default graph
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+  put
+    ✔ should return a writable stream
+    ✔ should send a PUT request
+    ✔ should do nothing if the stream was closed and no quads have been written
+    ✔ should send a content-type header with the value application/n-triples
+    ✔ should send the quad stream as N-Triples
+    ✔ should support default graph
+    ✔ should send a basic authentication header if user and password are given
+    ✔ should handle server errors
+
+
+  26 passing (278ms)
+  1 failing
+
+  1) graph-store pipeline
+       "before all" hook for "should run graph-store put pipeline without error":
+     Error: spawn docker ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+      at onErrorNT (node:internal/child_process:483:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+
+
+
+> lindas-barnard59-http@3.0.1 test
+> mocha
+
+
+
+  get
+    ✔ returns only a readable stream
+    ✔ provides the response content as stream
+    ✔ can be called with 2 arguments
+
+  post
+    ✔ returns a duplex stream
+    ✔ sends the stream to the server
+    ✔ can be called with 2 arguments
+
+
+  6 passing (139ms)
+
+
+> lindas-barnard59-rdf@4.0.1 test
+> mocha
+
+
+
+  metadata.append
+    ✔ should throw an error if no argument is given
+    ✔ should return a duplex stream with a stream metadata parameter
+    ✔ should return a duplex stream with a path (string) metadata parameter
+    1) should return a duplex stream with an URL pointing to a public resource
+    ✔ should append data and metadata with default values
+    2) should append data and metadata with default values, and path as string
+    ✔ should append data with the specified graph
+    ✔ fails at unknown protocol
+    - fails at file not found
+
+  File System: metadata.append
+    3) should use resolved literal TIME_FILE_CREATION with dateCreated
+    4) should use resolved literal TIME_FILE_CREATION with dateModified
+    5) should use resolved literal TIME_FILE_MODIFICATION with dateCreated
+    6) should use resolved literal TIME_FILE_MODIFICATION with dateModified
+    ✔ should use resolved literal TIME_NOW with dateModified
+    ✔ should use resolved literal TIME_NOW with dateCreated
+    ✔ should use specified literal with dateModified (string)
+    ✔ should use specified literal with dateCreated (string)
+    ✔ should use specified literal with dateModified
+    ✔ should use specified literal with dateCreated
+
+  fs
+    parse
+      ✔ parses files from input chunks paths
+      ✔ fails when file does not exist
+      ✔ fails when file fails to parse
+      ✔ fails when extensions is unrecognised
+
+  mapMatch
+    ✔ should return a duplex stream
+    ✔ should not touch any quads not matching the pattern
+    ✔ should touch only the quads matching the pattern
+    ✔ should support multiple terms given as an iterable
+    ✔ should support async map functions
+    ✔ should give the quad to the map function
+    ✔ should assign @zazuko/env as rdf to the this context
+
+  membership.toTarget
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should return a duplex stream with valid parameters
+    ✔ should append meta-data to the data
+    ✔ should append meta-data to the data with string parameters
+
+  membership.fromSource
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should throw an error if a mandatory parameter is missing
+    ✔ should return a duplex stream with valid parameters
+    ✔ should append meta-data to the data
+    ✔ should append meta-data to the data with string parameters
+
+  open
+    ✔ should open from local path
+    ✔ should load from remote URL
+    ✔ should load from remote URL with overridden media type
+
+  PatternMatcher
+    ✔ should be a constructor
+    ✔ should assign the given terms to the pattern object
+    ✔ should assign the given iterable to the pattern object
+    .test
+      ✔ should be a method
+      ✔ should return false if the quad doesn't match the pattern
+      ✔ should return true if the subject matches
+      ✔ should return true if the predicate matches
+      ✔ should return true if the object matches
+      ✔ should return true if the graph matches
+
+  setGraph
+    ✔ should return a duplex stream
+    ✔ should set the graph of all quads
+    ✔ should accept string values
+    ✔ should use default graph if an empty string is given
+    ✔ should use default graph if null is given
+    ✔ should use default graph if undefined is given
+
+  metadata.voidStats
+    ✔ throws an error if no argument is given
+    ✔ return a duplex stream with default values for voidDatasetUri
+    ✔ includes counts at the end of the stream
+    ✔ returns zero counts for no data
+    ✔ returns zero counts for 0 classes
+    ✔ uses the named-graph given as parameter
+    ✔ does not include total counts with includeTotals: false
+    ✔ describes counts for class partitions
+    ✔ describe counts for class partitions with no matches
+    ✔ describe counts for property partitions
+    ✔ describe counts for property partitions with no matches
+    ✔ accepts string parameters
+
+
+  69 passing (137ms)
+  1 pending
+  6 failing
+
+  1) metadata.append
+       should return a duplex stream with an URL pointing to a public resource:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.readFileSync (node:fs:439:14)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:58:24)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) metadata.append
+       should append data and metadata with default values, and path as string:
+     Error: unknown protocol
+      at Function.fetch (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\proto-fetch\index.js:10:25)
+      at instance (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\proto-fetch\index.js:15:18)
+      at Object.localFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/lib/localFetch/localFetch.js:106:16)
+      at MetadataAppend._flush (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/lib/append.js:35:63)
+      at MetadataAppend.prefinish (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_transform.js:123:10)
+      at MetadataAppend.emit (node:events:518:28)
+      at prefinish (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:569:14)
+      at finishMaybe (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:576:5)
+      at endWritable (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:594:3)
+      at Writable.end (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\readable-stream\lib\_stream_writable.js:535:22)
+      at N3StreamParser.onend (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\n3\node_modules\readable-stream\lib\internal\streams\readable.js:608:10)
+      at Object.onceWrapper (node:events:632:28)
+      at N3StreamParser.emit (node:events:518:28)
+      at endReadableNT (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\n3\node_modules\readable-stream\lib\internal\streams\readable.js:1190:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+  3) File System: metadata.append
+       should use resolved literal TIME_FILE_CREATION with dateCreated:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:162:29)
+
+  4) File System: metadata.append
+       should use resolved literal TIME_FILE_CREATION with dateModified:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:187:29)
+
+  5) File System: metadata.append
+       should use resolved literal TIME_FILE_MODIFICATION with dateCreated:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:213:29)
+
+  6) File System: metadata.append
+       should use resolved literal TIME_FILE_MODIFICATION with dateModified:
+     TypeError [ERR_INVALID_URL_SCHEME]: The URL must be of scheme file
+      at Object.lstat (node:internal/fs/promises:1029:19)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/test/append.test.js:238:29)
+
+
+
+
+> lindas-barnard59-s3@1.0.1 test
+> mocha
+
+
+
+  getObject
+    ✔ should be able to get a file
+    ✔ should throw for empty body
+
+  getObjectStream
+    ✔ should be able to get a stream from a file
+    ✔ should throw in case of empty body
+
+  lib
+    client
+      ✔ should be able to create a new client
+      ✔ should be able to create a new client using newClient
+      ✔ should be able to generate a config with default values
+      ✔ should be able to override default region
+      ✔ should be able to forward authentication
+
+  putObject
+    ✔ should be able to put a file
+
+
+  10 passing (61ms)
+
+
+> lindas-barnard59-shacl@2.0.1 test
+> mocha
+
+
+
+  pipeline/validate
+    1) runs without error when input is valid
+    ✔ validates against shapes from input (245ms)
+    ✔ validates against remote shapes (233ms)
+    2) pushes error reports when resource has errors
+
+  TermCounter
+    ✔ should count terms
+
+  shacl
+    validate
+      ✔ should be a factory
+      ✔ should throw an error if no argument is given
+      ✔ should return a duplex stream with a stream shape parameter
+      ✔ sets maxErrors for validator
+      ✔ unsets maxErrors when argument is zero
+      ✔ does not fail when validation ok
+      ✔ successfully fails when there are validation errors
+      ✔ does not fail when there are validation errors but callback returns true
+
+
+  11 passing (1s)
+  2 failing
+
+  1) pipeline/validate
+       runs without error when input is valid:
+     Error: could not load step b13
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+  Caused by: Error: could not load step b21
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: TypeError: node-fetch cannot load c:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\shacl\test\support\PersonShape.ttl. URL scheme "c" is not supported.
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/node_modules/node-fetch/src/index.js:54:10
+      at new Promise (<anonymous>)
+      at fetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/node_modules/node-fetch/src/index.js:49:9)
+      at nodeifyFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/index.js:7:10)
+      at rdfFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/@rdfjs/fetch-lite/index.js:16:21)
+      at Proxy.result (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/@rdfjs/fetch-lite/Factory.js:7:12)
+      at Object.default (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/open.js:15:37)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:15:55
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+  2) pipeline/validate
+       pushes error reports when resource has errors:
+     Error: could not load step b474
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+  Caused by: Error: could not load step b482
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:31:19
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+  Caused by: TypeError: node-fetch cannot load c:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\packages\shacl\test\support\PersonShape.ttl. URL scheme "c" is not supported.
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/node_modules/node-fetch/src/index.js:54:10
+      at new Promise (<anonymous>)
+      at fetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/node_modules/node-fetch/src/index.js:49:9)
+      at nodeifyFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/nodeify-fetch/index.js:7:10)
+      at rdfFetch (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/@rdfjs/fetch-lite/index.js:16:21)
+      at Proxy.result (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/node_modules/@rdfjs/fetch-lite/Factory.js:7:12)
+      at Object.default (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/rdf/open.js:15:37)
+      at file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/step.js:15:55
+      at async Pipeline.onInit (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/factory/pipeline.js:45:35)
+      at async Pipeline._init (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:64:13)
+      at async Pipeline._read (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/core/lib/Pipeline.js:116:13)
+
+
+
+
+> lindas-barnard59-sparql@3.0.1 test
+> mocha
+
+
+
+  construct
+    ✔ should be a function
+    ✔ should return a readable stream
+    ✔ should send a GET request
+    ✔ should send a POST request
+    ✔ should parse the response
+    ✔ should support authentication headers (44ms)
+
+  query
+    ✔ should be a function
+    ✔ should return a readable and witable stream
+    ✔ should CONSTRUCT quads
+
+  update
+    ✔ should be a function
+    ✔ should return a readable and witable stream
+    ✔ should UPDATE quads
+
+  select
+    ✔ should be a function
+    ✔ should return a readable stream
+    ✔ should send a GET request
+    ✔ should send a POST request
+    ✔ should parse the response (46ms)
+    ✔ should support authentication headers (47ms)
+
+
+  18 passing (338ms)
+
+
+> lindas-barnard59-validation@1.0.1 test
+> mocha
+
+
+
+  addGenericCheck
+    ✔ should add check to this.generic
+
+  addPipelineCheck
+    ✔ should add check to this.pipelines[pipeline]
+
+  getGenericChecks
+    ✔ should get all generic checks
+    ✔ should get all generic checks of given level
+    ✔ should get all generic checks of multiple levels
+
+  getPipelineChecks
+    ✔ should get all pipeline checks
+    ✔ should get all pipline checks of multiple levels
+
+  getChecks
+    ✔ should get all checks
+    ✔ should get all pipline checks of multiple levels
+
+  containsMessage
+    ✔ should return true if message exists in checks
+    ✔ should return false if message does not exists in checks
+
+  countChecks
+    ✔ should return checks count
+
+  barnard59-validate
+    ✔ should exit with a zero exit code (4245ms)
+    1) should exit with a non-zero exit code in strict mode
+    2) should report parsing errors
+    3) should report file not found
+    ✔ should not report warnings when quiet (2989ms)
+    ✔ should only report info when verbose (3167ms)
+    should validate manifests
+      - good
+      - good, verbose
+      - bad
+
+  manifest
+    ✔ finds import errors
+    4) finds matching imports/exports
+    5) reports faulty imports/exports
+
+  parser
+    getDependencies
+      ✔ should create tree structure for codelinks
+      ✔ should fail with noniterable input
+      ✔ should forward iriResolve error
+    getAllCodeLinks
+      ✔ should transform dict values to set
+    readGraph
+      ✔ should read .ttl file and create DatasetCore object
+    getModuleOperationProperties
+      ✔ should create properties tree for identifiers
+    getIdentifiers
+      ✔ should create pipelines list
+      ✔ should return only requested pipeline
+      ✔ should return empty dict if pipeline does not exist
+      ✔ should not crash on invalid steps
+    getAllOperationProperties
+      ✔ should get operation properties from manifest.ttl file (55ms)
+      ✔ should return nulls if manifest.ttl doesn't exist
+      ✔ should return properties for existing operations, and nulls for nonexisting ones
+      ✔ should report missing packages
+    getPipelineProperties
+      ✔ should extract pipeline properties
+      ✔ should return null when no properties exist
+    validatePipelines
+      ✔ should issue a warning if pipeline has no readable/writable property
+      ✔ should issue an info if pipeline has readable/writable property
+
+  rules
+    ✔ should produce array of rules
+    ✔ it should have ruleId, ruleDescription, messageSuccess, messageFailure for each rule
+    ✔ should have as many rules as validators
+    ✔ the rule fields should be non-empty
+    ✔ the ruleId needs to be a number
+
+  utils
+    removeFilePart
+      ✔ should remove last file part
+      ✔ should remove last file part, if it has extension
+    checkArrayContainsField
+      ✔ should return true if field with given value exists in at least one object
+      ✔ should return false if field with given value does not exists in any object
+      ✔ should return false if field does not exists in any object
+    checkArrayContainsObject
+      ✔ should return true if same object exists in array
+      ✔ should return false if same object does not exists in array
+    isModuleInstalled
+      ✔ should return true if module is installed
+      ✔ should return false if module is not installed
+    getManifestPath
+      ✔ should return path if manifest exists
+      ✔ should return null if module is not installed
+      ✔ should return null if module is installed, but no manifest exists
+      6) should override manifest location for known packages
+    template
+      ✔ should replace key variables in template
+      ✔ should return template when no variables are passed
+      ✔ should return template when empty array is passed
+
+  validatePipelinePropertyModeFirst
+    ✔ should produce an error if first stream is writable, but pipeline is not
+    ✔ should produce an error if first stream is WritableObjectMode, but pipeline is not
+    ✔ should produce an error if first stream is Writable or WritableObjectMode, but pipeline is not
+    ✔ should produce an info if first stream is writable and pipeline is
+    ✔ should produce an info if first stream is WritableObjectMode and pipeline is
+    ✔ should produce an info if first stream is Writable or WritableObjectMode and pipeline is
+    ✔ should produce no info if first stream is writable or readable
+
+  validatePipelinePropertyModeLast
+    ✔ should produce an error if last stream is readable, but pipeline is not
+    ✔ should produce an error if last stream is ReadableObjectMode, but pipeline is not
+    ✔ should produce an error if last stream is readable or ReadableObjectMode, but pipeline is not
+    ✔ should produce an info if last stream is readable, and pipeline is
+    ✔ should produce an info if last stream is ReadableObjectMode, and pipeline is
+    ✔ should produce an info if last stream is Readable or ReadableObjectMode, and pipeline is
+    ✔ should produce no info if last stream is writable or readable
+
+  parser.validateSteps
+    ✔ should accept valid pipelines
+    ✔ should accept valid pipelines -- object mode
+    ✔ should report missing metadata
+    ✔ should report found metadata
+    ✔ should report operations missing p:Operation
+    ✔ should report non-writable operation being written into
+    ✔ should report error if first operation is writable
+    ✔ should report bad mix of normal streams and object-mode streams
+
+  validators
+    ✔ should have all required fields
+
+
+  77 passing (15s)
+  3 pending
+  6 failing
+
+  1) barnard59-validate
+       should exit with a non-zero exit code in strict mode:
+
+      AssertionError: expected "./cli.js -s ./sample-pipelines/fetch-json-to-ntriples.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:32:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  2) barnard59-validate
+       should report parsing errors:
+
+      AssertionError: expected "./cli.js ./test/fixtures/invalid.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:46:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  3) barnard59-validate
+       should report file not found:
+
+      AssertionError: expected "./cli.js ./test/-fixtures-/invalid.ttl" to exit with a code of 255, but it exited with 4294967295
+      + expected - actual
+
+      -4294967295
+      +255
+      
+      at assert.exitCode (C:\Users\gva\repos\lindas-211-214-fork-trifid-barnard59-others\lindas-barnard59\node_modules\@jsdevtools\chai-exec\lib\exit-code.js:20:30)
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/cli.test.js:56:12)
+      at process.processImmediate (node:internal/timers:485:21)
+
+  4) manifest
+       finds matching imports/exports:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(checks.generic.filter((issue) => issue.level === 'error').length === 0)
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/manifest.test.js:21:12)
+
+  5) manifest
+       reports faulty imports/exports:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(error1.message.includes('does not export default'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/manifest.test.js:31:5)
+
+  6) utils
+       getManifestPath
+         should override manifest location for known packages:
+
+      AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(actual.endsWith('/packages/core/manifest.ttl'))
+
+      + expected - actual
+
+      -false
+      +true
+      
+      at Context.<anonymous> (file:///C:/Users/gva/repos/lindas-211-214-fork-trifid-barnard59-others/lindas-barnard59/packages/validation/test/utils.test.js:97:7)
+      at process.processImmediate (node:internal/timers:485:21)
+
+
+
+
+> lindas-barnard59-test-e2e@0.1.3 test
+> mocha *.test.js
+
+
+
+  forEach
+    ✔ should execute the example correctly (653ms)
+    ✔ should preserve variables set during forEach execution (312ms)
+    ✔ should be able to access variables from higher scopes (299ms)
+
+  Pipeline
+    ✔ should load code using node: scheme (257ms)
+    ✔ should load code using file: scheme (172ms)
+    ✔ should load code using async loaders (165ms)
+    ✔ should load file contents using loader (200ms)
+    ✔ should be set to fail from sub-pipeline (159ms)
+    ✔ works with async generator steps (174ms)
+
+
+  9 passing (2s)
+

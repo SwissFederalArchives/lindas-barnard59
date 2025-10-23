@@ -1,11 +1,11 @@
 @prefix code: <https://code.described.at/> .
 @prefix p: <https://pipeline.described.at/> .
-@prefix shacl: <https://barnard59.zazuko.com/operations/shacl/> .
-@prefix base: <https://barnard59.zazuko.com/operations/base/> .
-@prefix getDataset: <https://barnard59.zazuko.com/operations/rdf/getDataset> .
-@prefix splitDataset: <https://barnard59.zazuko.com/operations/rdf/splitDataset/> .
-@prefix n3: <https://barnard59.zazuko.com/operations/formats/n3/> .
-@prefix ntriples: <https://barnard59.zazuko.com/operations/formats/ntriples/> .
+@prefix shacl: <https://lindas-barnard59.zazuko.com/operations/shacl/> .
+@prefix base: <https://lindas-barnard59.zazuko.com/operations/base/> .
+@prefix getDataset: <https://lindas-barnard59.zazuko.com/operations/rdf/getDataset> .
+@prefix splitDataset: <https://lindas-barnard59.zazuko.com/operations/rdf/splitDataset/> .
+@prefix n3: <https://lindas-barnard59.zazuko.com/operations/formats/n3/> .
+@prefix ntriples: <https://lindas-barnard59.zazuko.com/operations/formats/ntriples/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
