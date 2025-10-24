@@ -50,7 +50,9 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
  * @return {Promise<string[]>}
  */
 async function getInstalledPackages(all) {
+  console.log('[barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
   if (isInstalledGlobally) {
+    console.log('[barnard59] Running npm list globally')
     let npmList = 'npm list -g'
     if (all) {
       npmList += ' --all'
