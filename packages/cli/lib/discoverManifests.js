@@ -57,7 +57,9 @@ async function getInstalledPackages(all) {
     }
     return new Promise((resolve, reject) => {
       exec(npmList, (err, stdout) => {
-        if (err) {
+        // npm list exits with code 1 if there are peer dependency warnings,
+        // but still outputs the package list to stdout, so we should parse it
+        if (err && !stdout) {
           reject(err)
         } else {
           resolve([...new Set(stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g))])
