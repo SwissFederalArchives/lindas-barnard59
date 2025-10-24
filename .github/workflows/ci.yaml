@@ -170,6 +170,13 @@ jobs:
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
       - run: where lindas-barnard59
         if: matrix.os == 'windows-latest'
+      - name: Debug - List globally installed lindas-barnard59 packages
+        run: npm list -g --depth=0 | grep lindas-barnard59 || echo "No lindas-barnard59 packages found"
+        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+      - name: Debug - List globally installed lindas-barnard59 packages (Windows)
+        shell: pwsh
+        run: npm list -g --depth=0 | Select-String "lindas-barnard59"
+        if: matrix.os == 'windows-latest'
       - run: lindas-barnard59 --help
       - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
