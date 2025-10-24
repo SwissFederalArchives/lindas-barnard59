@@ -56,13 +56,17 @@ async function getInstalledPackages(all) {
       npmList += ' --all'
     }
     return new Promise((resolve, reject) => {
-      exec(npmList, (err, stdout) => {
+      exec(npmList, (err, stdout, stderr) => {
         // npm list exits with code 1 if there are peer dependency warnings,
         // but still outputs the package list to stdout, so we should parse it
         if (err && !stdout) {
+          console.error('[barnard59] Failed to list globally installed packages:', err.message)
+          console.error('[barnard59] stderr:', stderr)
           reject(err)
         } else {
-          resolve([...new Set(stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g))])
+          const matches = stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g)
+          console.log('[barnard59] Found globally installed packages:', matches)
+          resolve([...new Set(matches || [])])
         }
       })
     })
