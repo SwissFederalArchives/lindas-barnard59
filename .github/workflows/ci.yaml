@@ -152,13 +152,18 @@ jobs:
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
         run: |
           for pkg in lindas-barnard59*.tgz; do
-            npm install -g "$pkg"
+            # Skip test packages which have unpublished dependencies
+            if [[ "$pkg" != *"-test-"* ]]; then
+              npm install -g "$pkg"
+            fi
           done
       - name: install all packages globally (Windows)
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |
-          Get-ChildItem -Filter "lindas-barnard59*.tgz" | ForEach-Object {
+          Get-ChildItem -Filter "lindas-barnard59*.tgz" | Where-Object {
+            $_.Name -notlike "*-test-*"
+          } | ForEach-Object {
             npm install -g $_.FullName
           }
       - run: which lindas-barnard59
