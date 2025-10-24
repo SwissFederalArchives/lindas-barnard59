@@ -51,13 +51,14 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
  */
 async function getInstalledPackages(all) {
   console.log('[barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
-  if (isInstalledGlobally) {
-    console.log('[barnard59] Running npm list globally')
+
+  // Try global first, always - isInstalledGlobally can be unreliable
+  try {
     let npmList = 'npm list -g'
     if (all) {
       npmList += ' --all'
     }
-    return new Promise((resolve, reject) => {
+    const result = await new Promise((resolve, reject) => {
       exec(npmList, (err, stdout, stderr) => {
         // npm list exits with code 1 if there are peer dependency warnings,
         // but still outputs the package list to stdout, so we should parse it
@@ -72,8 +73,14 @@ async function getInstalledPackages(all) {
         }
       })
     })
+    if (result.length > 0) {
+      return result
+    }
+  } catch (err) {
+    console.log('[barnard59] Global package discovery failed, trying local')
   }
 
+  // Fallback to local
   const packagePath = await findUp(['package-lock.json', 'yarn.lock'])
   if (!packagePath) {
     return []
