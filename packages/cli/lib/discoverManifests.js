@@ -32,15 +32,23 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
   }
 
   for (const pkg of packages) {
-    const { version } = require(`${pkg}/package.json`)
-    const dataset = await rdf.dataset().import(rdf.fromFile(require.resolve(`${pkg}/manifest.ttl`)))
-    const matched = pkg.match(packagePattern)
-    if (matched) {
-      yield {
-        name: matched[1],
-        manifest: rdf.clownface({ dataset }),
-        version,
+    console.log('[barnard59] Processing package:', pkg)
+    try {
+      const { version } = require(`${pkg}/package.json`)
+      const manifestPath = require.resolve(`${pkg}/manifest.ttl`)
+      console.log('[barnard59] Loading manifest from:', manifestPath)
+      const dataset = await rdf.dataset().import(rdf.fromFile(manifestPath))
+      const matched = pkg.match(packagePattern)
+      if (matched) {
+        console.log('[barnard59] Yielding command:', matched[1])
+        yield {
+          name: matched[1],
+          manifest: rdf.clownface({ dataset }),
+          version,
+        }
       }
+    } catch (err) {
+      console.error('[barnard59] Failed to load package', pkg, ':', err.message)
     }
   }
 }
