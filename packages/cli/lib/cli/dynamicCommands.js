@@ -12,20 +12,17 @@ const require = module.createRequire(import.meta.url)
 const B59_LINDAS = 'https://lindas-barnard59.zazuko.com/vocab#'
 const B59_UPSTREAM = 'https://barnard59.zazuko.com/vocab#'
 
-function b59Term(local) {
-  // Prefer env mapping, fallback to explicit IRIs
-  if (rdf.ns?.b59 && typeof rdf.ns.b59[local] === 'object' || typeof rdf.ns.b59?.[local] === 'function') {
-    try {
-      return rdf.ns.b59[local]
-    } catch {}
-  }
-  return rdf.namedNode(B59_LINDAS + local)
-}
-
+/**
+ * Read a property using LINDAS b59 first, then upstream b59 as fallback.
+ * @param {import('clownface').AnyPointer} ptr
+ * @param {string} local
+ */
 function outB59(ptr, local) {
-  const a = ptr.out(rdf.namedNode(B59_LINDAS + local))
-  if (a.values.length || (a.terms && a.terms.length)) return a
-  return ptr.out(rdf.namedNode(B59_UPSTREAM + local))
+  const lindas = rdf.namedNode(B59_LINDAS + local)
+  const upstream = rdf.namedNode(B59_UPSTREAM + local)
+  const first = ptr.out(lindas)
+  if (first.values.length || (first.terms && first.terms.length)) return first
+  return ptr.out(upstream)
 }
 
 /**
