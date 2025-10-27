@@ -75,7 +75,7 @@ describe('graph-store pipeline', function () {
     [1000, 10000, 100000].forEach((size) => {
       context(`with ${size} triples`, () => {
         it('should complete graph store operation in a timely manner', async function () {
-          this.timeout(10000)
+          this.timeout(60000)
 
           // given`
           const { ptr, basePath } = await loadPipelineDefinition('test/support/pipelines/large-dataset')

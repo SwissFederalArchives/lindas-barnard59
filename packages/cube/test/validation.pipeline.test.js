@@ -10,7 +10,7 @@ describe('cube validation pipeline', function () {
 
   it('should run check-cube-observations pipeline without error', () => {
     const constraintFile = `${support}/constraint01.ttl`
-    const command = `cat ${support}/observations01.ttl | barnard59 cube check-observations --constraint ${constraintFile}`
+    const command = `cat ${support}/observations01.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile}`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -21,7 +21,7 @@ describe('cube validation pipeline', function () {
 
   it('should run check-cube-observations pipeline with error', () => {
     const constraintFile = `${support}/constraint01.ttl`
-    const command = `cat ${support}/observations02.ttl | barnard59 cube check-observations --constraint ${constraintFile} --maxViolations 1`
+    const command = `cat ${support}/observations02.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile} --maxViolations 1`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -32,7 +32,7 @@ describe('cube validation pipeline', function () {
 
   it('should run check-cube-observations pipeline with warning', () => {
     const constraintFile = `${support}/constraint01.ttl`
-    const command = `cat ${support}/observations03.ttl | barnard59 cube check-observations --constraint ${constraintFile}`
+    const command = `cat ${support}/observations03.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile}`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -45,7 +45,7 @@ describe('cube validation pipeline', function () {
 
   it('should run check-cube-observations when maxViolations is not exceeded', () => {
     const constraintFile = `${support}/constraint01.ttl`
-    const command = `cat ${support}/observations02.ttl | barnard59 cube check-observations --constraint ${constraintFile}`
+    const command = `cat ${support}/observations02.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile}`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -56,7 +56,7 @@ describe('cube validation pipeline', function () {
 
   it('should run check-cube-observations pipeline with options', () => {
     const constraintFile = `${support}/constraint01.ttl`
-    const command = `cat ${support}/observations01.ttl | barnard59 cube check-observations --constraint ${constraintFile} --maxViolations 1 --batchSize 1 --sortChunkSize 1`
+    const command = `cat ${support}/observations01.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile} --maxViolations 1 --batchSize 1 --sortChunkSize 1`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -68,7 +68,7 @@ describe('cube validation pipeline', function () {
   it('should run check-cube-observations pipeline with error for cube.link examples', () => {
     const constraintFile = `${support}/constraint.ttl`
     // sh:class constraint fails because of batching
-    const command = `cat ${support}/cube.ttl | barnard59 cube check-observations --constraint ${constraintFile} --batchSize 10`
+    const command = `cat ${support}/cube.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile} --batchSize 10`
 
     const result = shell.exec(command, { silent: true, cwd })
 
@@ -79,7 +79,7 @@ describe('cube validation pipeline', function () {
   it('should run check-cube-observations pipeline with cube.link examples', () => {
     const constraintFile = `${support}/constraint.ttl`
     // disabling batching makes all data available when checking the sh:class constraint
-    const command = `cat ${support}/cube.ttl | barnard59 cube check-observations --constraint ${constraintFile} --batchSize 0`
+    const command = `cat ${support}/cube.ttl | npx lindas-barnard59 cube check-observations --constraint ${constraintFile} --batchSize 0`
 
     const result = shell.exec(command, { silent: true, cwd })
 
