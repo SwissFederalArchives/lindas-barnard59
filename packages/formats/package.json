@@ -29,7 +29,7 @@
     "@rdfjs/serializer-jsonld": "^2.0.0",
     "@rdfjs/serializer-ntriples": "^2.0.1",
     "@rdfjs/sink-to-duplex": "^1.0.0",
-    "is-stream": "^3.0.0",
+    "is-stream": "^4.0.1",
     "@zazuko/rdf-parser-csvw": "^0.17.0",
     "@zazuko/rdf-parser-csvw-xlsx": "^0.3",
     "rdfxml-streaming-parser": "^3.1.0",
@@ -40,7 +40,7 @@
     "@types/rdfjs__parser-jsonld": "^2.1.7",
     "@types/sax": "^1.2.7",
     "@zazuko/env-core": "^1.1.2",
-    "chai": "^4.3.7",
+    "chai": "^6.2.0",
     "lindas-barnard59-env": "^2.0.1"
   },
   "engines": {
