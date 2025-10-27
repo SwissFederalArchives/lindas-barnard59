@@ -1,6 +1,6 @@
 import { strictEqual } from 'assert'
-import { expect } from 'chai'
 import { fileURLToPath } from 'url'
+import { expect } from 'chai'
 import shell from 'shelljs'
 import stripAnsi from 'strip-ansi'
 import filenamePipelineDefinition from './support/filenamePipelineDefinition.js'

@@ -181,6 +181,9 @@ jobs:
       - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
         shell: bash
-      - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl
+      - name: Validate SHACL (Windows)
         if: matrix.os == 'windows-latest'
-        shell: powershell
+        shell: pwsh
+        run: |
+          Get-Content -Raw test/e2e/definitions/file-loader.ttl |
+            lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl
