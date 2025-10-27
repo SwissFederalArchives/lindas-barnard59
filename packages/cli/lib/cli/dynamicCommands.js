@@ -9,6 +9,25 @@ import { combine } from './options.js'
 const FALSE = rdf.literal('false', rdf.ns.xsd.boolean)
 const require = module.createRequire(import.meta.url)
 
+const B59_LINDAS = 'https://lindas-barnard59.zazuko.com/vocab#'
+const B59_UPSTREAM = 'https://barnard59.zazuko.com/vocab#'
+
+function b59Term(local) {
+  // Prefer env mapping, fallback to explicit IRIs
+  if (rdf.ns?.b59 && typeof rdf.ns.b59[local] === 'object' || typeof rdf.ns.b59?.[local] === 'function') {
+    try {
+      return rdf.ns.b59[local]
+    } catch {}
+  }
+  return rdf.namedNode(B59_LINDAS + local)
+}
+
+function outB59(ptr, local) {
+  const a = ptr.out(rdf.namedNode(B59_LINDAS + local))
+  if (a.values.length || (a.terms && a.terms.length)) return a
+  return ptr.out(rdf.namedNode(B59_UPSTREAM + local))
+}
+
 /**
  * @typedef {{
  *   name: string | undefined,
@@ -24,9 +43,16 @@ const require = module.createRequire(import.meta.url)
 export async function * discoverCommands(manifests) {
   for await (const { name, manifest, version = '0.0.0' } of manifests) {
     console.log('[barnard59] discoverCommands processing:', name)
-    const commands = manifest
-      .has(rdf.ns.rdf.type, rdf.ns.b59.CliCommand)
-      .toArray()
+
+    // Find CliCommand nodes regardless of which b59 namespace variant is used
+    const cliTypes = [
+      rdf.namedNode(B59_LINDAS + 'CliCommand'),
+      rdf.namedNode(B59_UPSTREAM + 'CliCommand'),
+    ]
+
+    const commands = Array.from(new Set([
+      ...cliTypes.flatMap(t => manifest.has(rdf.ns.rdf.type, t).toArray()),
+    ]))
 
     if (!commands.length) {
       console.log('[barnard59] No CliCommands found in manifest for:', name)
@@ -38,9 +64,9 @@ export async function * discoverCommands(manifests) {
     let hasValidSubcommands = false
 
     for (const commandPtr of commands) {
-      const source = commandPtr.out(rdf.ns.b59.source)
-      const pipeline = commandPtr.out(rdf.ns.b59.pipeline)
-      const commandName = commandPtr.out(rdf.ns.b59.command).value
+      const source = outB59(commandPtr, 'source')
+      const pipeline = outB59(commandPtr, 'pipeline')
+      const commandName = outB59(commandPtr, 'command').value
       const description = commandPtr.out(rdf.ns.rdfs.label).value
 
       console.log('[barnard59] Processing subcommand:', commandName, 'source:', source.value)
