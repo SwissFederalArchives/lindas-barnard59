@@ -48,7 +48,8 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
         }
       }
     } catch (err) {
-      console.error('[barnard59] Failed to load package', pkg, ':', err.message)
+      const message = err instanceof Error ? err.message : String(err)
+      console.error('[barnard59] Failed to load package', pkg, ':', message)
     }
   }
 }
