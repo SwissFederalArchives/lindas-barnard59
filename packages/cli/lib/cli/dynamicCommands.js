@@ -32,6 +32,7 @@ export async function * discoverCommands(manifests) {
     }
 
     const command = program.command(`${name}`).version(version)
+    let hasValidSubcommands = false
 
     for (const commandPtr of commands) {
       const source = commandPtr.out(rdf.ns.b59.source)
@@ -45,33 +46,46 @@ export async function * discoverCommands(manifests) {
         continue
       }
 
-      const { basePath, ptr } = await parse(require.resolve(source.value), pipeline.value)
+      try {
+        const { basePath, ptr } = await parse(require.resolve(source.value), pipeline.value)
 
-      const pipelineSubCommand = command.command(commandName)
-      if (description) {
-        pipelineSubCommand.description(description)
-      }
-
-      const variables = getAnnotatedVariables(ptr)
-      for (const { name, description, required, defaultValue } of variables) {
-        const option = `--${name} <${name}>`
-        if (required) {
-          pipelineSubCommand.requiredOption(option, description, defaultValue)
-        } else {
-          pipelineSubCommand.option(option, description, defaultValue)
+        const pipelineSubCommand = command.command(commandName)
+        if (description) {
+          pipelineSubCommand.description(description)
         }
-      }
 
-      yield pipelineSubCommand
-        .action(async (options) => {
-          return runAction(ptr, basePath, combine({
-            ...options,
-            variable: new Map([
-              ...options.variable,
-              ...Object.entries(options).filter(([key]) => variables.some(v => v.name === key)),
-            ]),
-          }))
-        })
+        const variables = getAnnotatedVariables(ptr)
+        for (const { name, description, required, defaultValue } of variables) {
+          const option = `--${name} <${name}>`
+          if (required) {
+            pipelineSubCommand.requiredOption(option, description, defaultValue)
+          } else {
+            pipelineSubCommand.option(option, description, defaultValue)
+          }
+        }
+
+        yield pipelineSubCommand
+          .action(async (options) => {
+            return runAction(ptr, basePath, combine({
+              ...options,
+              variable: new Map([
+                ...options.variable,
+                ...Object.entries(options).filter(([key]) => variables.some(v => v.name === key)),
+              ]),
+            }))
+          })
+
+        hasValidSubcommands = true
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        // eslint-disable-next-line no-console
+        console.error(`WARN: Failed to load command '${commandName}' from ${name}:`, message)
+      }
+    }
+
+    if (!hasValidSubcommands) {
+      // eslint-disable-next-line no-console
+      console.warn(`WARN: Command '${name}' has no valid subcommands`)
     }
   }
 }
