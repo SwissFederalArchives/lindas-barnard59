@@ -71,7 +71,9 @@ async function getInstalledPackages(all) {
         // npm list exits with code 1 if there are peer dependency warnings,
         // but still outputs the package list to stdout, so we should parse it
         if (err && !stdout) {
-          console.error('[barnard59] Failed to list globally installed packages:', err.message)
+          if (err instanceof Error) {
+            console.error('[barnard59] Failed to list globally installed packages:', err.message)
+          }
           console.error('[barnard59] stderr:', stderr)
           reject(err)
         } else {
