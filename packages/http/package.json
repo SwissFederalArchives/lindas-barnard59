@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/duplexify": "^3.6.4",
-    "express-as-promise": "^1.2.0",
+    "express-as-promise": "^2.0.1",
     "get-stream": "^6.0.1",
     "is-stream": "^3.0.0"
   },
