@@ -148,14 +148,34 @@ jobs:
       - run: npm ci
       - name: pack all
         run: npm pack -ws
-      - run: npm install -g lindas-barnard59-*.tgz
+      - name: install all packages globally (Unix)
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
-      - run: npm install -g (Get-ChildItem -Filter "lindas-barnard59-*.tgz").FullName
+        run: |
+          for pkg in lindas-barnard59*.tgz; do
+            # Skip test packages which have unpublished dependencies
+            if [[ "$pkg" != *"-test-"* ]]; then
+              npm install -g "$pkg"
+            fi
+          done
+      - name: install all packages globally (Windows)
         if: matrix.os == 'windows-latest'
-        shell: powershell
+        shell: pwsh
+        run: |
+          Get-ChildItem -Filter "lindas-barnard59*.tgz" | Where-Object {
+            $_.Name -notlike "*-test-*"
+          } | ForEach-Object {
+            npm install -g $_.FullName
+          }
       - run: which lindas-barnard59
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
       - run: where lindas-barnard59
+        if: matrix.os == 'windows-latest'
+      - name: Debug - List globally installed lindas-barnard59 packages
+        run: npm list -g --depth=0 | grep lindas-barnard59 || echo "No lindas-barnard59 packages found"
+        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+      - name: Debug - List globally installed lindas-barnard59 packages (Windows)
+        shell: pwsh
+        run: npm list -g --depth=0 | Select-String "lindas-barnard59"
         if: matrix.os == 'windows-latest'
       - run: lindas-barnard59 --help
       - run: lindas-barnard59 shacl validate --shapes test/support/pipeline-shapes.ttl < test/e2e/definitions/file-loader.ttl

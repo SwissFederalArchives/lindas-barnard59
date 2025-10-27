@@ -32,15 +32,23 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
   }
 
   for (const pkg of packages) {
-    const { version } = require(`${pkg}/package.json`)
-    const dataset = await rdf.dataset().import(rdf.fromFile(require.resolve(`${pkg}/manifest.ttl`)))
-    const matched = pkg.match(packagePattern)
-    if (matched) {
-      yield {
-        name: matched[1],
-        manifest: rdf.clownface({ dataset }),
-        version,
+    console.log('[barnard59] Processing package:', pkg)
+    try {
+      const { version } = require(`${pkg}/package.json`)
+      const manifestPath = require.resolve(`${pkg}/manifest.ttl`)
+      console.log('[barnard59] Loading manifest from:', manifestPath)
+      const dataset = await rdf.dataset().import(rdf.fromFile(manifestPath))
+      const matched = pkg.match(packagePattern)
+      if (matched) {
+        console.log('[barnard59] Yielding command:', matched[1])
+        yield {
+          name: matched[1],
+          manifest: rdf.clownface({ dataset }),
+          version,
+        }
       }
+    } catch (err) {
+      console.error('[barnard59] Failed to load package', pkg, ':', err.message)
     }
   }
 }
@@ -50,22 +58,37 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
  * @return {Promise<string[]>}
  */
 async function getInstalledPackages(all) {
-  if (isInstalledGlobally) {
+  console.log('[barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
+
+  // Try global first, always - isInstalledGlobally can be unreliable
+  try {
     let npmList = 'npm list -g'
     if (all) {
       npmList += ' --all'
     }
-    return new Promise((resolve, reject) => {
-      exec(npmList, (err, stdout) => {
-        if (err) {
+    const result = await new Promise((resolve, reject) => {
+      exec(npmList, (err, stdout, stderr) => {
+        // npm list exits with code 1 if there are peer dependency warnings,
+        // but still outputs the package list to stdout, so we should parse it
+        if (err && !stdout) {
+          console.error('[barnard59] Failed to list globally installed packages:', err.message)
+          console.error('[barnard59] stderr:', stderr)
           reject(err)
         } else {
-          resolve([...new Set(stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g))])
+          const matches = stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g)
+          console.log('[barnard59] Found globally installed packages:', matches)
+          resolve([...new Set(matches || [])])
         }
       })
     })
+    if (result.length > 0) {
+      return result
+    }
+  } catch (err) {
+    console.log('[barnard59] Global package discovery failed, trying local')
   }
 
+  // Fallback to local
   const packagePath = await findUp(['package-lock.json', 'yarn.lock'])
   if (!packagePath) {
     return []
