@@ -39,11 +39,11 @@
   },
   "devDependencies": {
     "@aws-sdk/util-stream-node": "^3.374.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.10.5",
-    "aws-sdk-client-mock": "^3.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.10.0",
+    "aws-sdk-client-mock": "^4.1.0",
     "get-stream": "^8.0.1",
-    "rimraf": "^5.0.5"
+    "rimraf": "^6.1.0"
   },
   "mocha": {
     "loader": "ts-node/esm/transpile-only"

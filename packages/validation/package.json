@@ -19,9 +19,9 @@
   "devDependencies": {
     "@jsdevtools/chai-exec": "^2.1.1",
     "chai": "^4.3.0",
-    "deep-equal": "^2.0.5",
-    "esmock": "^2.3.8",
-    "sinon": "^15.2.0",
+    "deep-equal": "^2.2.3",
+    "esmock": "^2.7.3",
+    "sinon": "^21.0.0",
     "lindas-barnard59-base": "^3.0.1",
     "lindas-barnard59-core": "^7.0.1",
     "lindas-barnard59-formats": "^5.0.1"
