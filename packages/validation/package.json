@@ -4,7 +4,7 @@
   "type": "module",
   "main": "cli.js",
   "bin": {
-    "barnard59-validate": "./cli.js"
+    "lindas-barnard59-validate": "./cli.js"
   },
   "imports": {
     "#fixtures/*": "./test/fixtures/*"
@@ -49,5 +49,8 @@
       "ts-node/esm",
       "esmock"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

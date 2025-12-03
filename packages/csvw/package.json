@@ -54,5 +54,8 @@
   "mocha": {
     "require": "../../test/mocha-setup.cjs",
     "loader": "ts-node/esm"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

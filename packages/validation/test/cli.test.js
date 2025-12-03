@@ -13,7 +13,7 @@ chaiExec.defaults = {
   },
 }
 
-describe('barnard59-validate', function () {
+describe('lindas-barnard59-validate', function () {
   this.timeout(60000)
 
   it('should exit with a zero exit code', () => {

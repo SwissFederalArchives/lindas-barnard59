@@ -38,7 +38,7 @@
   "devDependencies": {
     "@rdfjs/namespace": "^2.0.0",
     "@types/readable-stream": "^4.0.9",
-    "barnard59-test-support": "^0.0.3",
+    "lindas-barnard59-test-support": "^0.0.3",
     "chai": "^4.3.7",
     "get-stream": "^6.0.1",
     "husky": "^8.0.3",
@@ -51,5 +51,8 @@
   "mocha": {
     "require": "../../test/mocha-setup.cjs",
     "loader": "ts-node/esm"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

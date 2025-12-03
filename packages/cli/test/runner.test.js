@@ -1,6 +1,6 @@
 import assert, { strictEqual } from 'assert'
 import { resolve } from 'path'
-import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDefinition.js'
+import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
 import env from 'lindas-barnard59-env'
 import runner from '../runner.js'
 

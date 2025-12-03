@@ -7,7 +7,7 @@ import rdf from 'lindas-barnard59-env'
 import { packageDirectory } from 'pkg-dir'
 import { findUp } from 'find-up'
 
-const packagePattern = /^(?:lindas-)?barnard59-(.+)$/
+const packagePattern = /^lindas-barnard59-(.+)$/
 
 /**
  * @param {object} [options]
@@ -32,15 +32,15 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
   }
 
   for (const pkg of packages) {
-    console.log('[barnard59] Processing package:', pkg)
+    console.log('[lindas-barnard59] Processing package:', pkg)
     try {
       const { version } = require(`${pkg}/package.json`)
       const manifestPath = require.resolve(`${pkg}/manifest.ttl`)
-      console.log('[barnard59] Loading manifest from:', manifestPath)
+      console.log('[lindas-barnard59] Loading manifest from:', manifestPath)
       const dataset = await rdf.dataset().import(rdf.fromFile(manifestPath))
       const matched = pkg.match(packagePattern)
       if (matched) {
-        console.log('[barnard59] Yielding command:', matched[1])
+        console.log('[lindas-barnard59] Yielding command:', matched[1])
         yield {
           name: matched[1],
           manifest: rdf.clownface({ dataset }),
@@ -49,7 +49,7 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
       }
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err)
-      console.error('[barnard59] Failed to load package', pkg, ':', message)
+      console.error('[lindas-barnard59] Failed to load package', pkg, ':', message)
     }
   }
 }
@@ -59,7 +59,7 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
  * @return {Promise<string[]>}
  */
 async function getInstalledPackages(all) {
-  console.log('[barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
+  console.log('[lindas-barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
 
   // Try global first, always - isInstalledGlobally can be unreliable
   try {
@@ -73,13 +73,13 @@ async function getInstalledPackages(all) {
         // but still outputs the package list to stdout, so we should parse it
         if (err && !stdout) {
           if (err instanceof Error) {
-            console.error('[barnard59] Failed to list globally installed packages:', err.message)
+            console.error('[lindas-barnard59] Failed to list globally installed packages:', err.message)
           }
-          console.error('[barnard59] stderr:', stderr)
+          console.error('[lindas-barnard59] stderr:', stderr)
           reject(err)
         } else {
-          const matches = stdout.match(/(?<pkg>(?:lindas-)?barnard59-[^@]+)/g)
-          console.log('[barnard59] Found globally installed packages:', matches)
+          const matches = stdout.match(/(?<pkg>lindas-barnard59-[^@]+)/g)
+          console.log('[lindas-barnard59] Found globally installed packages:', matches)
           resolve([...new Set(matches || [])])
         }
       })
@@ -88,7 +88,7 @@ async function getInstalledPackages(all) {
       return result
     }
   } catch (err) {
-    console.log('[barnard59] Global package discovery failed, trying local')
+    console.log('[lindas-barnard59] Global package discovery failed, trying local')
   }
 
   // Fallback to local
@@ -96,7 +96,7 @@ async function getInstalledPackages(all) {
   if (!packagePath) {
     return []
   }
-  return (getInstalledPackage('{barnard59-*,lindas-barnard59-*}', dirname(packagePath)) || []).map(pkg => pkg.name)
+  return (getInstalledPackage('lindas-barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
 }
 
 /**

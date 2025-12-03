@@ -36,5 +36,8 @@
   },
   "mocha": {
     "loader": "ts-node/esm"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

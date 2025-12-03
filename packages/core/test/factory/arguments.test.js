@@ -1,5 +1,5 @@
 import { deepStrictEqual, strictEqual } from 'assert'
-import { pipelineDefinitionLoader } from 'barnard59-test-support/loadPipelineDefinition.js'
+import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
 import env from 'lindas-barnard59-env'
 import defaultLoaderRegistry from '../../lib/defaultLoaderRegistry.js'
 import createArguments from '../../lib/factory/arguments.js'

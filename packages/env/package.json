@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/SwissFederalArchives/lindas-barnard59/issues"
   },
-  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59"
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -59,8 +59,7 @@
     "@types/readable-stream": "^4.0.10",
     "@types/shelljs": "^0.8.15",
     "approvals": "^7.3.0",
-    "barnard59-shell": "^0.1.0",
-    "barnard59-test-support": "^0.0.3",
+    "lindas-barnard59-test-support": "^0.0.3",
     "chai": "^4.3.7",
     "mocha-chai-jest-snapshot": "^1.1.4",
     "shelljs": "^0.8.4",
@@ -72,5 +71,8 @@
   },
   "mocha": {
     "loader": "ts-node/esm/transpile-only"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

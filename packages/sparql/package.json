@@ -14,12 +14,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/SwissFederalArchives/lindas-barnard59-sparql.git"
+    "url": "git://github.com/SwissFederalArchives/lindas-barnard59.git",
+    "directory": "packages/sparql"
   },
   "bugs": {
-    "url": "https://github.com/SwissFederalArchives/lindas-barnard59-sparql/issues"
+    "url": "https://github.com/SwissFederalArchives/lindas-barnard59/issues"
   },
-  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59-sparql",
+  "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
     "duplex-to": "^1.0.1",
     "oxigraph": "^0.4.0-alpha.2",
@@ -40,5 +41,8 @@
   },
   "mocha": {
     "loader": "ts-node/esm/transpile-only"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
