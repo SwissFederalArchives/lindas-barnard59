@@ -38,5 +38,14 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "overrides": {
+    "ip": "2.0.1",
+    "braces": "3.0.3",
+    "micromatch": "4.0.8",
+    "ssh2": "1.16.0",
+    "ftp-srv": {
+      "ip": "2.0.1"
+    }
   }
 }
