@@ -70,13 +70,15 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
 async function getInstalledPackages(all) {
   console.log('[lindas-barnard59] getInstalledPackages called, isInstalledGlobally:', isInstalledGlobally)
 
-  // Try global first, always - isInstalledGlobally can be unreliable
+  const allPackages = []
+
+  // Try global packages
   try {
     let npmList = 'npm list -g'
     if (all) {
       npmList += ' --all'
     }
-    const result = await new Promise((resolve, reject) => {
+    const globalPackages = await new Promise((resolve, reject) => {
       exec(npmList, (err, stdout, stderr) => {
         // npm list exits with code 1 if there are peer dependency warnings,
         // but still outputs the package list to stdout, so we should parse it
@@ -85,7 +87,7 @@ async function getInstalledPackages(all) {
             console.error('[lindas-barnard59] Failed to list globally installed packages:', err.message)
           }
           console.error('[lindas-barnard59] stderr:', stderr)
-          reject(err)
+          resolve([])
         } else {
           // Match both lindas-barnard59-* and barnard59-* packages
           const lindasMatches = stdout.match(/(?<pkg>lindas-barnard59-[^@\s]+)/g) || []
@@ -96,21 +98,21 @@ async function getInstalledPackages(all) {
         }
       })
     })
-    if (result.length > 0) {
-      return result
-    }
+    allPackages.push(...globalPackages)
   } catch (err) {
-    console.log('[lindas-barnard59] Global package discovery failed, trying local')
+    console.log('[lindas-barnard59] Global package discovery failed')
   }
 
-  // Fallback to local - search for both package patterns
+  // Always check local packages too - merge with global packages
   const packagePath = await findUp(['package-lock.json', 'yarn.lock'])
-  if (!packagePath) {
-    return []
+  if (packagePath) {
+    const lindasPackages = (getInstalledPackage('lindas-barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+    const originalPackages = (getInstalledPackage('barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+    console.log('[lindas-barnard59] Found locally installed packages:', [...lindasPackages, ...originalPackages])
+    allPackages.push(...lindasPackages, ...originalPackages)
   }
-  const lindasPackages = (getInstalledPackage('lindas-barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
-  const originalPackages = (getInstalledPackage('barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
-  return [...new Set([...lindasPackages, ...originalPackages])]
+
+  return [...new Set(allPackages)]
 }
 
 /**
