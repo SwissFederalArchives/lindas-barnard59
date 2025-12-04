@@ -1,5 +1,13 @@
 # barnard59-core
 
+## 7.0.2
+
+### Patch Changes
+
+- d19f419: Fix test definition file paths that were causing module not found errors
+- d55915d: Bump patch versions for all lindas-trifid packages to ensure they are available on npm
+  with the LINDAS namespace
+
 ## 7.0.1
 
 ### Patch Changes
