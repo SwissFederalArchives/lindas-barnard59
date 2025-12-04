@@ -1,5 +1,16 @@
 # barnard59
 
+## 6.0.2
+
+### Patch Changes
+
+- d55915d: Bump patch versions for all lindas-trifid packages to ensure they are available on npm
+  with the LINDAS namespace
+- Updated dependencies [d19f419]
+- Updated dependencies [d55915d]
+  - lindas-barnard59-core@7.0.2
+  - lindas-barnard59-env@2.0.2
+
 ## 6.0.1
 
 ### Patch Changes

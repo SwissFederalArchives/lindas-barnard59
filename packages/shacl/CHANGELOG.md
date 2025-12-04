@@ -1,5 +1,16 @@
 # barnard59-shacl
 
+## 2.0.2
+
+### Patch Changes
+
+- d55915d: Bump patch versions for all lindas-trifid packages to ensure they are available on npm
+  with the LINDAS namespace
+- Updated dependencies [d55915d]
+  - lindas-barnard59-base@3.0.2
+  - lindas-barnard59-formats@5.0.2
+  - lindas-barnard59-rdf@4.0.2
+
 ## 2.0.1
 
 ### Patch Changes

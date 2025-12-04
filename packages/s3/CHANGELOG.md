@@ -1,5 +1,12 @@
 # barnard59-s3
 
+## 1.0.2
+
+### Patch Changes
+
+- d55915d: Bump patch versions for all lindas-trifid packages to ensure they are available on npm
+  with the LINDAS namespace
+
 ## 1.0.1
 
 ### Patch Changes
