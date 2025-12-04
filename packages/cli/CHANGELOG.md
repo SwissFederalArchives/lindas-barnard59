@@ -1,5 +1,15 @@
 # barnard59
 
+## 6.0.3
+
+### Patch Changes
+
+- 4bf25e5: Add backwards compatibility for barnard59-\* packages
+
+  The CLI now discovers both lindas-barnard59-_ and barnard59-_ packages,
+  allowing pipelines to use operations from the original barnard59-formats,
+  barnard59-csvw, barnard59-cube, etc. packages alongside lindas packages.
+
 ## 6.0.2
 
 ### Patch Changes
