@@ -7,7 +7,8 @@ import rdf from 'lindas-barnard59-env'
 import { packageDirectory } from 'pkg-dir'
 import { findUp } from 'find-up'
 
-const packagePattern = /^lindas-barnard59-(.+)$/
+const lindasPackagePattern = /^lindas-barnard59-(.+)$/
+const originalPackagePattern = /^barnard59-(.+)$/
 
 /**
  * @param {object} [options]
@@ -24,8 +25,14 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
   const dir = await packageDirectory()
   if (hasManifest(dir)) {
     const { name, version } = require(`${dir}/package.json`)
+    let shortName = name
+    if (lindasPackagePattern.test(name)) {
+      shortName = name.match(lindasPackagePattern)[1]
+    } else if (originalPackagePattern.test(name)) {
+      shortName = name.match(originalPackagePattern)[1]
+    }
     yield {
-      name: packagePattern.test(name) ? name.match(packagePattern)[1] : name,
+      name: shortName,
       manifest: rdf.clownface({ dataset: await rdf.dataset().import(rdf.fromFile(`${dir}/manifest.ttl`)) }),
       version,
     }
@@ -38,7 +45,9 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
       const manifestPath = require.resolve(`${pkg}/manifest.ttl`)
       console.log('[lindas-barnard59] Loading manifest from:', manifestPath)
       const dataset = await rdf.dataset().import(rdf.fromFile(manifestPath))
-      const matched = pkg.match(packagePattern)
+      const lindasMatched = pkg.match(lindasPackagePattern)
+      const originalMatched = pkg.match(originalPackagePattern)
+      const matched = lindasMatched || originalMatched
       if (matched) {
         console.log('[lindas-barnard59] Yielding command:', matched[1])
         yield {
@@ -78,9 +87,12 @@ async function getInstalledPackages(all) {
           console.error('[lindas-barnard59] stderr:', stderr)
           reject(err)
         } else {
-          const matches = stdout.match(/(?<pkg>lindas-barnard59-[^@]+)/g)
-          console.log('[lindas-barnard59] Found globally installed packages:', matches)
-          resolve([...new Set(matches || [])])
+          // Match both lindas-barnard59-* and barnard59-* packages
+          const lindasMatches = stdout.match(/(?<pkg>lindas-barnard59-[^@\s]+)/g) || []
+          const originalMatches = stdout.match(/(?<pkg>barnard59-[^@\s]+)/g) || []
+          const allMatches = [...lindasMatches, ...originalMatches]
+          console.log('[lindas-barnard59] Found globally installed packages:', allMatches)
+          resolve([...new Set(allMatches)])
         }
       })
     })
@@ -91,12 +103,14 @@ async function getInstalledPackages(all) {
     console.log('[lindas-barnard59] Global package discovery failed, trying local')
   }
 
-  // Fallback to local
+  // Fallback to local - search for both package patterns
   const packagePath = await findUp(['package-lock.json', 'yarn.lock'])
   if (!packagePath) {
     return []
   }
-  return (getInstalledPackage('lindas-barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+  const lindasPackages = (getInstalledPackage('lindas-barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+  const originalPackages = (getInstalledPackage('barnard59-*', dirname(packagePath)) || []).map(pkg => pkg.name)
+  return [...new Set([...lindasPackages, ...originalPackages])]
 }
 
 /**
