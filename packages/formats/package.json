@@ -32,7 +32,7 @@
     "is-stream": "^3.0.0",
     "rdfxml-streaming-parser": "^3.1.0",
     "lindas-barnard59-base": "^3.0.2",
-    "@lindas/rdf-parser-csvw": "^1.0.0",
+    "@lindas/rdf-parser-csvw": "^0.17.0",
     "@lindas/rdf-parser-csvw-xlsx": "^1.0.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@types/sax": "^1.2.7",
     "chai": "^4.3.7",
     "lindas-barnard59-env": "^2.0.2",
-    "@lindas/env-core": "^1.0.0"
+    "@lindas/env-core": "^1.1.2"
   },
   "engines": {
     "node": ">= 14.0.0"

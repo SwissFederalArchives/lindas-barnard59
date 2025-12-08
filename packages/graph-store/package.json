@@ -47,7 +47,7 @@
     "wait-on": "^8.0.3",
     "lindas-barnard59-core": "^7.0.2",
     "lindas-barnard59-env": "^2.0.2",
-    "@lindas/env": "^1.0.0"
+    "@lindas/env": "^3.0.1"
   },
   "engines": {
     "node": ">= 14.0.0"
