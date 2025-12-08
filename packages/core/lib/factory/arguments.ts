@@ -1,5 +1,5 @@
 import parseArguments from 'rdf-loader-code/arguments.js'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import type { Logger } from 'winston'
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import { unknownVariable } from '../loader/variable.js'

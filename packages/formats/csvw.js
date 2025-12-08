@@ -1,5 +1,5 @@
 import sinkToDuplex from '@rdfjs/sink-to-duplex'
-import CsvwParser from '@zazuko/rdf-parser-csvw'
+import CsvwParser from '@lindas/rdf-parser-csvw'
 import tracer from './lib/tracer.js'
 import { toDataset } from './lib/stream.js'
 

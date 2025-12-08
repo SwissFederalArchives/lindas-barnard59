@@ -27,7 +27,7 @@ const createOutputStream = (output = '-') => {
 }
 
 /**
- * @param {import('clownface').AnyPointer} ptr
+ * @param {import('@lindas/clownface').AnyPointer} ptr
  * @param {string} basePath
  * @param {Partial<import('../cli.js').CliOptions>} [options]
  */

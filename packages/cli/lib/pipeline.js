@@ -49,7 +49,7 @@ export const desugar = async (dataset, { logger, knownOperations, pipelinePath }
   })
   const require = module.createRequire(dir + '/')
 
-  const ptr = rdf.clownface({ dataset })
+  const ptr = rdf.@lindas/clownface({ dataset })
   let n = 0
   ptr.has(rdf.ns.p.stepList).out(rdf.ns.p.stepList).forEach(listPointer => {
     for (const step of (listPointer.list() || [])) {
@@ -109,7 +109,7 @@ async function fileToDataset(filename) {
  * @param {string | import('@rdfjs/types').NamedNode} [iri]
  * @param {object} [options]
  * @param {import('winston').Logger} [options.logger]
- * @return {Promise<{ basePath: string, ptr: import('clownface').GraphPointer }>}
+ * @return {Promise<{ basePath: string, ptr: import('@lindas/clownface').GraphPointer }>}
  */
 export async function parse(filename, iri, { logger } = {}) {
   const dataset = await fileToDataset(filename)

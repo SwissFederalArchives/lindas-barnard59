@@ -1,5 +1,5 @@
 import type { DatasetCore, Term } from '@rdfjs/types'
-import type { GraphPointer, MultiPointer } from 'clownface'
+import type { GraphPointer, MultiPointer } from '@lindas/clownface'
 import type { Logger } from 'winston'
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import type { Environment } from 'lindas-barnard59-env'
@@ -65,7 +65,7 @@ function createPipeline(maybePtr: { term?: Term; dataset?: DatasetCore }, init: 
     throw new Error('the given graph pointer is invalid')
   }
 
-  const ptr = context.env.clownface({ dataset: maybePtr.dataset, term: maybePtr.term })
+  const ptr = context.env.@lindas/clownface({ dataset: maybePtr.dataset, term: maybePtr.term })
 
   const onInit = async (pipeline: Pipeline) => {
     function error(err: Error) {

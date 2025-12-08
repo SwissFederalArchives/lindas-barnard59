@@ -1,6 +1,6 @@
 import { strictEqual } from 'node:assert'
 import { promisify } from 'node:util'
-import rdf from '@zazuko/env'
+import rdf from '@lindas/env'
 import quadToNTriples from '@rdfjs/to-ntriples'
 import withServer from 'express-as-promise/withServer.js'
 import getStream from 'get-stream'

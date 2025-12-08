@@ -1,4 +1,4 @@
-import Environment from '@zazuko/env-core'
+import Environment from '@lindas/env-core'
 import parent from 'lindas-barnard59-env'
 
 class TestDataFactory {

@@ -19,7 +19,7 @@ class Dimension {
     }
     toDataset({ cube, shape }) {
         const dataset = this.rdf.dataset();
-        const graph = this.rdf.clownface({ dataset });
+        const graph = this.rdf.@lindas/clownface({ dataset });
         const ptr = graph.node(this.shapeId(cube, this));
         ptr
             .addIn(this.rdf.ns.sh.property, shape)

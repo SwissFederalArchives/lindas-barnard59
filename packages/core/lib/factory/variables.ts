@@ -1,4 +1,4 @@
-import type { MultiPointer } from 'clownface'
+import type { MultiPointer } from '@lindas/clownface'
 import type { Logger } from 'winston'
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import { isGraphPointer } from 'is-graph-pointer'

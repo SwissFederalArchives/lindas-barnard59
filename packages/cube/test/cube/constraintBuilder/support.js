@@ -8,7 +8,7 @@ const subject = rdf.namedNode('http://example.org/subject')
 const property = rdf.namedNode('http://example.org/property')
 
 const createDataset = values =>
-  rdf.clownface().namedNode(subject).addOut(property, values).dataset
+  rdf.@lindas/clownface().namedNode(subject).addOut(property, values).dataset
 
 export const conforms = async (validator, ...values) => {
   const report = await validator.validate(createDataset(values))
@@ -21,7 +21,7 @@ export const notConforms = async (validator, ...values) => {
 }
 
 export const buildShape = async (builder, ...values) => {
-  const shape = rdf.clownface()
+  const shape = rdf.@lindas/clownface()
   const ptr = shape.blankNode()
   shape.namedNode('http://example.org/shape')
     .addOut(sh.targetNode, subject)

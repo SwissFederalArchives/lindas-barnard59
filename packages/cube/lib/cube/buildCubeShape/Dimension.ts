@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { isResource } from 'is-graph-pointer'
 import type { Environment } from 'lindas-barnard59-env'
-import type { AnyPointer } from 'clownface'
+import type { AnyPointer } from '@lindas/clownface'
 import type { BlankNode, NamedNode, Term, Quad_Predicate as Predicate } from '@rdfjs/types'
 import cbdCopy from '../../cbdCopy.js'
 import datatypeParsers from './datatypes.js'
@@ -44,7 +44,7 @@ class Dimension {
   toDataset({ cube, shape }: { cube: Cube; shape: Term }) {
     const dataset = this.rdf.dataset()
 
-    const graph = this.rdf.clownface({ dataset })
+    const graph = this.rdf.@lindas/clownface({ dataset })
     const ptr = graph.node(this.shapeId(cube, this))
 
     ptr

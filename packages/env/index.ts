@@ -1,4 +1,4 @@
-import BaseEnv, { Environment as ZazukoEnv } from '@zazuko/env-node'
+import BaseEnv, { Environment as ZazukoEnv } from '@lindas/env-node'
 import NamespacesFactory from './lib/Namespaces.js'
 import ConstantsFactory from './lib/Constants.js'
 

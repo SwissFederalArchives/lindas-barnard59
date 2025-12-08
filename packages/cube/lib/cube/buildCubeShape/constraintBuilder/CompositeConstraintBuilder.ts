@@ -1,5 +1,5 @@
 import type { Term } from '@rdfjs/types'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 
 export interface Builder {
   add(object: Term): void

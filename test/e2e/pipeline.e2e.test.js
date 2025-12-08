@@ -7,7 +7,7 @@ import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipe
 import { expect } from 'chai'
 import toCanonical from 'rdf-dataset-ext/toCanonical.js'
 import fromStream from 'rdf-dataset-ext/fromStream.js'
-import fromFile from '@zazuko/rdf-utils-fs/fromFile.js'
+import fromFile from '@lindas/rdf-utils-fs/fromFile.js'
 import env from 'lindas-barnard59-env'
 import { promisedEcmaScriptLoader, promisedUrlLoader } from './asyncLoaders.js'
 

@@ -63,7 +63,7 @@ describe('utils', () => {
   describe('isModuleInstalled', () => {
     it('should return true if module is installed', () => {
       const expected = true
-      const actual = utils.isModuleInstalled('clownface')
+      const actual = utils.isModuleInstalled('@lindas/clownface')
       assert.strictEqual(actual, expected)
     })
 
@@ -88,7 +88,7 @@ describe('utils', () => {
 
     it('should return null if module is installed, but no manifest exists', () => {
       const expected = null
-      const actual = utils.getManifestPath('clownface')
+      const actual = utils.getManifestPath('@lindas/clownface')
       assert.strictEqual(actual, expected)
     })
 

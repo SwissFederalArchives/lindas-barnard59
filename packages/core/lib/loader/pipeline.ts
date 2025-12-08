@@ -1,6 +1,6 @@
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import type { Environment } from 'lindas-barnard59-env'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import createPipeline from '../factory/pipeline.js'
 import type { Context, VariableMap } from '../../index.js'
 

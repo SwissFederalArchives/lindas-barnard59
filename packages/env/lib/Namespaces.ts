@@ -1,7 +1,7 @@
 import type NsBuildersFactory from '@tpluscode/rdf-ns-builders'
 import type { Environment } from '@rdfjs/environment/Environment.js'
 import type { NamespaceFactory } from '@rdfjs/namespace/Factory.js'
-import * as Builders from '@zazuko/vocabulary-extras-builders'
+import * as Builders from '@lindas/vocabulary-extras-builders'
 
 declare module '@tpluscode/rdf-ns-builders' {
   interface CustomNamespaces {

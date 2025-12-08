@@ -11,11 +11,11 @@ import { ex } from '../support/namespaces.js'
 const toObservation = toObservationUnbound.bind({ env: rdf })
 
 function createMeasure({ term = ex('topic/a') } = {}) {
-  return rdf.clownface({ dataset: rdf.dataset(), term })
+  return rdf.@lindas/clownface({ dataset: rdf.dataset(), term })
 }
 
 function findObservation(result) {
-  return rdf.clownface({ dataset: rdf.dataset(result[0]) }).has(rdf.ns.rdf.type, rdf.ns.cube.Observation)
+  return rdf.@lindas/clownface({ dataset: rdf.dataset(result[0]) }).has(rdf.ns.rdf.type, rdf.ns.cube.Observation)
 }
 
 describe('cube.toObservation', () => {
@@ -195,7 +195,7 @@ describe('cube.toObservation', () => {
         .dataset
 
       const transform = toObservation({
-        useDate: rdf.clownface({ term: ex.date2 }),
+        useDate: rdf.@lindas/clownface({ term: ex.date2 }),
       })
 
       Readable.from([dataset]).pipe(transform)
@@ -356,7 +356,7 @@ describe('cube.toObservation', () => {
         .dataset
 
       const transform = toObservation({
-        blacklist: [rdf.clownface({ term: ex.property1 }), rdf.clownface({ term: ex.property3 })],
+        blacklist: [rdf.@lindas/clownface({ term: ex.property1 }), rdf.@lindas/clownface({ term: ex.property3 })],
       })
 
       Readable.from([dataset]).pipe(transform)
@@ -394,7 +394,7 @@ describe('cube.toObservation', () => {
         .dataset
 
       const transform = toObservation({
-        dimensions: [rdf.clownface({ term: ex.property1 }), rdf.clownface({ term: ex.property3 })],
+        dimensions: [rdf.@lindas/clownface({ term: ex.property1 }), rdf.@lindas/clownface({ term: ex.property3 })],
       })
 
       Readable.from([dataset]).pipe(transform)

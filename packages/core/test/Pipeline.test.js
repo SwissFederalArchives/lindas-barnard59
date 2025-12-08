@@ -117,7 +117,7 @@ describe('Pipeline', () => {
     })
   })
 
-  it('should have a ptr clownface property', async () => {
+  it('should have a ptr @lindas/clownface property', async () => {
     const { ptr, basePath } = await loadPipelineDefinition('read')
 
     const pipeline = createPipeline(ptr, { env, basePath })

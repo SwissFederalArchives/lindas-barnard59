@@ -2,7 +2,7 @@ import { ok, strictEqual } from 'node:assert'
 import getStream from 'get-stream'
 import { isReadableStream, isWritableStream } from 'is-stream'
 import { Readable } from 'readable-stream'
-import rdf from '@zazuko/env'
+import rdf from '@lindas/env'
 import { query, update } from '../inMemory.js'
 import * as ns from './support/namespaces.js'
 

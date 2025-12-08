@@ -8,7 +8,6 @@
     "clock": "lindas-barnard59 run definitions/world-clock/file.ttl"
   },
   "dependencies": {
-    "@zazuko/rdf-utils-fs": "^3.3.1",
     "lindas-barnard59-base": "^3.0.1",
     "lindas-barnard59-core": "^7.0.1",
     "lindas-barnard59-env": "^2.0.1",
@@ -21,7 +20,8 @@
     "readable-stream": "^3",
     "rdf-dataset-ext": "^1.0.1",
     "rdf-loader-code": "^2.2.2",
-    "string-to-stream": "^3.0.1"
+    "string-to-stream": "^3.0.1",
+    "@lindas/rdf-utils-fs": "^1.0.0"
   },
   "mocha": {
     "loader": "ts-node/esm"

@@ -18,7 +18,7 @@ async function fetchMetadata(rdf: Environment, url: URL | string) {
       throw new Error('response is empty')
     }
 
-    return rdf.clownface({ dataset: await res.dataset() })
+    return rdf.@lindas/clownface({ dataset: await res.dataset() })
   })
 }
 

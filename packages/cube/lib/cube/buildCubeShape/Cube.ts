@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import type { BlankNode, DatasetCore, NamedNode, Quad, Quad_Predicate as Predicate, Term } from '@rdfjs/types'
 import type { Environment } from 'lindas-barnard59-env'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import cbdCopy from '../../cbdCopy.js'
 import Dimension from './Dimension.js'
 
@@ -65,19 +65,19 @@ class Cube {
   toDataset({ shapeGraph }: { shapeGraph?: NamedNode } = { }): DatasetCore {
     const dataset = this.rdf.dataset()
 
-    const cube = this.rdf.clownface({ dataset, term: this.term })
+    const cube = this.rdf.@lindas/clownface({ dataset, term: this.term })
       .addOut(this.rdf.ns.rdf.type, this.rdf.ns.cube.Cube)
       .addOut(this.rdf.ns.cube.observationSet, this.observationSet)
       .addOut(this.rdf.ns.cube.observationConstraint, this.shape)
 
     cbdCopy(this.rdf, this.metadata, cube, { ignore: this.rdf.termSet([this.rdf.ns.cube.observationConstraint]) })
 
-    this.rdf.clownface({ dataset, term: this.observationSet })
+    this.rdf.@lindas/clownface({ dataset, term: this.observationSet })
       .addOut(this.rdf.ns.rdf.type, this.rdf.ns.cube.ObservationSet)
 
     const shapeDataset = this.rdf.dataset()
 
-    this.rdf.clownface({ dataset: shapeDataset, term: this.shape })
+    this.rdf.@lindas/clownface({ dataset: shapeDataset, term: this.shape })
       .addOut(this.rdf.ns.rdf.type, [this.rdf.ns.sh.NodeShape, this.rdf.ns.cube.Constraint])
       .addOut(this.rdf.ns.sh.closed, true)
 

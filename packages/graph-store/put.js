@@ -6,7 +6,7 @@ import { toTerm } from './lib/graph.js'
  * @this {import('lindas-barnard59-core').Context}
  * @param {Pick<import('sparql-http-client/StreamClient.js').Options<any>, 'user' | 'password'> & {
  *   endpoint: string,
- *   graph: string | import('clownface').GraphPointer<import('@rdfjs/types').NamedNode> | import('@rdfjs/types').NamedNode,
+ *   graph: string | import('@lindas/clownface').GraphPointer<import('@rdfjs/types').NamedNode> | import('@rdfjs/types').NamedNode,
  * }} options
  * @returns {import('readable-stream').Writable}
  */

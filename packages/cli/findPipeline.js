@@ -15,10 +15,10 @@ export class MultipleRootsError extends Error {
 /**
  * @param {import('@rdfjs/types').DatasetCore} dataset
  * @param {string | import('@rdfjs/types').NamedNode} [iri]
- * @return {import('clownface').GraphPointer}
+ * @return {import('@lindas/clownface').GraphPointer}
  */
 function findPipeline(dataset, iri) {
-  let ptr = rdf.clownface({ dataset })
+  let ptr = rdf.@lindas/clownface({ dataset })
 
   if (iri) {
     ptr = ptr.namedNode(iri)

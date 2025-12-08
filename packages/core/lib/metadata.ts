@@ -1,5 +1,5 @@
 import type { Environment } from 'lindas-barnard59-env'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 
 function metadata(rdf: Environment, ptr: GraphPointer) {
   const readableObjectMode = Boolean(ptr.has(rdf.ns.rdf.type, rdf.ns.p.ReadableObjectMode).term)

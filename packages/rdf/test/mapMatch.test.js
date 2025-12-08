@@ -127,7 +127,7 @@ describe('mapMatch', () => {
     strictEqual(quads[1].equals(seen[1]), true)
   })
 
-  it('should assign @zazuko/env as rdf to the this context', async () => {
+  it('should assign @lindas/env as rdf to the this context', async () => {
     let context = null
     const quads = [
       rdf.quad(ns.ex.subject1, ns.ex.predicate1, ns.ex.object1, ns.ex.graph1),

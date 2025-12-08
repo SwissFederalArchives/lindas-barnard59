@@ -30,18 +30,18 @@
     "@rdfjs/serializer-ntriples": "^2.0.1",
     "@rdfjs/sink-to-duplex": "^1.0.0",
     "is-stream": "^3.0.0",
-    "@zazuko/rdf-parser-csvw": "^0.17.0",
-    "@zazuko/rdf-parser-csvw-xlsx": "^0.3",
     "rdfxml-streaming-parser": "^3.1.0",
-    "lindas-barnard59-base": "^3.0.2"
+    "lindas-barnard59-base": "^3.0.2",
+    "@lindas/rdf-parser-csvw": "^1.0.0",
+    "@lindas/rdf-parser-csvw-xlsx": "^1.0.0"
   },
   "devDependencies": {
     "@types/rdfjs__sink-to-duplex": "^1.0.0",
     "@types/rdfjs__parser-jsonld": "^2.1.7",
     "@types/sax": "^1.2.7",
-    "@zazuko/env-core": "^1.1.2",
     "chai": "^4.3.7",
-    "lindas-barnard59-env": "^2.0.2"
+    "lindas-barnard59-env": "^2.0.2",
+    "@lindas/env-core": "^1.0.0"
   },
   "engines": {
     "node": ">= 14.0.0"

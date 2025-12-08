@@ -1,5 +1,5 @@
 import type { BlankNode, NamedNode, Term } from '@rdfjs/types'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 
 import type { Environment } from 'lindas-barnard59-env'
 

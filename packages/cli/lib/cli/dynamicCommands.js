@@ -14,7 +14,7 @@ const B59_UPSTREAM = 'https://barnard59.zazuko.com/vocab#'
 
 /**
  * Read a property using LINDAS b59 first, then upstream b59 as fallback.
- * @param {import('clownface').AnyPointer} ptr
+ * @param {import('@lindas/clownface').AnyPointer} ptr
  * @param {string} local
  */
 function outB59(ptr, local) {
@@ -28,7 +28,7 @@ function outB59(ptr, local) {
 /**
  * @typedef {{
  *   name: string | undefined,
- *   manifest: import('clownface').AnyPointer,
+ *   manifest: import('@lindas/clownface').AnyPointer,
  *   version: string,
  * }} Manifest
  */
@@ -128,7 +128,7 @@ export async function * discoverCommands(manifests) {
 }
 
 /**
- * @param {import('clownface').GraphPointer} ptr
+ * @param {import('@lindas/clownface').GraphPointer} ptr
  * @returns {Array<{ name: string | undefined, description: string | undefined, required: boolean, defaultValue: string | undefined }>}
  */
 function getAnnotatedVariables(ptr) {

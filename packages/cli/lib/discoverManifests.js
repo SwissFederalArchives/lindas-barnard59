@@ -14,7 +14,7 @@ const originalPackagePattern = /^barnard59-(.+)$/
  * @param {object} [options]
  * @param {string} [options.basePath]
  * @param {boolean} [options.all]
- * @returns {AsyncGenerator<{ name: string, manifest: import('clownface').AnyPointer, version: string }, void, unknown>}
+ * @returns {AsyncGenerator<{ name: string, manifest: import('@lindas/clownface').AnyPointer, version: string }, void, unknown>}
  */
 export default async function * ({ basePath = import.meta.url, all = false } = {}) {
   const require = module.createRequire(basePath)
@@ -33,7 +33,7 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
     }
     yield {
       name: shortName,
-      manifest: rdf.clownface({ dataset: await rdf.dataset().import(rdf.fromFile(`${dir}/manifest.ttl`)) }),
+      manifest: rdf.@lindas/clownface({ dataset: await rdf.dataset().import(rdf.fromFile(`${dir}/manifest.ttl`)) }),
       version,
     }
   }
@@ -52,7 +52,7 @@ export default async function * ({ basePath = import.meta.url, all = false } = {
         console.log('[lindas-barnard59] Yielding command:', matched[1])
         yield {
           name: matched[1],
-          manifest: rdf.clownface({ dataset }),
+          manifest: rdf.@lindas/clownface({ dataset }),
           version,
         }
       }

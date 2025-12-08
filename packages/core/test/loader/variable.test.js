@@ -7,7 +7,7 @@ const loader = loaderUnbound.bind(null, rdf)
 
 describe('loader/variable', () => {
   it('should load a variable from the map by name', async () => {
-    const ptr = rdf.clownface({ dataset: rdf.dataset() })
+    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() })
       .blankNode()
       .addOut(ns.rdf.type, ns.p.Variable)
       .addOut(ns.p.name, 'foo')
@@ -19,7 +19,7 @@ describe('loader/variable', () => {
   })
 
   it('should add the variable name to variable value term', async () => {
-    const ptr = rdf.clownface({ dataset: rdf.dataset() })
+    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() })
       .blankNode()
       .addOut(ns.rdf.type, ns.p.Variable)
       .addOut(ns.p.name, 'foo')
@@ -31,7 +31,7 @@ describe('loader/variable', () => {
   })
 
   it('should load the variable from the dataset if it\'s not present in the variable map', async () => {
-    const ptr = rdf.clownface({ dataset: rdf.dataset() })
+    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() })
       .blankNode()
       .addOut(ns.rdf.type, ns.p.Variable)
       .addOut(ns.p.name, 'foo')
@@ -43,7 +43,7 @@ describe('loader/variable', () => {
   })
 
   it('should prioritize the variable value from the variable map', async () => {
-    const ptr = rdf.clownface({ dataset: rdf.dataset() })
+    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() })
       .blankNode()
       .addOut(ns.rdf.type, ns.p.Variable)
       .addOut(ns.p.name, 'foo')
@@ -56,7 +56,7 @@ describe('loader/variable', () => {
   })
 
   it('should load a variable value for a given variable name', async () => {
-    const ptr = rdf.clownface({ dataset: rdf.dataset() }).literal('foo', ns.p.VariableName)
+    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() }).literal('foo', ns.p.VariableName)
     const variables = new Map([['foo', 'bar']])
 
     const result = await loader(ptr, { variables })

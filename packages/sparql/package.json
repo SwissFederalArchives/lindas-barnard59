@@ -30,11 +30,11 @@
   "devDependencies": {
     "@tpluscode/rdf-string": "^1.1.2",
     "@types/sparql-http-client": "^3.0.0",
-    "@zazuko/env": "^3",
     "get-stream": "^6.0.0",
     "is-stream": "^3.0.0",
     "nock": "^13.1.1",
-    "lindas-barnard59-env": "^2.0.2"
+    "lindas-barnard59-env": "^2.0.2",
+    "@lindas/env": "^1.0.0"
   },
   "engines": {
     "node": ">= 14.0.0"

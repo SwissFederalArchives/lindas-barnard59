@@ -1,6 +1,6 @@
 import type { Term, NamedNode } from '@rdfjs/types'
 import type { Environment } from 'lindas-barnard59-env'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import type { DatatypeParser } from '../datatypes.js'
 import { DatatypeConstraintBuilder } from './DatatypeConstraintBuilder.js'
 import { type Builder, CompositeConstraintBuilder } from './CompositeConstraintBuilder.js'

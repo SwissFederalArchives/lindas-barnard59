@@ -13,7 +13,7 @@ function findRoot($rdf, { dataset }) {
     return subject;
 }
 function defaultObserver({ dataset, subject }) {
-    const observer = this.rdf.clownface({ dataset }).out(this.rdf.ns.cube.observedBy);
+    const observer = this.rdf.@lindas/clownface({ dataset }).out(this.rdf.ns.cube.observedBy);
     if (isNamedNode(observer)) {
         return observer.term;
     }
@@ -35,7 +35,7 @@ function defaultObservation({ observations, subject }) {
 }
 function dateByProperty(property) {
     return function ({ dataset }) {
-        const date = this.rdf.clownface({ dataset }).out(property);
+        const date = this.rdf.@lindas/clownface({ dataset }).out(property);
         if (!isLiteral(date)) {
             throw new Error(`Expected a date literal at property ${property.value} but found ${date.term?.value}`);
         }
@@ -46,7 +46,7 @@ function dateNow() {
     return this.rdf.literal((new Date()).toISOString(), this.rdf.ns.xsd.dateTime);
 }
 function dateByDatatype({ dataset }) {
-    const terms = this.rdf.clownface({ dataset })
+    const terms = this.rdf.@lindas/clownface({ dataset })
         .out()
         .filter(isLiteral)
         .filter(ptr => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))

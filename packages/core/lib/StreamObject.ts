@@ -1,7 +1,7 @@
 import type { Stream } from 'readable-stream'
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import type { Logger } from 'winston'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import type * as otel from '@opentelemetry/api'
 import type { Context, VariableMap } from '../index.js'
 import { VariableMap as VariableMapImpl } from './VariableMap.js'

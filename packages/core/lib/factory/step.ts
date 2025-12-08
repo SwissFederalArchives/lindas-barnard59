@@ -1,7 +1,7 @@
 import { Duplex } from 'node:stream'
 import type { Stream } from 'readable-stream'
 import { SpanStatusCode } from '@opentelemetry/api'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import type { Logger } from 'winston'
 import type { LoaderRegistry } from 'rdf-loaders-registry'
 import { isStream } from '../isStream.js'

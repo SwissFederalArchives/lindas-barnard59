@@ -1,7 +1,7 @@
 import type { Term, NamedNode } from '@rdfjs/types'
 import type { Environment } from 'lindas-barnard59-env'
 import type { Sh } from '@tpluscode/rdf-ns-builders/vocabularies/sh'
-import type { GraphPointer } from 'clownface'
+import type { GraphPointer } from '@lindas/clownface'
 import type { Builder } from './CompositeConstraintBuilder.js'
 
 export class DatatypeConstraintBuilder implements Builder {
