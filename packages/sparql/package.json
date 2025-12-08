@@ -22,18 +22,18 @@
   },
   "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
-    "duplex-to": "^1.0.1",
-    "oxigraph": "^0.4.0-alpha.2",
-    "readable-stream": "^4.5.2",
+    "duplex-to": "^2.0.0",
+    "oxigraph": "^0.5.2",
+    "readable-stream": "^4.7.0",
     "sparql-http-client": "^3.0.0"
   },
   "devDependencies": {
     "@tpluscode/rdf-string": "^1.1.2",
     "@types/sparql-http-client": "^3.0.0",
     "@zazuko/env": "^3",
-    "get-stream": "^6.0.0",
-    "is-stream": "^3.0.0",
-    "nock": "^13.1.1",
+    "get-stream": "^9.0.1",
+    "is-stream": "^4.0.1",
+    "nock": "^14.0.10",
     "lindas-barnard59-env": "^2.0.2"
   },
   "engines": {

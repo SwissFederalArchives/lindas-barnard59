@@ -23,16 +23,16 @@
   "homepage": "https://github.com/SwissFederalArchives/lindas-barnard59",
   "dependencies": {
     "@opentelemetry/api": "^1.0.1",
-    "duplex-to": "^1.0.1",
+    "duplex-to": "^2.0.0",
     "duplexify": "^4.0.0",
     "node-fetch": "^3.3.2",
-    "readable-stream": ">=3"
+    "readable-stream": ">=4"
   },
   "devDependencies": {
     "@types/duplexify": "^3.6.4",
     "express-as-promise": "^1.2.0",
-    "get-stream": "^6.0.1",
-    "is-stream": "^3.0.0"
+    "get-stream": "^9.0.1",
+    "is-stream": "^4.0.1"
   },
   "mocha": {
     "loader": "ts-node/esm"
