@@ -1,4 +1,4 @@
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { GraphPointer } from '@lindas/clownface'
 
 function metadata(rdf: Environment, ptr: GraphPointer) {

@@ -1,6 +1,6 @@
 import type { NamedNode } from '@rdfjs/types'
 import { fromRdf } from 'rdf-literal'
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { Xsd } from '@tpluscode/rdf-ns-builders/vocabularies/xsd'
 
 const datatypes: Array<keyof Xsd> = [

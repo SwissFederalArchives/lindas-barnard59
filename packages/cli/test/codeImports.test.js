@@ -1,5 +1,5 @@
 import { createRequire } from 'node:module'
-import env from 'lindas-barnard59-env'
+import env from '@lindas/barnard59-env'
 import formatsPretty from '@rdfjs-elements/formats-pretty'
 import chai, { expect } from 'chai'
 import { jestSnapshotPlugin } from 'mocha-chai-jest-snapshot'

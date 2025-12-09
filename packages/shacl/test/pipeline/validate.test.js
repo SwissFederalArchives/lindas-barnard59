@@ -1,12 +1,12 @@
 import * as url from 'url'
 import { expect } from 'chai'
-import env from 'lindas-barnard59-env'
+import env from '@lindas/barnard59-env'
 import express from 'express'
 import withServer from 'express-as-promise/withServer.js'
 import { turtle } from '@tpluscode/rdf-string'
 import toStream from 'string-to-stream'
-import { createPipeline } from 'lindas-barnard59-core'
-import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
+import { createPipeline } from '@lindas/barnard59-core'
+import { pipelineDefinitionLoader } from '@lindas/barnard59-test-support/loadPipelineDefinition.js'
 import getStream from 'get-stream'
 
 const ex = env.namespace('http://example.org/')

@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-formats",
+  "name": "@lindas/barnard59-formats",
   "version": "5.0.2",
   "description": "Support for various formats for Barnard59 Linked Data pipelines",
   "main": "index.js",
@@ -31,7 +31,7 @@
     "@rdfjs/sink-to-duplex": "^1.0.0",
     "is-stream": "^3.0.0",
     "rdfxml-streaming-parser": "^3.1.0",
-    "lindas-barnard59-base": "^3.0.2",
+    "@lindas/barnard59-base": "^3.0.2",
     "@lindas/rdf-parser-csvw": "^0.17.0",
     "@lindas/rdf-parser-csvw-xlsx": "^1.0.0"
   },
@@ -40,7 +40,7 @@
     "@types/rdfjs__parser-jsonld": "^2.1.7",
     "@types/sax": "^1.2.7",
     "chai": "^4.3.7",
-    "lindas-barnard59-env": "^2.0.2",
+    "@lindas/barnard59-env": "^2.0.2",
     "@lindas/env-core": "^1.1.2"
   },
   "engines": {

@@ -1,5 +1,5 @@
 import module from 'node:module'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { program } from 'commander'
 import { isLiteral } from 'is-graph-pointer'
 import { parse } from '../pipeline.js'

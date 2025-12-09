@@ -1,5 +1,5 @@
 import { program } from 'commander'
-import { defaultLogger } from 'lindas-barnard59-core'
+import { defaultLogger } from '@lindas/barnard59-core'
 
 /**
  * @param {import('../cli.js').CliOptions & { variable: Map<string, string >}} options

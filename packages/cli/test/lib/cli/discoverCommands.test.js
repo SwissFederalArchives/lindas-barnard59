@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { discoverCommands } from '../../../lib/cli/dynamicCommands.js'
 import discoverManifests from '../../../lib/discoverManifests.js'
 

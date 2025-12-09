@@ -1,5 +1,5 @@
 import rdfFetch from '@rdfjs/fetch'
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { DatasetResponse } from '@rdfjs/fetch-lite'
 import type { DatasetCore } from '@rdfjs/types'
 import checkResponse from './checkResponse.js'

@@ -1,4 +1,4 @@
-import { createPipeline, defaultLogger, run } from 'lindas-barnard59-core'
+import { createPipeline, defaultLogger, run } from '@lindas/barnard59-core'
 
 import tracer from './lib/tracer.js'
 

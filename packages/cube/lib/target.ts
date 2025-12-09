@@ -1,4 +1,4 @@
-import type { Context } from 'lindas-barnard59-core'
+import type { Context } from '@lindas/barnard59-core'
 import type { DatasetCore } from '@rdfjs/types'
 
 export const addTarget = function (this: Context, shape: DatasetCore) {

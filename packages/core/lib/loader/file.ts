@@ -4,7 +4,7 @@ import { isLiteral } from 'is-graph-pointer'
 import untildify from 'untildify'
 import type { GraphPointer } from '@lindas/clownface'
 import type LoaderRegistry from 'rdf-loaders-registry'
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { VariableMap } from '../VariableMap.js'
 
 export default function loader(ptr: GraphPointer, { basePath, variables }: { basePath: string; variables: VariableMap }) {

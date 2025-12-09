@@ -1,4 +1,4 @@
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { NodeKindConstraintBuilder } from '../../../lib/cube/buildCubeShape/constraintBuilder/NodeKindConstraintBuilder.js'
 import { prepareValidator } from './support.js'
 

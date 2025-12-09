@@ -2,7 +2,7 @@ import { strictEqual } from 'node:assert'
 import getStream from 'get-stream'
 import { isReadableStream, isWritableStream } from 'is-stream'
 import nock from 'nock'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import selectUnbound from '../select.js'
 
 const select = selectUnbound.bind({ env: rdf })

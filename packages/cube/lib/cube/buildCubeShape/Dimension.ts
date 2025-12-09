@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 import { isResource } from 'is-graph-pointer'
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { AnyPointer } from '@lindas/clownface'
 import type { BlankNode, NamedNode, Term, Quad_Predicate as Predicate } from '@rdfjs/types'
 import cbdCopy from '../../cbdCopy.js'

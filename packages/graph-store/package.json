@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-graph-store",
+  "name": "@lindas/barnard59-graph-store",
   "version": "7.0.2",
   "description": "SPARQL Graph Store Protocol support for Linked Data pipelines",
   "type": "module",
@@ -28,8 +28,8 @@
     "promise-the-world": "^1.0.1",
     "readable-stream": "^3.6.0",
     "sparql-http-client": "^3.0.0",
-    "lindas-barnard59-base": "^3.0.2",
-    "lindas-barnard59-rdf": "^4.0.2"
+    "@lindas/barnard59-base": "^3.0.2",
+    "@lindas/barnard59-rdf": "^4.0.2"
   },
   "devDependencies": {
     "@rdfjs/to-ntriples": "^3.0.0",
@@ -38,15 +38,15 @@
     "@types/promise-the-world": "^1.0.6",
     "@types/readable-stream": "^4.0.10",
     "@types/sparql-http-client": "^3.0.0",
-    "lindas-barnard59-test-support": "*",
+    "@lindas/barnard59-test-support": "*",
     "docker-compose": "^0.24.8",
     "express-as-promise": "^1.2.0",
     "get-stream": "^6.0.1",
     "is-stream": "^3",
     "rdf-literal": "^2.0.0",
     "wait-on": "^8.0.3",
-    "lindas-barnard59-core": "^7.0.2",
-    "lindas-barnard59-env": "^2.0.2",
+    "@lindas/barnard59-core": "^7.0.2",
+    "@lindas/barnard59-env": "^2.0.2",
     "@lindas/env": "^3.0.1"
   },
   "engines": {

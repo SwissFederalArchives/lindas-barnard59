@@ -1,11 +1,11 @@
 {
-  "name": "lindas-barnard59",
+  "name": "@lindas/barnard59",
   "version": "6.0.4",
   "description": "Barnard59 Linked Data pipelines",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "lindas-barnard59": "bin/barnard59.sh",
+    "barnard59": "bin/barnard59.sh",
     "b59": "bin/barnard59.sh"
   },
   "scripts": {
@@ -49,8 +49,8 @@
     "rdf-loader-code": "^2.2.2",
     "rdf-transform-graph-imports": "^0.2.2",
     "readable-stream": "^3.6.0",
-    "lindas-barnard59-core": "7.0.2",
-    "lindas-barnard59-env": "2.0.2"
+    "@lindas/barnard59-core": "7.0.2",
+    "@lindas/barnard59-env": "2.0.2"
   },
   "devDependencies": {
     "@fig/complete-commander": "^3.1.0",
@@ -59,15 +59,15 @@
     "@types/readable-stream": "^4.0.10",
     "@types/shelljs": "^0.8.15",
     "approvals": "^7.3.0",
-    "lindas-barnard59-test-support": "^0.0.3",
+    "@lindas/barnard59-test-support": "^0.0.3",
     "chai": "^4.3.7",
     "mocha-chai-jest-snapshot": "^1.1.4",
     "shelljs": "^0.8.4",
     "strip-ansi": "^7.0.0",
-    "lindas-barnard59-base": "^3.0.2",
-    "lindas-barnard59-formats": "^5.0.2",
-    "lindas-barnard59-graph-store": "^7.0.2",
-    "lindas-barnard59-http": "^3.0.2"
+    "@lindas/barnard59-base": "^3.0.2",
+    "@lindas/barnard59-formats": "^5.0.2",
+    "@lindas/barnard59-graph-store": "^7.0.2",
+    "@lindas/barnard59-http": "^3.0.2"
   },
   "mocha": {
     "loader": "ts-node/esm/transpile-only"

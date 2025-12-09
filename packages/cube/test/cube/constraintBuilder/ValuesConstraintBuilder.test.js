@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { ValuesConstraintBuilder } from '../../../lib/cube/buildCubeShape/constraintBuilder/ValuesConstraintBuilder.js'
 import { prepareValidator } from './support.js'
 

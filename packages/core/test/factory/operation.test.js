@@ -1,6 +1,6 @@
 import { strictEqual } from 'node:assert'
-import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
-import env from 'lindas-barnard59-env'
+import { pipelineDefinitionLoader } from '@lindas/barnard59-test-support/loadPipelineDefinition.js'
+import env from '@lindas/barnard59-env'
 import defaultLoaderRegistry from '../../lib/defaultLoaderRegistry.js'
 import createOperation from '../../lib/factory/operation.js'
 import ns from '../support/namespaces.js'

@@ -1,1 +1,1 @@
-export { get } from 'lindas-barnard59-http'
+export { get } from '@lindas/barnard59-http'

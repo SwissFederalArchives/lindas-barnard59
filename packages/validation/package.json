@@ -1,10 +1,10 @@
 {
-  "name": "lindas-barnard59-validation",
+  "name": "@lindas/barnard59-validation",
   "version": "1.0.2",
   "type": "module",
   "main": "cli.js",
   "bin": {
-    "lindas-barnard59-validate": "./cli.js"
+    "barnard59-validate": "./cli.js"
   },
   "imports": {
     "#fixtures/*": "./test/fixtures/*"
@@ -22,9 +22,9 @@
     "deep-equal": "^2.0.5",
     "esmock": "^2.3.8",
     "sinon": "^15.2.0",
-    "lindas-barnard59-base": "^3.0.2",
-    "lindas-barnard59-core": "^7.0.2",
-    "lindas-barnard59-formats": "^5.0.2"
+    "@lindas/barnard59-base": "^3.0.2",
+    "@lindas/barnard59-core": "^7.0.2",
+    "@lindas/barnard59-formats": "^5.0.2"
   },
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
     "chalk": "^4.1.0",
     "commander": "^11.0.0",
     "rdf-loader-code": "^2.2.2",
-    "lindas-barnard59-env": "^2.0.2"
+    "@lindas/barnard59-env": "^2.0.2"
   },
   "mocha": {
     "loader": [

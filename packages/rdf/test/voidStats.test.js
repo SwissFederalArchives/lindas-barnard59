@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import assertThrows from 'assert-throws-async'
 import getStream from 'get-stream'
 import { isDuplexStream as isDuplex } from 'is-stream'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { Readable } from 'readable-stream'
 import voidStatsUnbound from '../lib/voidStats.js'
 

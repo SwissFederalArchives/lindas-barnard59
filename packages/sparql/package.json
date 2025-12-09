@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-sparql",
+  "name": "@lindas/barnard59-sparql",
   "version": "3.0.2",
   "description": "SPARQL support for Barnard59 Linked Data pipelines",
   "type": "module",
@@ -33,7 +33,7 @@
     "get-stream": "^6.0.0",
     "is-stream": "^3.0.0",
     "nock": "^13.1.1",
-    "lindas-barnard59-env": "^2.0.2",
+    "@lindas/barnard59-env": "^2.0.2",
     "@lindas/env": "^3.0.1"
   },
   "engines": {

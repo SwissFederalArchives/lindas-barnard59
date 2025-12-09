@@ -1,6 +1,6 @@
 import { Readable, Duplex } from 'node:stream'
 import { sort, compareOn, createStore } from 'external-merge-sort'
-import type { Context } from 'lindas-barnard59-core'
+import type { Context } from '@lindas/barnard59-core'
 import type { Quad } from '@rdfjs/types'
 
 export function sortBySubject(this: Context, sortChunkSize: string | number) {

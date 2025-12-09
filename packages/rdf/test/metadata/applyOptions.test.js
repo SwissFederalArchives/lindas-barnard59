@@ -1,6 +1,6 @@
 import { strictEqual } from 'node:assert'
 import { expect } from 'chai'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { Readable } from 'readable-stream'
 import { applyOptions } from '../../lib/metadata/applyOptions.js'
 

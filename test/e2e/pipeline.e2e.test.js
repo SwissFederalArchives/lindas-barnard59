@@ -1,14 +1,14 @@
 import { deepStrictEqual } from 'node:assert'
 import getStream from 'get-stream'
 import nock from 'nock'
-import createPipeline from 'lindas-barnard59-core/lib/factory/pipeline.js'
-import defaultLoaderRegistry from 'lindas-barnard59-core/lib/defaultLoaderRegistry.js'
-import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
+import createPipeline from '@lindas/barnard59-core/lib/factory/pipeline.js'
+import defaultLoaderRegistry from '@lindas/barnard59-core/lib/defaultLoaderRegistry.js'
+import { pipelineDefinitionLoader } from '@lindas/barnard59-test-support/loadPipelineDefinition.js'
 import { expect } from 'chai'
 import toCanonical from 'rdf-dataset-ext/toCanonical.js'
 import fromStream from 'rdf-dataset-ext/fromStream.js'
 import fromFile from '@lindas/rdf-utils-fs/fromFile.js'
-import env from 'lindas-barnard59-env'
+import env from '@lindas/barnard59-env'
 import { promisedEcmaScriptLoader, promisedUrlLoader } from './asyncLoaders.js'
 
 const loadPipelineDefinition = pipelineDefinitionLoader(import.meta.url, 'definitions')

@@ -1,4 +1,4 @@
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { fromRdf } from 'rdf-literal'
 import { DimensionConstraintsBuilder } from '../../../lib/cube/buildCubeShape/constraintBuilder/DimensionConstraintsBuilder.js'
 import { prepareValidator } from './support.js'

@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-core",
+  "name": "@lindas/barnard59-core",
   "version": "7.0.2",
   "description": "Core component of Barnard59 Linked Data pipelines",
   "type": "module",
@@ -38,15 +38,15 @@
   "devDependencies": {
     "@rdfjs/namespace": "^2.0.0",
     "@types/readable-stream": "^4.0.9",
-    "lindas-barnard59-test-support": "^0.0.3",
+    "@lindas/barnard59-test-support": "^0.0.3",
     "chai": "^4.3.7",
     "get-stream": "^6.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "nock": "^13.1.0",
     "sinon": "^15.0.4",
-    "lindas-barnard59-env": "^2.0.2",
-    "lindas-barnard59-http": "^3.0.2"
+    "@lindas/barnard59-env": "^2.0.2",
+    "@lindas/barnard59-http": "^3.0.2"
   },
   "mocha": {
     "require": "../../test/mocha-setup.cjs",

@@ -1,6 +1,6 @@
 import { Readable } from 'stream'
 import deepEqual from 'deep-equal'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 
 const parser = rdf.formats.parsers.get('text/turtle')
 

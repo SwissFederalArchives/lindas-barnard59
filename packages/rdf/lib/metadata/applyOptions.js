@@ -1,4 +1,4 @@
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { wellKnownDatasetClasses, wellKnownDatasetClassesWithDcterms } from './datasetClasses.js'
 import { namedDateLiterals } from './namedDateLiterals.js'
 

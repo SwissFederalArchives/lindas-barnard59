@@ -1,5 +1,5 @@
 import Environment from '@lindas/env-core'
-import parent from 'lindas-barnard59-env'
+import parent from '@lindas/barnard59-env'
 
 class TestDataFactory {
   quad(...args) {

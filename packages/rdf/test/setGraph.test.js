@@ -1,7 +1,7 @@
 import { strictEqual } from 'assert'
 import getStream from 'get-stream'
 import { isDuplexStream as isDuplex } from 'is-stream'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { Readable } from 'readable-stream'
 import setGraphUnbound from '../setGraph.js'
 import * as ns from './support/namespaces.js'

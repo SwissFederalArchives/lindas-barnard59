@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-http",
+  "name": "@lindas/barnard59-http",
   "version": "3.0.2",
   "description": "HTTP protocol support for Barnard59 Linked Data pipelines",
   "main": "index.js",

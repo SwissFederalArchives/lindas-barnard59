@@ -1,5 +1,5 @@
 import type { Logger } from 'winston'
-import type { Environment } from 'lindas-barnard59-env'
+import type { Environment } from '@lindas/barnard59-env'
 import type { GraphPointer, AnyPointer } from '@lindas/clownface'
 import defaultLoaderRegistry from './lib/defaultLoaderRegistry.js'
 import defaultLogger from './lib/defaultLogger.js'

@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-test-e2e",
+  "name": "@lindas/barnard59-test-e2e",
   "version": "0.1.3",
   "private": true,
   "type": "module",
@@ -8,15 +8,15 @@
     "clock": "lindas-barnard59 run definitions/world-clock/file.ttl"
   },
   "dependencies": {
-    "lindas-barnard59-base": "^3.0.1",
-    "lindas-barnard59-core": "^7.0.1",
-    "lindas-barnard59-env": "^2.0.1",
-    "lindas-barnard59-formats": "^5.0.1",
-    "lindas-barnard59-http": "^3.0.1",
+    "@lindas/barnard59-base": "^3.0.1",
+    "@lindas/barnard59-core": "^7.0.1",
+    "@lindas/barnard59-env": "^2.0.1",
+    "@lindas/barnard59-formats": "^5.0.1",
+    "@lindas/barnard59-http": "^3.0.1",
     "chai": "^4.3.7",
     "get-stream": "^6.0.0",
     "nock": "^13.3.1",
-    "lindas-barnard59-test-support": "^0.0.3",
+    "@lindas/barnard59-test-support": "^0.0.3",
     "readable-stream": "^3",
     "rdf-dataset-ext": "^1.0.1",
     "rdf-loader-code": "^2.2.2",

@@ -1,8 +1,8 @@
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import approvals from 'approvals'
-import rdf from 'lindas-barnard59-env'
-import { pipelineDefinitionLoader } from 'lindas-barnard59-test-support/loadPipelineDefinition.js'
+import rdf from '@lindas/barnard59-env'
+import { pipelineDefinitionLoader } from '@lindas/barnard59-test-support/loadPipelineDefinition.js'
 import { desugar } from '../lib/pipeline.js'
 
 const __dirname = resolve(fileURLToPath(import.meta.url), '..')

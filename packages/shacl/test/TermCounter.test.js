@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert'
-import env from 'lindas-barnard59-env'
+import env from '@lindas/barnard59-env'
 import TermCounter from '../lib/TermCounter.js'
 
 describe('TermCounter', () => {

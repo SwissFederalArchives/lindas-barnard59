@@ -1,5 +1,5 @@
 import { notStrictEqual, strictEqual, throws } from 'assert'
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import cloneTermUnbound from '../lib/cloneTerm.js'
 import ns from './support/namespaces.js'
 

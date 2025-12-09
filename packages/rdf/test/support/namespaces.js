@@ -1,4 +1,4 @@
-import $rdf from 'lindas-barnard59-env'
+import $rdf from '@lindas/barnard59-env'
 
 const ex = $rdf.namespace('http://example.org/')
 const { rdf, schema, sh, xsd } = $rdf.ns

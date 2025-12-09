@@ -3,7 +3,7 @@ import Parser from '@rdfjs/parser-jsonld'
 import FsDocumentLoader from '@rdfjs/parser-jsonld/FsDocumentLoader.js'
 import Serializer from '@rdfjs/serializer-jsonld'
 import sinkToDuplex from '@rdfjs/sink-to-duplex'
-import { combine, jsonStringify } from 'lindas-barnard59-base'
+import { combine, jsonStringify } from '@lindas/barnard59-base'
 import tracer from './lib/tracer.js'
 
 /**

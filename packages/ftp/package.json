@@ -1,5 +1,5 @@
 {
-  "name": "lindas-barnard59-ftp",
+  "name": "@lindas/barnard59-ftp",
   "version": "3.0.2",
   "description": "FTP support for Linked Data pipelines",
   "main": "index.js",

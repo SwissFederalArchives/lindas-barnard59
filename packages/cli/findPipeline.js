@@ -1,4 +1,4 @@
-import rdf from 'lindas-barnard59-env'
+import rdf from '@lindas/barnard59-env'
 import { isGraphPointer } from 'is-graph-pointer'
 
 export class MultipleRootsError extends Error {
