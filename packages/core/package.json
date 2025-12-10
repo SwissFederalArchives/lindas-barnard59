@@ -36,17 +36,18 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@lindas/barnard59-env": "^2.0.2",
+    "@lindas/barnard59-http": "^3.0.2",
+    "@lindas/barnard59-test-support": "^0.0.3",
+    "@lindas/clownface": "^2.0.4",
     "@rdfjs/namespace": "^2.0.0",
     "@types/readable-stream": "^4.0.9",
-    "@lindas/barnard59-test-support": "^0.0.3",
     "chai": "^4.3.7",
     "get-stream": "^6.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "nock": "^13.1.0",
-    "sinon": "^15.0.4",
-    "@lindas/barnard59-env": "^2.0.2",
-    "@lindas/barnard59-http": "^3.0.2"
+    "sinon": "^15.0.4"
   },
   "mocha": {
     "require": "../../test/mocha-setup.cjs",
