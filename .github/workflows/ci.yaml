@@ -37,12 +37,12 @@ jobs:
           node-version: "20"
           cache: npm
       - run: npm ci
-      - run: npx c8 --all --src packages/${{ matrix.package }} -x "packages/!(${{ matrix.package }})" --reporter lcovonly --reporter text npm run -w lindas-barnard59-${{ matrix.package }} test
+      - run: npx c8 --all --src packages/${{ matrix.package }} -x "packages/!(${{ matrix.package }})" --reporter lcovonly --reporter text npm run -w @lindas/barnard59-${{ matrix.package }} test
       - name: Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          flags: lindas-barnard59-${{ matrix.package }}
+          flags: barnard59-${{ matrix.package }}
 
   type-check:
     runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
           node-version: "20"
           cache: npm
       - run: npm ci
-      - run: npm run -w lindas-barnard59-test-e2e test
+      - run: npm run -w @lindas/barnard59-test-e2e test
 
   test-cli:
     runs-on: ubuntu-latest
@@ -77,12 +77,12 @@ jobs:
       - run: npm ci
       - name: Compile TypeScript packages
         run: npm run -ws --if-present build -- --sourceMap
-      - run: npx c8 --all --src packages/cli -x "packages/!(cli)" --reporter lcovonly --reporter text npm run -w lindas-barnard59 test
+      - run: npx c8 --all --src packages/cli -x "packages/!(cli)" --reporter lcovonly --reporter text npm run -w @lindas/barnard59 test
       - name: Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          flags: lindas-barnard59
+          flags: barnard59
 
   lint:
     runs-on: ubuntu-latest
@@ -171,10 +171,10 @@ jobs:
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
       - run: where lindas-barnard59
         if: matrix.os == 'windows-latest'
-      - name: Debug - List globally installed lindas-barnard59 packages
-        run: npm list -g --depth=0 | grep lindas-barnard59 || echo "No lindas-barnard59 packages found"
+      - name: Debug - List globally installed barnard59 packages
+        run: npm list -g --depth=0 | grep lindas-barnard59 || echo "No barnard59 packages found"
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
-      - name: Debug - List globally installed lindas-barnard59 packages (Windows)
+      - name: Debug - List globally installed barnard59 packages (Windows)
         shell: pwsh
         run: npm list -g --depth=0 | Select-String "lindas-barnard59"
         if: matrix.os == 'windows-latest'
