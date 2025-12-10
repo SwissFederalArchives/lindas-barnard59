@@ -1,5 +1,5 @@
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {string} pathOrUri
  * @param {string} [mediaTypeOverride]
  * @return {Promise<import('@rdfjs/types').Stream>}

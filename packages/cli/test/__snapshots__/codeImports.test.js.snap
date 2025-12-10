@@ -17,7 +17,7 @@ exports[`pipeline with code:imports merges the pipelines 1`] = `
 				) ;
 				code:implementedBy [
 					rdf:type code:EcmaScriptModule ;
-					code:link <node:lindas-barnard59-base/Readable.js#from> ;
+					code:link <node:@lindas/barnard59-base/Readable.js#from> ;
 				] ;
 			]
 			<http://example.org/pipeline/out>
@@ -31,7 +31,7 @@ exports[`pipeline with code:imports merges the pipelines 1`] = `
 				rdf:type p:Step ;
 				code:implementedBy [
 					rdf:type code:EcmaScriptModule ;
-					code:link <node:lindas-barnard59-base/process.js#stdout> ;
+					code:link <node:@lindas/barnard59-base/process.js#stdout> ;
 				] ;
 			]
 		) ;

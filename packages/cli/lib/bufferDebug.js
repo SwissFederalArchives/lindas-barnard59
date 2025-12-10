@@ -9,7 +9,7 @@ const { finished } = stream
  *   index: number,
  *   mode: string,
  *   state: import('readable-stream').ReadableState | import('readable-stream').WritableState,
- *   step: import('lindas-barnard59-core').Step
+ *   step: import('@lindas/barnard59-core').Step
  * }} args
  * @return {{value: (number|number), key: string}}
  */
@@ -21,7 +21,7 @@ function bufferStatePair({ index, mode, state, step }) {
 }
 
 /**
- * @param {import('lindas-barnard59-core').Pipeline} pipeline
+ * @param {import('@lindas/barnard59-core').Pipeline} pipeline
  * @returns {Record<string, number> | undefined}
  */
 function bufferInfo(pipeline) {
@@ -59,7 +59,7 @@ function bufferInfo(pipeline) {
 }
 
 /**
- * @param {import('lindas-barnard59-core').Pipeline} pipeline
+ * @param {import('@lindas/barnard59-core').Pipeline} pipeline
  * @param {{ interval?: number }} [options]
  */
 function bufferDebug(pipeline, { interval = 10 } = {}) {

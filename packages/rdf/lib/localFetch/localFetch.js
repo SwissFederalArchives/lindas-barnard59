@@ -49,7 +49,7 @@ async function fetchHTTPWithMeta(input) {
 }
 
 /**
- * @param {import('lindas-barnard59-env').Environment} env
+ * @param {import('@lindas/barnard59-env').Environment} env
  * @param {string} filePath
  */
 function guessParserForFile(env, filePath) {
@@ -61,7 +61,7 @@ function guessParserForFile(env, filePath) {
 }
 
 /**
- * @param {import('lindas-barnard59-env').Environment} env
+ * @param {import('@lindas/barnard59-env').Environment} env
  * @param {string} input
  * @return {Promise<LocalFetchResponse>}
  */
@@ -85,7 +85,7 @@ async function fetchFileWithMeta(env, input) {
 
 /**
  * Tries to fetch or read locally one file
- * @this import('lindas-barnard59-core').Context
+ * @this import('@lindas/barnard59-core').Context
  * @param {import('stream').Readable | string} input
  * @param {string} [basePath]
  * @return {Promise<LocalFetchResponse>}

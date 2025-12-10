@@ -1,7 +1,7 @@
 import transform from 'parallel-transform'
 
 /**
- * @typedef {(this: import('lindas-barnard59-core').Context, chunk: From) => Promise<To> | To} MapCallback
+ * @typedef {(this: import('@lindas/barnard59-core').Context, chunk: From) => Promise<To> | To} MapCallback
  * @template From, To
  */
 
@@ -18,7 +18,7 @@ import transform from 'parallel-transform'
 /**
  * Processes chunks with a transform function
  *
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {MapOptions<From, To>} options Transform function or complex options
  * @return {import('stream').Transform}
  * @template From, To

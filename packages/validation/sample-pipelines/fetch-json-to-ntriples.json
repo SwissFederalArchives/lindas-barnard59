@@ -72,7 +72,7 @@
                 {
                     "@id": "fetch",
                     "code:implementedBy": {
-                        "code:link": "node:lindas-barnard59-base#fetch.json",
+                        "code:link": "node:@lindas/barnard59-base#fetch.json",
                         "@type": "code:EcmaScript"
                     },
                     "code:arguments": [
@@ -85,7 +85,7 @@
                 {
                     "@id": "jsonldStructure",
                     "code:implementedBy": {
-                        "code:link": "node:lindas-barnard59-base#map",
+                        "code:link": "node:@lindas/barnard59-base#map",
                         "@type": "code:EcmaScript"
                     },
                     "code:arguments": [
@@ -98,14 +98,14 @@
                 {
                     "@id": "parse",
                     "code:implementedBy": {
-                        "code:link": "node:lindas-barnard59-formats#jsonld.parse.object",
+                        "code:link": "node:@lindas/barnard59-formats#jsonld.parse.object",
                         "@type": "code:EcmaScript"
                     }
                 },
                 {
                     "@id": "serialize",
                     "code:implementedBy": {
-                        "code:link": "node:lindas-barnard59-formats#ntriples.serialize",
+                        "code:link": "node:@lindas/barnard59-formats#ntriples.serialize",
                         "@type": "code:EcmaScript"
                     }
                 }

@@ -3,7 +3,7 @@ import { Transform } from 'readable-stream'
 
 class AddRelations extends Transform {
   /**
-   * @param {import('lindas-barnard59-core').Context} context
+   * @param {import('@lindas/barnard59-core').Context} context
    * @param {object} options
    * @param {(targetUri: string | import('@rdfjs/types').NamedNode) => import('@rdfjs/types').Quad} options.createRelation
    * @param {import('@rdfjs/types').Quad[]} options.additionalQuads
@@ -50,7 +50,7 @@ class AddRelations extends Transform {
 const toNamedNode = item => typeof item === 'string' ? rdf.namedNode(item) : item
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {object} options
  * @param {string | import('@rdfjs/types').NamedNode} options.targetUri
  * @param {string | import('@rdfjs/types').NamedNode} options.targetClass
@@ -85,7 +85,7 @@ function toTarget({
 }
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {object} options
  * @param {string | import('@rdfjs/types').NamedNode} options.sourceUri
  * @param {string | import('@rdfjs/types').NamedNode} options.sourceClass

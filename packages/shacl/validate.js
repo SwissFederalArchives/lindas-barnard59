@@ -6,7 +6,7 @@ import { ValidationError } from './lib/errors.js'
 /**
  * @callback OnViolation
  * @param {object} options
- * @param {import('lindas-barnard59-core').Context} options.context
+ * @param {import('@lindas/barnard59-core').Context} options.context
  * @param {import('rdf-validate-shacl/src/validation-report').ValidationReport} options.report
  * @param {import('@rdfjs/types').DatasetCore} options.data
  * @returns {boolean}
@@ -14,7 +14,7 @@ import { ValidationError } from './lib/errors.js'
 
 class ValidateChunk extends Transform {
   /**
-   * @param {import('lindas-barnard59-core').Context} context
+   * @param {import('@lindas/barnard59-core').Context} context
    * @param {import('@rdfjs/types').DatasetCore} shape
    * @param {{ maxErrors?: number, onViolation?: OnViolation }} options
    */
@@ -55,7 +55,7 @@ class ValidateChunk extends Transform {
 }
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {import('stream').Stream | { shape: import('stream').Stream, maxErrors?: number }} arg
  * @return {Promise<Transform>}
  */

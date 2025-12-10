@@ -28,6 +28,6 @@
     code:implementedBy
         [
             a code:EcmaScriptModule ;
-            code:link <node:lindas-barnard59-base/limit.js#default>
+            code:link <node:@lindas/barnard59-base/limit.js#default>
         ];
         code:arguments ( 100 ).

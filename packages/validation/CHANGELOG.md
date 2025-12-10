@@ -7,7 +7,7 @@
 - d55915d: Bump patch versions for all lindas-trifid packages to ensure they are available on npm
   with the LINDAS namespace
 - Updated dependencies [d55915d]
-  - lindas-barnard59-env@2.0.2
+  - @lindas/barnard59-env@2.0.2
 
 ## 1.0.1
 
@@ -18,7 +18,7 @@
   Updated all source and test file imports to reference the renamed lindas-barnard59 packages instead of the old barnard59 names. External packages like barnard59-test-support remain unchanged.
 
 - Updated dependencies [02c2689]
-  - lindas-barnard59-env@2.0.1
+  - @lindas/barnard59-env@2.0.1
 
 ## 1.0.0
 
@@ -31,7 +31,7 @@
 ### Patch Changes
 
 - Updated dependencies [d98737d]
-  - lindas-barnard59-env@2.0.0
+  - @lindas/barnard59-env@2.0.0
 
 ## 0.4.3
 

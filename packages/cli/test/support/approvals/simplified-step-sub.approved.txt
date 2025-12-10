@@ -16,6 +16,6 @@ _:c14n5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/199
 _:c14n6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:c14n3 .
 _:c14n6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:c14n7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://code.described.at/EcmaScriptModule> .
-_:c14n7 <https://code.described.at/link> <node:lindas-barnard59-base#concat> .
+_:c14n7 <https://code.described.at/link> <node:@lindas/barnard59-base#concat> .
 _:c14n8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://code.described.at/EcmaScriptModule> .
-_:c14n8 <https://code.described.at/link> <node:lindas-barnard59-base#concat> .
+_:c14n8 <https://code.described.at/link> <node:@lindas/barnard59-base#concat> .

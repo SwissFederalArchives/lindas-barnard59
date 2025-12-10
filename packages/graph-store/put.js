@@ -3,7 +3,7 @@ import SinkToWritable from './lib/SinkToWritable.js'
 import { toTerm } from './lib/graph.js'
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {Pick<import('sparql-http-client/StreamClient.js').Options<any>, 'user' | 'password'> & {
  *   endpoint: string,
  *   graph: string | import('@lindas/clownface').GraphPointer<import('@rdfjs/types').NamedNode> | import('@rdfjs/types').NamedNode,

@@ -1,7 +1,7 @@
 import mime from 'mime-types'
 
 /**
- * @param {import('lindas-barnard59-env').Environment} env
+ * @param {import('@lindas/barnard59-env').Environment} env
  * @param {string | URL} fileUrl
  * @returns {import('@rdfjs/types').Sink<import('stream').EventEmitter, import('@rdfjs/types').Stream> | undefined}
  */

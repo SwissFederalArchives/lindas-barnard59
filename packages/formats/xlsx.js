@@ -23,7 +23,7 @@ import { toDataset } from './lib/stream.js'
  */
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {Options | import('@rdfjs/types').DatasetCore} args
  */
 function parse(args) {

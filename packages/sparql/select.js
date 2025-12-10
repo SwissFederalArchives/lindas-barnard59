@@ -2,7 +2,7 @@ import readable from 'duplex-to/readable.js'
 import Client from 'sparql-http-client'
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {Object} options
  * @param {string} options.endpoint
  * @param {string} options.query

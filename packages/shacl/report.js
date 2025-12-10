@@ -4,7 +4,7 @@ import SHACLValidator from 'rdf-validate-shacl'
 import TermCounter from './lib/TermCounter.js'
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {object} options
  * @param {import('@rdfjs/types').DatasetCore | undefined} options.shapes
  * @param {number | undefined} options.maxViolations
@@ -47,7 +47,7 @@ async function * validate({ shapes, maxViolations }, iterable) {
 }
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @param {import('stream').Stream | { shape: import('stream').Stream, maxErrors?: number }} arg
  * @return {Promise<Duplex>}
  */

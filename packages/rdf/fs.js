@@ -1,7 +1,7 @@
 import { Transform } from 'readable-stream'
 
 /**
- * @this {import('lindas-barnard59-core').Context}
+ * @this {import('@lindas/barnard59-core').Context}
  * @return {Transform}
  */
 export function parse() {

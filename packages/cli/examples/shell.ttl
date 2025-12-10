@@ -24,7 +24,7 @@
 
 <sed> a p:Step;
   code:implementedBy [
-    code:link <node:lindas-barnard59-shell>;
+    code:link <node:@lindas/barnard59-shell>;
     a code:EcmaScript
   ];
   code:arguments ("sed" "--expression=s/columnA/columnZ/g").

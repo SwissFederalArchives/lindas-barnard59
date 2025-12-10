@@ -4,7 +4,7 @@ import { applyOptions } from './metadata/applyOptions.js'
 
 class MetadataAppend extends Transform {
   /**
-   * @param {import('lindas-barnard59-core').Context} context
+   * @param {import('@lindas/barnard59-core').Context} context
    * @param {string | undefined} basePath
    * @param {string} input
    * @param {{
@@ -48,7 +48,7 @@ class MetadataAppend extends Transform {
 }
 
 /**
- * @this import('lindas-barnard59-core').Context
+ * @this import('@lindas/barnard59-core').Context
  * @param {object} [options]
  * @param {string | undefined} [options.input]
  * @param {string} [options.basepath]

@@ -76,7 +76,7 @@ describe('utils', () => {
 
   describe('getManifestPath', () => {
     it('should return path if manifest exists', () => {
-      const actual = utils.getManifestPath('lindas-barnard59-base')
+      const actual = utils.getManifestPath('@lindas/barnard59-base')
       assert(fs.existsSync(actual))
     })
 

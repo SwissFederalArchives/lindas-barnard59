@@ -6,7 +6,7 @@ _:c14n1 <https://pipeline.described.at/stepList> _:c14n0 .
 _:c14n2 <https://code.described.at/name> "snd" .
 _:c14n2 <https://code.described.at/value> <http://example.org/pipeline/readB> .
 _:c14n3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://code.described.at/EcmaScriptModule> .
-_:c14n3 <https://code.described.at/link> <node:lindas-barnard59-base#concat> .
+_:c14n3 <https://code.described.at/link> <node:@lindas/barnard59-base#concat> .
 _:c14n4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://pipeline.described.at/Step> .
 _:c14n4 <https://code.described.at/arguments> _:c14n2 .
 _:c14n4 <https://code.described.at/arguments> _:c14n5 .

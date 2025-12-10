@@ -19,7 +19,7 @@ import { combine } from './cli/options.js'
  *   quiet: boolean,
  *   enableBufferMonitor: boolean,
  *   otelDebug: keyof typeof import('@opentelemetry/api').DiagLogLevel,
- *   level: import('lindas-barnard59-core/lib/defaultLogger.js').LogLevels,
+ *   level: import('@lindas/barnard59-core/lib/defaultLogger.js').LogLevels,
  *   otelTracesExporter: 'otlp' | 'none',
  *   otelMetricsExporter: 'otlp' | 'none',
  * }} CliOptions
@@ -77,10 +77,10 @@ export default async function () {
           if (groups && groups.command) {
             /* eslint-disable no-console */
             if (isInstalledGlobally) {
-              console.error(`Try running 'npm install (-g) lindas-barnard59-${groups.command}'`)
+              console.error(`Try running 'npm install (-g) @lindas/barnard59-${groups.command}'`)
             }
 
-            console.error(`Try running 'npm install lindas-barnard59-${groups.command}'`)
+            console.error(`Try running 'npm install @lindas/barnard59-${groups.command}'`)
           }
           process.exit(error.exitCode)
         } else if (error instanceof MultipleRootsError) {

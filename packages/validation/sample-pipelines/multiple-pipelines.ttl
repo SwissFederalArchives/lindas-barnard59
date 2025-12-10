@@ -23,7 +23,7 @@ _:vars p:variable
 
 <concatFiles> a p:Step;
   code:implementedBy [ a code:EcmaScript;
-    code:link <node:lindas-barnard59-base#concat.object>
+    code:link <node:@lindas/barnard59-base#concat.object>
   ];
   code:arguments (<parseNames><parseOrgs>).
 
@@ -57,25 +57,25 @@ _:vars p:variable
 
 <parseTurtle> a p:Step;
   code:implementedBy [
-    code:link <node:lindas-barnard59-formats#n3.parse>;
+    code:link <node:@lindas/barnard59-formats#n3.parse>;
     a code:EcmaScript
   ].
 
 <serialize> a p:Step;
   code:implementedBy [
-    code:link <node:lindas-barnard59-formats#ntriples.serialize> ;
+    code:link <node:@lindas/barnard59-formats#ntriples.serialize> ;
     a code:EcmaScript
   ].
 
 <setGraph> a p:Step;
   code:implementedBy [ a code:EcmaScript;
-    code:link <node:lindas-barnard59-base#setGraph>
+    code:link <node:@lindas/barnard59-base#setGraph>
   ];
   code:arguments ( "graph"^^p:VariableName ).
 
 <upload> a p:Step;
   code:implementedBy [ a code:EcmaScript;
-    code:link <node:lindas-barnard59-graph-store#put>
+    code:link <node:@lindas/barnard59-graph-store#put>
   ];
   code:arguments [
     code:name "endpoint";

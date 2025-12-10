@@ -7,19 +7,19 @@
   rdfs:label "Put an object to S3";
   rdfs:comment "Put an object to a S3 bucket.";
   code:implementedBy [ a code:EcmaScriptModule;
-    code:link <node:lindas-barnard59-s3/cmd/putObject.js#default>
+    code:link <node:@lindas/barnard59-s3/cmd/putObject.js#default>
   ].
 
 <getObject> a p:Operation;
   rdfs:label "Get S3 object";
   rdfs:comment "Get an object from a S3 bucket.";
   code:implementedBy [ a code:EcmaScriptModule;
-    code:link <node:lindas-barnard59-s3/cmd/getObject.js#default>
+    code:link <node:@lindas/barnard59-s3/cmd/getObject.js#default>
   ].
 
 <getObject/stream> a p:Operation, p:Readable;
   rdfs:label "Get S3 object as stream";
   rdfs:comment "Get an object from a S3 bucket as a Readable stream.";
   code:implementedBy [ a code:EcmaScriptModule;
-    code:link <node:lindas-barnard59-s3/cmd/getObjectStream.js#default>
+    code:link <node:@lindas/barnard59-s3/cmd/getObjectStream.js#default>
   ].
