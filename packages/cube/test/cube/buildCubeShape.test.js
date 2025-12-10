@@ -645,7 +645,7 @@ describe('cube.buildCubeShape', () => {
   it('should merge given metadata with blank nodes to cube metadata', async () => {
     const dataset = rdf.dataset()
 
-    rdf.@lindas/clownface({ dataset, term: ex.cube })
+    rdf.clownface({ dataset, term: ex.cube })
       .addOut(ex.propertyA, null, ptr => {
         ptr
           .addOut(ex.propertyB, 'Text B')
@@ -687,7 +687,7 @@ describe('cube.buildCubeShape', () => {
   it('should merge given metadata to dimension metadata', async () => {
     const dataset = rdf.dataset()
 
-    rdf.@lindas/clownface({ dataset, term: ex.cube })
+    rdf.clownface({ dataset, term: ex.cube })
       .addOut(ns.cube.observationConstraint, shape => {
         shape.addOut(ns.sh.property, property => {
           property
@@ -696,7 +696,7 @@ describe('cube.buildCubeShape', () => {
         })
       })
 
-    rdf.@lindas/clownface({ dataset, term: ex.otherCube })
+    rdf.clownface({ dataset, term: ex.otherCube })
       .addOut(ns.cube.observationConstraint, shape => {
         shape.addOut(ns.sh.property, property => {
           property
@@ -726,7 +726,7 @@ describe('cube.buildCubeShape', () => {
   it('should merge given metadata with blank nodes to dimension metadata', async () => {
     const dataset = rdf.dataset()
 
-    rdf.@lindas/clownface({ dataset, term: ex.cube })
+    rdf.clownface({ dataset, term: ex.cube })
       .addOut(ns.cube.observationConstraint, shape => {
         shape.addOut(ns.sh.property, property => {
           property

@@ -110,7 +110,7 @@ class CubeShapeBuilder extends Transform {
 
     const context = {
       dataset,
-      ptr: this.rdf.@lindas/clownface({ dataset }).has(this.rdf.ns.rdf.type, this.rdf.ns.cube.Observation),
+      ptr: this.rdf.clownface({ dataset }).has(this.rdf.ns.rdf.type, this.rdf.ns.cube.Observation),
     } as unknown as Context
 
     context.observationSet = context.ptr.in(this.rdf.ns.cube.observation).term!
@@ -122,7 +122,7 @@ class CubeShapeBuilder extends Transform {
       context.cube = new Cube({
         rdf: this.rdf,
         term: context.term,
-        metadata: this.rdf.@lindas/clownface({ dataset: this.options.metadata, term: context.term }),
+        metadata: this.rdf.clownface({ dataset: this.options.metadata, term: context.term }),
         observationSet: context.observationSet,
         shape: context.shape,
         propertyShapeId: this.options.propertyShapeId,

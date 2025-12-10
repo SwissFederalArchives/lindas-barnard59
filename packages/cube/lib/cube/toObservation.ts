@@ -23,7 +23,7 @@ function findRoot($rdf: Environment, { dataset }: { dataset: DatasetCore }): Nam
 }
 
 function defaultObserver(this: { rdf: Environment }, { dataset, subject }: { dataset: DatasetCore; subject: NamedNode }): NamedNode {
-  const observer = this.rdf.@lindas/clownface({ dataset }).out(this.rdf.ns.cube.observedBy)
+  const observer = this.rdf.clownface({ dataset }).out(this.rdf.ns.cube.observedBy)
 
   if (isNamedNode(observer)) {
     return observer.term
@@ -59,7 +59,7 @@ interface DateCallback {
 
 function dateByProperty(property: NamedNode): DateCallback {
   return function (this:{ rdf: Environment }, { dataset }: { dataset: DatasetCore }): Literal {
-    const date = this.rdf.@lindas/clownface({ dataset }).out(property)
+    const date = this.rdf.clownface({ dataset }).out(property)
 
     if (!isLiteral(date)) {
       throw new Error(`Expected a date literal at property ${property.value} but found ${date.term?.value}`)
@@ -74,7 +74,7 @@ function dateNow(this: { rdf: Environment }) {
 }
 
 function dateByDatatype(this: { rdf: Environment }, { dataset }: { dataset: DatasetCore }) {
-  const terms: Literal[] = this.rdf.@lindas/clownface({ dataset })
+  const terms: Literal[] = this.rdf.clownface({ dataset })
     .out()
     .filter(isLiteral)
     .filter(ptr => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))

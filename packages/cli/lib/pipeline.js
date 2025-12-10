@@ -49,7 +49,7 @@ export const desugar = async (dataset, { logger, knownOperations, pipelinePath }
   })
   const require = module.createRequire(dir + '/')
 
-  const ptr = rdf.@lindas/clownface({ dataset })
+  const ptr = rdf.clownface({ dataset })
   let n = 0
   ptr.has(rdf.ns.p.stepList).out(rdf.ns.p.stepList).forEach(listPointer => {
     for (const step of (listPointer.list() || [])) {

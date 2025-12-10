@@ -18,7 +18,7 @@ export class MultipleRootsError extends Error {
  * @return {import('@lindas/clownface').GraphPointer}
  */
 function findPipeline(dataset, iri) {
-  let ptr = rdf.@lindas/clownface({ dataset })
+  let ptr = rdf.clownface({ dataset })
 
   if (iri) {
     ptr = ptr.namedNode(iri)

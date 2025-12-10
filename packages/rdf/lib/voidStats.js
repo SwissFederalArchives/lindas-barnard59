@@ -82,7 +82,7 @@ class VoidStats extends Transform {
       const datasetUri = toNamedNode(this.voidDatasetUri)
       const datasetGraph = this.graph ? toNamedNode(this.graph) : undefined
 
-      const stats = this.rdf.@lindas/clownface({
+      const stats = this.rdf.clownface({
         dataset: this.rdf.dataset(),
         graph: datasetGraph,
       })

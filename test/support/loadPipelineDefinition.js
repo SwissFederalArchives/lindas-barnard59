@@ -25,7 +25,7 @@ export function pipelineDefinitionLoader(baseUrl, path = 'support/definitions') 
     }
 
     return {
-      ptr: rdf.@lindas/clownface({ dataset, term }),
+      ptr: rdf.clownface({ dataset, term }),
       basePath: dirname(filename),
     }
   }

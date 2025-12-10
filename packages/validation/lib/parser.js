@@ -40,9 +40,9 @@ export async function readGraph(file, checks) {
   }
 
   checks.addGenericCheck(issue)
-  const @lindas/clownfaceObj = rdf.@lindas/clownface({ dataset })
+  const clownfaceObj = rdf.clownface({ dataset })
 
-  return @lindas/clownfaceObj
+  return clownfaceObj
 }
 
 export function parseError(path, error) {

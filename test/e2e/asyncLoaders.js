@@ -11,7 +11,7 @@ promisedEcmaScriptLoader.register = registry => {
 }
 
 async function promisedUrlLoader({ term, dataset }) {
-  return rdf.@lindas/clownface({ dataset, term })
+  return rdf.clownface({ dataset, term })
     .out(rdf.namedNode('http://example.org/url'))
     .value
 }

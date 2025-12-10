@@ -24,7 +24,7 @@ describe('loader/pipeline', () => {
   })
 
   it('should reject if the referred resource does not have a pipeline type', async () => {
-    const ptr = rdf.@lindas/clownface({ dataset: rdf.dataset() }).blankNode()
+    const ptr = rdf.clownface({ dataset: rdf.dataset() }).blankNode()
 
     await rejects(async () => {
       await loader(ptr, { context })

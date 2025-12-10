@@ -6,7 +6,7 @@ function createObservationsStream({ observations = [{ [ex.property.value]: rdf.l
   const datasets = []
 
   observations.forEach((observation, index) => {
-    const observationPtr = rdf.@lindas/clownface({
+    const observationPtr = rdf.clownface({
       dataset: rdf.dataset(),
       term: ex(`cube/observation/${index + 1}`),
     })

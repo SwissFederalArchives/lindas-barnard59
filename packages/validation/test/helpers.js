@@ -7,7 +7,7 @@ const parser = rdf.formats.parsers.get('text/turtle')
 export async function turtleToCF(str) {
   const stream = Readable.from([str])
   const quadStream = parser.import(stream)
-  return rdf.@lindas/clownface({ dataset: await rdf.dataset().import(quadStream) })
+  return rdf.clownface({ dataset: await rdf.dataset().import(quadStream) })
 }
 
 export function checkArrayContainsField(array, field, value) {

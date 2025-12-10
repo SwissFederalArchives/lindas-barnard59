@@ -10,7 +10,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 describe('loader/file', () => {
   it('should load file contents from given path', async () => {
     // given
-    const ptr = $rdf.@lindas/clownface()
+    const ptr = $rdf.clownface()
       .literal('file.txt', ns.p.FileContents)
 
     // when
@@ -25,7 +25,7 @@ describe('loader/file', () => {
 
   it('should load file contents from path in variable', async () => {
     // given
-    const ptr = $rdf.@lindas/clownface().literal('PATH', ns.p.FileContents)
+    const ptr = $rdf.clownface().literal('PATH', ns.p.FileContents)
     const variables = new Map([
       ['PATH', 'file.txt'],
     ])
@@ -42,7 +42,7 @@ describe('loader/file', () => {
 
   it('should load file contents from HOME_DIR path', async () => {
     // given
-    const ptr = $rdf.@lindas/clownface()
+    const ptr = $rdf.clownface()
       .literal('~/file.txt', ns.p.FileContents)
 
     try {

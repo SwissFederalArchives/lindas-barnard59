@@ -21,7 +21,7 @@ describe('lib/cli/discoverCommands.js', () => {
   it('creates flag with default value', async () => {
     // given
     let command
-    const manifest = rdf.@lindas/clownface()
+    const manifest = rdf.clownface()
       .blankNode()
       .addOut(rdf.ns.rdf.type, rdf.ns.b59.CliCommand)
       .addOut(rdf.ns.b59.command, 'bar')

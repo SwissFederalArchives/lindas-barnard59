@@ -9,7 +9,7 @@ function createPipelineDefinition({
   writable,
   writableObjectMode,
 } = {}) {
-  const ptr = rdf.@lindas/clownface({
+  const ptr = rdf.clownface({
     dataset: dataset || rdf.dataset(),
     term: term || rdf.blankNode(),
   })
