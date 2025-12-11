@@ -45,10 +45,10 @@
     "@types/readable-stream": "^4.0.9",
     "chai": "^4.3.7",
     "get-stream": "^6.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "nock": "^13.1.0",
-    "sinon": "^15.0.4"
+    "sinon": "^21.0.0"
   },
   "mocha": {
     "require": "../../test/mocha-setup.cjs",
