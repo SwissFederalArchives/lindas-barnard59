@@ -1,6 +1,6 @@
 {
   "name": "@lindas/barnard59-shacl",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A barnard59 step that validates RDF using the Shapes Constraint Language (SHACL).",
   "type": "module",
   "main": "index.js",
