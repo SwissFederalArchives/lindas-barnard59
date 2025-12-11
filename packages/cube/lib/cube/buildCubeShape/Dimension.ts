@@ -56,8 +56,10 @@ class Dimension {
     this.constraints.build(ptr)
 
     ptr.out(this.rdf.ns.sh.description)
-      .forEach(description => {
-        this.messages.push(`${this.predicate.value}: ${description.term.value}`)
+      .forEach((description: AnyPointer) => {
+        if (description.term) {
+          this.messages.push(`${this.predicate.value}: ${description.term.value}`)
+        }
       })
 
     if (isResource(this.metadata)) {

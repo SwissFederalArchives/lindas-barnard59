@@ -1,6 +1,6 @@
 {
   "name": "@lindas/barnard59-cube",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Build and check RDF cubes in Linked Data pipelines",
   "type": "module",
   "main": "index.js",

@@ -49,7 +49,7 @@ function dateByDatatype({ dataset }) {
     const terms = this.rdf.clownface({ dataset })
         .out()
         .filter(isLiteral)
-        .filter(ptr => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))
+        .filter((ptr) => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))
         .terms;
     if (terms.length === 0) {
         throw new Error('now date value found');

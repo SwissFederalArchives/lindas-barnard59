@@ -77,7 +77,7 @@ function dateByDatatype(this: { rdf: Environment }, { dataset }: { dataset: Data
   const terms: Literal[] = this.rdf.clownface({ dataset })
     .out()
     .filter(isLiteral)
-    .filter(ptr => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))
+    .filter((ptr: GraphPointer<Literal>) => this.rdf.ns.xsd.dateTime.equals(ptr.term.datatype))
     .terms
 
   if (terms.length === 0) {

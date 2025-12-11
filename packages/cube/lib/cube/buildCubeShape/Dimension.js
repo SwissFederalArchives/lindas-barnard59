@@ -28,8 +28,10 @@ class Dimension {
             .addOut(this.rdf.ns.sh.maxCount, 1);
         this.constraints.build(ptr);
         ptr.out(this.rdf.ns.sh.description)
-            .forEach(description => {
-            this.messages.push(`${this.predicate.value}: ${description.term.value}`);
+            .forEach((description) => {
+            if (description.term) {
+                this.messages.push(`${this.predicate.value}: ${description.term.value}`);
+            }
         });
         if (isResource(this.metadata)) {
             cbdCopy(this.rdf, this.metadata, ptr);
