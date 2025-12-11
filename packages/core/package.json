@@ -1,6 +1,6 @@
 {
   "name": "@lindas/barnard59-core",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "Core component of Barnard59 Linked Data pipelines",
   "type": "module",
   "main": "index.js",
@@ -41,6 +41,7 @@
     "@lindas/barnard59-test-support": "^0.0.3",
     "@lindas/clownface": "^2.0.4",
     "@rdfjs/namespace": "^2.0.0",
+    "@types/clownface": "^2.0.10",
     "@types/readable-stream": "^4.0.9",
     "chai": "^4.3.7",
     "get-stream": "^6.0.1",

@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
-function monitor(stream, prefix) {
+import { EventEmitter } from 'events'
+
+function monitor(stream: EventEmitter, prefix: string): void {
   stream.on('close', () => {
     console.log(`${prefix}: close`)
   })
