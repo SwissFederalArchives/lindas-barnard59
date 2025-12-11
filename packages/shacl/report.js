@@ -34,12 +34,10 @@ async function * validate({ shapes, maxViolations }, iterable) {
 
   counter.termMap.forEach((count, term) => this.logger.warn(`${count} results with severity ${term.value}`))
 
-  // Log the total violations but do NOT call this.error()
+  // Log the total violations but do NOT call this.error() or logger.error()
   // The error() call destroys the stream before data is flushed on Linux
+  // Using logger.error() with an Error object also causes issues
   // The validation report output itself contains violation information
-  if (totalViolations) {
-    this.logger.error(new Error(`${totalViolations} violations found`))
-  }
   if (counter.termMap.size === 0) {
     const report = this.env.dataset()
     const blankNode = this.env.blankNode('report')
