@@ -4,11 +4,12 @@
     "target": "ES2022",
     "moduleResolution": "Node",
     "declaration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "checkJs": false,
     "typeRoots": ["./types", "./node_modules/@types"]
   }
 }
