@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npx c8 --all --src packages/${{ matrix.package }} -x "packages/!(${{ matrix.package }})" --reporter lcovonly --reporter text npm run -w @lindas/barnard59-${{ matrix.package }} test
       - name: Codecov
         uses: codecov/codecov-action@v3
@@ -52,7 +52,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npm run -ws --if-present build
 
   test-e2e:
@@ -63,7 +63,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npm run -w @lindas/barnard59-test-e2e test
 
   test-cli:
@@ -74,7 +74,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - name: Compile TypeScript packages
         run: npm run -ws --if-present build -- --sourceMap
       - run: npx c8 --all --src packages/cli -x "packages/!(cli)" --reporter lcovonly --reporter text npm run -w @lindas/barnard59 test
@@ -92,7 +92,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npm run lint
 
   ensure-manifests:
@@ -103,7 +103,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: node .github/ensureManifests.js
 
   smoke-test-cli:
@@ -121,7 +121,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npx lindas-barnard59 run test/e2e/definitions/file-loader.ttl
       - run: npx lindas-barnard59 run test/e2e/definitions/foreach/with-handler.ttl
       - run: npx lindas-barnard59 run test/e2e/definitions/foreach/with-variable.ttl --variable pattern="test/e2e/definitions/foreach/*"
@@ -146,7 +146,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - name: pack all
         run: npm pack -ws
       - name: install all packages globally (Unix)
@@ -207,7 +207,7 @@ jobs:
           cache: "npm"
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
