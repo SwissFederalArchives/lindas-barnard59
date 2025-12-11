@@ -1,6 +1,6 @@
 {
   "name": "@lindas/barnard59",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "description": "Barnard59 Linked Data pipelines",
   "type": "module",
   "main": "index.js",
@@ -50,7 +50,7 @@
     "rdf-loader-code": "^2.2.2",
     "rdf-transform-graph-imports": "^0.2.2",
     "readable-stream": "^3.6.0",
-    "@lindas/barnard59-core": "7.0.2",
+    "@lindas/barnard59-core": "7.0.3",
     "@lindas/barnard59-env": "2.0.2"
   },
   "devDependencies": {
