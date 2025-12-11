@@ -1,12 +1,13 @@
 {
   "name": "@lindas/barnard59",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "Barnard59 Linked Data pipelines",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "barnard59": "bin/barnard59.sh",
-    "b59": "bin/barnard59.sh"
+    "barnard59": "bin/barnard59.js",
+    "b59": "bin/barnard59.js",
+    "lindas-barnard59": "bin/barnard59.js"
   },
   "scripts": {
     "test": "mocha",
