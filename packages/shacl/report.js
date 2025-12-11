@@ -4,9 +4,9 @@ import SHACLValidator from 'rdf-validate-shacl'
 import TermCounter from './lib/TermCounter.js'
 
 /**
- * Creates a Transform stream for SHACL validation that properly flushes on all platforms.
- * Using Transform instead of Duplex.from() with async generators because the latter
- * has issues with stream flushing on Linux.
+ * Creates a Transform stream for SHACL validation that collects all reports and
+ * pushes them in flush() to ensure proper stream flushing on all platforms.
+ * On Linux, data pushed in transform() may not reach stdout before the stream ends.
  *
  * @param {object} options
  * @param {import('@lindas/barnard59-core').Context} options.context
@@ -16,6 +16,8 @@ import TermCounter from './lib/TermCounter.js'
  */
 function createValidationTransform({ context, shapes, maxViolations }) {
   const counter = new TermCounter(context.env)
+  /** @type {import('@rdfjs/types').DatasetCore[]} */
+  const collectedReports = []
   let totalViolations = 0
   let aborted = false
 
@@ -43,7 +45,7 @@ function createValidationTransform({ context, shapes, maxViolations }) {
             if (result.severity) counter.add(result.severity)
           }
           totalViolations = counter.termMap.get(context.env.ns.sh.Violation) ?? 0
-          this.push(report.dataset)
+          collectedReports.push(report.dataset)
         }
 
         callback()
@@ -56,6 +58,11 @@ function createValidationTransform({ context, shapes, maxViolations }) {
       counter.termMap.forEach((count, term) => {
         context.logger.warn(`${count} results with severity ${term.value}`)
       })
+
+      // Push all collected reports
+      for (const dataset of collectedReports) {
+        this.push(dataset)
+      }
 
       // If no violations, push a conforming validation report
       if (counter.termMap.size === 0) {
