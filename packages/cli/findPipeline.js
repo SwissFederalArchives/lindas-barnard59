@@ -31,7 +31,7 @@ function findPipeline(dataset, iri) {
   }
 
   if (!isGraphPointer(ptr)) {
-    ptr = ptr.filter(ptr => ptr.in().terms.length === 0)
+    ptr = ptr.filter(/** @param {import('@lindas/clownface').GraphPointer} p */ p => p.in().terms.length === 0)
   }
 
   if (!isGraphPointer(ptr)) {

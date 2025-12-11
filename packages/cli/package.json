@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@fig/complete-commander": "^3.1.0",
+    "@types/clownface": "^2.0.10",
     "@rdfjs-elements/formats-pretty": "^0.6.8",
     "@types/lodash": "^4.14.202",
     "@types/readable-stream": "^4.0.10",

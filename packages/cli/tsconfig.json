@@ -6,10 +6,11 @@
     "emitDeclarationOnly": true,
     "skipLibCheck": true
   },
-  "files": [
+  "include": [
     "./index.js",
     "./findPipeline.js",
     "./runner.js",
-    "./bin/barnard59.js"
+    "./bin/barnard59.js",
+    "../../types/**/*.d.ts"
   ]
 }
