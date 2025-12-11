@@ -48,15 +48,12 @@ const runCommand = program
   })
 
 export default async function () {
-  console.error('[barnard59] Starting command discovery')
   for await (const command of discoverCommands(discoverManifests())) {
-    console.error('[barnard59] Received command from generator:', command.name())
     command
       .addOption(commonOptions.variable)
       .addOption(commonOptions.variableAll)
       .addOption(commonOptions.verbose)
   }
-  console.error('[barnard59] Command discovery complete')
 
   runCommand
     .addOption(commonOptions.variable)

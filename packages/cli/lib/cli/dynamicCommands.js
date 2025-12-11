@@ -39,8 +39,6 @@ function outB59(ptr, local) {
  */
 export async function * discoverCommands(manifests) {
   for await (const { name, manifest, version = '0.0.0' } of manifests) {
-    console.error('[barnard59] discoverCommands processing:', name)
-
     // Find CliCommand nodes regardless of which b59 namespace variant is used
     const cliTypes = [
       rdf.namedNode(B59_LINDAS + 'CliCommand'),
@@ -52,13 +50,10 @@ export async function * discoverCommands(manifests) {
     ]))
 
     if (!commands.length) {
-      console.error('[barnard59] No CliCommands found in manifest for:', name)
       continue
     }
 
-    console.error('[barnard59] Creating parent command:', name, 'with', commands.length, 'subcommands')
     const command = program.command(`${name}`).version(version)
-    let hasValidSubcommands = false
 
     for (const commandPtr of commands) {
       const source = outB59(commandPtr, 'source')
@@ -66,18 +61,12 @@ export async function * discoverCommands(manifests) {
       const commandName = outB59(commandPtr, 'command').value
       const description = commandPtr.out(rdf.ns.rdfs.label).value
 
-      console.error('[barnard59] Processing subcommand:', commandName, 'source:', source.value)
-
       if (!isLiteral(source) || !commandName) {
-        // eslint-disable-next-line no-console
-        console.error(`WARN: Skipping command <${commandPtr.value}> because it is not valid`)
         continue
       }
 
       try {
-        console.error('[barnard59] Resolving source:', source.value)
         const resolvedPath = require.resolve(source.value)
-        console.error('[barnard59] Resolved to:', resolvedPath)
         const { basePath, ptr } = await parse(resolvedPath, pipeline.value)
 
         const pipelineSubCommand = command.command(commandName)
@@ -95,7 +84,6 @@ export async function * discoverCommands(manifests) {
           }
         }
 
-        console.error('[barnard59] Successfully created subcommand:', name, commandName)
         yield pipelineSubCommand
           .action(async (options) => {
             return runAction(ptr, basePath, combine({
@@ -106,23 +94,9 @@ export async function * discoverCommands(manifests) {
               ]),
             }))
           })
-
-        hasValidSubcommands = true
-      } catch (err) {
-        const message = err instanceof Error ? err.message : String(err)
-        const stack = err instanceof Error ? err.stack : ''
-        // eslint-disable-next-line no-console
-        console.error(`[barnard59] WARN: Failed to load command '${commandName}' from ${name}:`, message)
-        if (stack) {
-          // eslint-disable-next-line no-console
-          console.error('[barnard59] Stack:', stack)
-        }
+      } catch {
+        // Skip commands that fail to load
       }
-    }
-
-    if (!hasValidSubcommands) {
-      // eslint-disable-next-line no-console
-      console.warn(`[barnard59] WARN: Command '${name}' has no valid subcommands`)
     }
   }
 }
