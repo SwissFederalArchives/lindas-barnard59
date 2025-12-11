@@ -13,6 +13,8 @@ import TermCounter from './lib/TermCounter.js'
 async function * validate({ shapes, maxViolations }, iterable) {
   let totalViolations = 0
   const counter = new TermCounter(this.env)
+  // Collect reports to yield at end - yielding inside loop does not flush properly on Linux
+  const reports = []
 
   for await (const chunk of iterable) {
     if (maxViolations && totalViolations > maxViolations) {
@@ -28,16 +30,18 @@ async function * validate({ shapes, maxViolations }, iterable) {
       }
 
       totalViolations = counter.termMap.get(this.env.ns.sh.Violation) ?? 0
-      yield report.dataset
+      reports.push(report.dataset)
     }
   }
 
   counter.termMap.forEach((count, term) => this.logger.warn(`${count} results with severity ${term.value}`))
 
-  // Log the total violations but do NOT call this.error() or logger.error()
-  // The error() call destroys the stream before data is flushed on Linux
-  // Using logger.error() with an Error object also causes issues
-  // The validation report output itself contains violation information
+  // Yield all collected reports at the end to ensure proper stream flushing
+  for (const report of reports) {
+    yield report
+  }
+
+  // If no violations, yield a conforming validation report
   if (counter.termMap.size === 0) {
     const report = this.env.dataset()
     const blankNode = this.env.blankNode('report')
