@@ -35,7 +35,10 @@ async function * validate({ shapes, maxViolations }, iterable) {
   counter.termMap.forEach((count, term) => this.logger.warn(`${count} results with severity ${term.value}`))
 
   if (totalViolations) {
-    this.error(new Error(`${totalViolations} violations found`))
+    // Defer error to allow stream buffer to flush before signaling error
+    const error = new Error(`${totalViolations} violations found`)
+    const context = this
+    setImmediate(() => context.error(error))
   }
   if (counter.termMap.size === 0) {
     const report = this.env.dataset()
