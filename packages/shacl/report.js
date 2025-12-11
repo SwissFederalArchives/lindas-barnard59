@@ -1,60 +1,80 @@
-import { Duplex } from 'node:stream'
+import { Transform } from 'node:stream'
 import { isReadableStream, isStream } from 'is-stream'
 import SHACLValidator from 'rdf-validate-shacl'
 import TermCounter from './lib/TermCounter.js'
 
 /**
- * @this {import('@lindas/barnard59-core').Context}
+ * Creates a Transform stream for SHACL validation that properly flushes on all platforms.
+ * Using Transform instead of Duplex.from() with async generators because the latter
+ * has issues with stream flushing on Linux.
+ *
  * @param {object} options
+ * @param {import('@lindas/barnard59-core').Context} options.context
  * @param {import('@rdfjs/types').DatasetCore | undefined} options.shapes
  * @param {number | undefined} options.maxViolations
- * @param {AsyncIterable<any>} iterable
+ * @return {Transform}
  */
-async function * validate({ shapes, maxViolations }, iterable) {
+function createValidationTransform({ context, shapes, maxViolations }) {
+  const counter = new TermCounter(context.env)
   let totalViolations = 0
-  const counter = new TermCounter(this.env)
-  // Collect reports to yield at end - yielding inside loop does not flush properly on Linux
-  const reports = []
+  let aborted = false
 
-  for await (const chunk of iterable) {
-    if (maxViolations && totalViolations > maxViolations) {
-      this.logger.warn('Exceeded max violations. Aborting')
-      break
-    }
+  return new Transform({
+    objectMode: true,
+    async transform(chunk, encoding, callback) {
+      try {
+        if (aborted) {
+          callback()
+          return
+        }
 
-    const validator = new SHACLValidator(shapes || chunk, { maxErrors: 0, factory: this.env })
-    const report = await validator.validate(chunk)
-    if (!report.conforms) {
-      for (const result of report.results) {
-        if (result.severity) counter.add(result.severity)
+        if (maxViolations && totalViolations > maxViolations) {
+          context.logger.warn('Exceeded max violations. Aborting')
+          aborted = true
+          callback()
+          return
+        }
+
+        const validator = new SHACLValidator(shapes || chunk, { maxErrors: 0, factory: context.env })
+        const report = await validator.validate(chunk)
+
+        if (!report.conforms) {
+          for (const result of report.results) {
+            if (result.severity) counter.add(result.severity)
+          }
+          totalViolations = counter.termMap.get(context.env.ns.sh.Violation) ?? 0
+          this.push(report.dataset)
+        }
+
+        callback()
+      } catch (err) {
+        callback(err)
+      }
+    },
+    flush(callback) {
+      // Log violation counts
+      counter.termMap.forEach((count, term) => {
+        context.logger.warn(`${count} results with severity ${term.value}`)
+      })
+
+      // If no violations, push a conforming validation report
+      if (counter.termMap.size === 0) {
+        const report = context.env.dataset()
+        const blankNode = context.env.blankNode('report')
+        report.add(context.env.quad(blankNode, context.env.ns.rdf.type, context.env.ns.sh.ValidationReport))
+        report.add(context.env.quad(blankNode, context.env.ns.sh.conforms, context.env.literal('true', context.env.ns.xsd.boolean)))
+        this.push(report)
       }
 
-      totalViolations = counter.termMap.get(this.env.ns.sh.Violation) ?? 0
-      reports.push(report.dataset)
-    }
-  }
-
-  counter.termMap.forEach((count, term) => this.logger.warn(`${count} results with severity ${term.value}`))
-
-  // Yield all collected reports at the end to ensure proper stream flushing
-  for (const report of reports) {
-    yield report
-  }
-
-  // If no violations, yield a conforming validation report
-  if (counter.termMap.size === 0) {
-    const report = this.env.dataset()
-    const blankNode = this.env.blankNode('report')
-    report.add(this.env.quad(blankNode, this.env.ns.rdf.type, this.env.ns.sh.ValidationReport))
-    report.add(this.env.quad(blankNode, this.env.ns.sh.conforms, this.env.literal('true', this.env.ns.xsd.boolean)))
-    yield report
-  }
+      callback()
+    },
+  })
 }
 
 /**
  * @this {import('@lindas/barnard59-core').Context}
  * @param {import('stream').Stream | { shape: import('stream').Stream, maxErrors?: number }} arg
- * @return {Promise<Duplex>}
+ * @return {Promise<Transform>}
  */
 export async function shacl(arg) {
   let shape
@@ -78,8 +98,9 @@ export async function shacl(arg) {
     ds = await this.env.dataset().import(shape)
   }
 
-  return Duplex.from(validate.bind(this, {
+  return createValidationTransform({
+    context: this,
     shapes: ds,
     maxViolations,
-  }))
+  })
 }
