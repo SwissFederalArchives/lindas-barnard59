@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { EventEmitter } from 'events'
+import type { EventEmitter } from 'events'
 
 function monitor(stream: EventEmitter, prefix: string): void {
   stream.on('close', () => {
