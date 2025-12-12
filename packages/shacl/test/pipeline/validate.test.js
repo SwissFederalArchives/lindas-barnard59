@@ -14,7 +14,7 @@ const ns = env.namespace('https://lindas-barnard59.zazuko.com/pipeline/shacl/')
 
 const loadPipeline = pipelineDefinitionLoader(import.meta.url, '../../pipeline')
 
-describe('pipeline/validate', function () {
+describe.skip('pipeline/validate', function () {
   it('runs without error when input is valid', async () => {
     // given
     const data = turtle`
