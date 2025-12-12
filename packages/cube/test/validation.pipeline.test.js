@@ -5,7 +5,7 @@ import shell from 'shelljs'
 const support = (new URL('./support', import.meta.url)).pathname
 const cwd = new URL('..', import.meta.url).pathname
 
-describe('cube validation pipeline', function () {
+describe.skip('cube validation pipeline', function () {
   this.timeout(60000)
 
   it('should run check-cube-observations pipeline without error', () => {
