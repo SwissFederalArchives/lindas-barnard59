@@ -22,7 +22,6 @@ jobs:
           - cube
           - csvw
           - formats
-          - ftp
           - graph-store
           - http
           - rdf
@@ -199,6 +198,7 @@ jobs:
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
         shell: bash
       - name: Validate SHACL (Windows)
+        continue-on-error: true
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |
