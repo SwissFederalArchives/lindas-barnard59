@@ -1,6 +1,6 @@
 {
   "name": "@lindas/barnard59-validation",
-  "version": "1.0.2",
+  "version": "7.1.0",
   "type": "module",
   "main": "cli.js",
   "bin": {
